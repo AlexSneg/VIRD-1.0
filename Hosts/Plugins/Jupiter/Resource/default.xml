@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Preset>
+    <Name></Name>
+    <PropertyList/>
+    <CommandList>
+        <EquipmentCommand Name="GetPower"      Command="WallGetPower"      Answer="WallPower"/>
+        <EquipmentCommand Name="GetBrightness" Command="WallGetBrightness" Answer="WallBrightness"/>
+        <EquipmentCommand Name="GetPicMute"    Command="WallGetPicMute"    Answer="WallPicMute"/>
+        <EquipmentCommand Name="SetPower"      Command="WallSetPower"/>
+        <EquipmentCommand Name="SetBrightness" Command="WallSetBrightness"/>
+        <EquipmentCommand Name="SetPicMute"    Command="WallSetPicMute"/>
+    </CommandList>
+</Preset>

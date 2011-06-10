@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Preset>
+    <Name></Name>
+    <PropertyList/>
+    <CommandList>
+        <EquipmentCommand Name="MixerSetTie" Command="MixerSetTie" />
+        <EquipmentCommand Name="MixerGetTie" Command="MixerGetTie" Answer="MixerTie"/>
+        <EquipmentCommand Name="MixerGetTies" Command="MixerGetTies" Answer="MixerTies"/>
+        <EquipmentCommand Name="MixerSetFader" Command="MixerSetFader" />
+        <EquipmentCommand Name="MixerGetFader" Command="MixerGetFader" Answer="MixerFader"/>
+    </CommandList>
+</Preset>

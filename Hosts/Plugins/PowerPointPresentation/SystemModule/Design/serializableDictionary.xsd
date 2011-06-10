@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="urn:serializableDictionary" 
+           elementFormDefault="qualified"
+           targetNamespace="urn:serializableDictionary"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="int" type="xs:int" />
+    <xs:element name="string" type="xs:string" />
+    <xs:element name="Point">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="X" type="xs:int" />
+                <xs:element name="Y" type="xs:int" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SlideLinkList">
+        <xs:complexType>
+            <xs:sequence minOccurs="1" maxOccurs="1">
+                <xs:element name="LinkList">
+                    <xs:complexType>
+                        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                            <xs:element name="Link">
+                                <xs:complexType>
+                                    <xs:attribute name="IsDefault" type="xs:boolean" use="required" />
+                                    <xs:attribute name="NextSlide" type="xs:int" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,1006 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:configuration-schema"
+    Name="Тестовая конфигурация" Comment=""
+    LastChangeDate="2009-03-16T10:00:00.0+00:00">
+    <DeviceList>
+        <GangSwitch UID="1" Name="ЛБП_1" Type="Логический блок переключателей" Comment="Переключатели в зале" Model="Стандартный">
+            <CommandList>
+                <EquipmentCommand Name="SwitchOn"   Command="SwitchOn" />
+                <EquipmentCommand Name="SwitchOff"  Command="SwitchOff" />
+                <EquipmentCommand Name="SwitchGet"  Command="SwitchGet" Answer="Switch"/>
+            </CommandList>
+            <GangSwitchUnitList>
+                <GangSwitchUnit Name="Диктофон" OnStateName="Включен" OffStateName="Выключен" />
+                <GangSwitchUnit Name="Верхняя лампа" OnStateName="Опущена" OffStateName="Поднята" />
+                <GangSwitchUnit Name="Демо-доска" OnStateName="Выдвинута" OffStateName="Убрана" />
+                <GangSwitchUnit Name="Шторы" OnStateName="Опущены" OffStateName="Подняты" />
+                <GangSwitchUnit Name="Switch05" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch06" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch07" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch08" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch09" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch10" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch11" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch12" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch13" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch14" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch15" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch16" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch17" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch18" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch19" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch20" OnStateName="on" OffStateName="off" />
+            </GangSwitchUnitList>
+        </GangSwitch>
+        <GangSwitch UID="2" Name="ЛБП_2" Type="Логический блок переключателей" Comment="Переключатели в зале" Model="Стандартный">
+            <CommandList>
+                <EquipmentCommand Name="SwitchOn"   Command="SwitchOn" />
+                <EquipmentCommand Name="SwitchOff"  Command="SwitchOff" />
+                <EquipmentCommand Name="SwitchGet"  Command="SwitchGet" Answer="Switch"/>
+            </CommandList>
+            <GangSwitchUnitList>
+                <GangSwitchUnit Name="Диктофон" OnStateName="Включен" OffStateName="Выключен" />
+                <GangSwitchUnit Name="Верхняя лампа" OnStateName="Опущена" OffStateName="Поднята" />
+                <GangSwitchUnit Name="Демо-доска" OnStateName="Выдвинута" OffStateName="Убрана" />
+                <GangSwitchUnit Name="Шторы" OnStateName="Опущены" OffStateName="Подняты" />
+                <GangSwitchUnit Name="Switch05" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch06" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch07" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch08" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch09" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch10" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch11" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch12" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch13" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch14" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch15" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch16" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch17" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch18" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch19" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch20" OnStateName="on" OffStateName="off" />
+            </GangSwitchUnitList>
+        </GangSwitch>
+        <GangSwitch UID="3" Name="ЛБП_3" Type="Логический блок переключателей" Comment="Переключатели в зале" Model="Стандартный">
+            <CommandList>
+                <EquipmentCommand Name="SwitchOn"   Command="SwitchOn" />
+                <EquipmentCommand Name="SwitchOff"  Command="SwitchOff" />
+                <EquipmentCommand Name="SwitchGet"  Command="SwitchGet" Answer="Switch"/>
+            </CommandList>
+            <GangSwitchUnitList>
+                <GangSwitchUnit Name="Диктофон" OnStateName="Включен" OffStateName="Выключен" />
+                <GangSwitchUnit Name="Верхняя лампа" OnStateName="Опущена" OffStateName="Поднята" />
+                <GangSwitchUnit Name="Демо-доска" OnStateName="Выдвинута" OffStateName="Убрана" />
+                <GangSwitchUnit Name="Шторы" OnStateName="Опущены" OffStateName="Подняты" />
+                <GangSwitchUnit Name="Switch05" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch06" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch07" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch08" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch09" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch10" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch11" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch12" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch13" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch14" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch15" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch16" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch17" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch18" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch19" OnStateName="on" OffStateName="off" />
+                <GangSwitchUnit Name="Switch20" OnStateName="on" OffStateName="off" />
+            </GangSwitchUnitList>
+        </GangSwitch>
+        <DVDPlayerDevice UID="4" Name="Pioneer DV-410V-1" Type="DVD" Comment="DVD с IR" Model="Pioneer DV-410V"
+                InterfaceType="IR">
+            <CommandList>
+                <EquipmentCommand Name="Power"       Command="DVDPower" />
+                <EquipmentCommand Name="Play"        Command="DVDPlay" />
+                <EquipmentCommand Name="Stop"        Command="DVDStop" />
+                <EquipmentCommand Name="Pause"       Command="DVDPause" />
+                <EquipmentCommand Name="Prev"        Command="DVDPrev" />
+                <EquipmentCommand Name="Next"        Command="DVDNext" />
+                <EquipmentCommand Name="Rew"         Command="DVDRev" />
+                <EquipmentCommand Name="Ff"          Command="DVDFf" />
+                <EquipmentCommand Name="Rec"         Command="DVDRec" />
+                <EquipmentCommand Name="Menu"        Command="DVDMenu" />
+                <EquipmentCommand Name="Exit"        Command="DVDExit" />
+                <EquipmentCommand Name="CursorUp"    Command="DVDCursorUp" />
+                <EquipmentCommand Name="CursorDown"  Command="DVDCursorDown" />
+                <EquipmentCommand Name="CursorLeft"  Command="DVDCursorLeft" />
+                <EquipmentCommand Name="CursorRight" Command="DVDCursorRight" />
+                <EquipmentCommand Name="CursorOk"    Command="DVDCursorOk" />
+                <EquipmentCommand Name="Track"       Command="DVDTrack" />
+                <EquipmentCommand Name="Chapter"     Command="DVDChapter" />
+                <EquipmentCommand Name="Repeat"      Command="DVDRepeat" />
+                <EquipmentCommand Name="Setup"       Command="DVDSetup" />
+                <EquipmentCommand Name="Return"      Command="DVDReturn" />
+            </CommandList>
+        </DVDPlayerDevice>
+        <DVDPlayerDevice UID="5" Name="Pioneer DV-410V-2" Type="DVD" Comment="DVD с IR" Model="Pioneer DV-410V"
+                InterfaceType="IR">
+            <CommandList>
+                <EquipmentCommand Name="Power"       Command="DVDPower" />
+                <EquipmentCommand Name="Play"        Command="DVDPlay" />
+                <EquipmentCommand Name="Stop"        Command="DVDStop" />
+                <EquipmentCommand Name="Pause"       Command="DVDPause" />
+                <EquipmentCommand Name="Prev"        Command="DVDPrev" />
+                <EquipmentCommand Name="Next"        Command="DVDNext" />
+                <EquipmentCommand Name="Rew"         Command="DVDRev" />
+                <EquipmentCommand Name="Ff"          Command="DVDFf" />
+                <EquipmentCommand Name="Rec"         Command="DVDRec" />
+                <EquipmentCommand Name="Menu"        Command="DVDMenu" />
+                <EquipmentCommand Name="Exit"        Command="DVDExit" />
+                <EquipmentCommand Name="CursorUp"    Command="DVDCursorUp" />
+                <EquipmentCommand Name="CursorDown"  Command="DVDCursorDown" />
+                <EquipmentCommand Name="CursorLeft"  Command="DVDCursorLeft" />
+                <EquipmentCommand Name="CursorRight" Command="DVDCursorRight" />
+                <EquipmentCommand Name="CursorOk"    Command="DVDCursorOk" />
+                <EquipmentCommand Name="Track"       Command="DVDTrack" />
+                <EquipmentCommand Name="Chapter"     Command="DVDChapter" />
+                <EquipmentCommand Name="Repeat"      Command="DVDRepeat" />
+                <EquipmentCommand Name="Setup"       Command="DVDSetup" />
+                <EquipmentCommand Name="Return"      Command="DVDReturn" />
+            </CommandList>
+        </DVDPlayerDevice>
+        <DVDPlayerDevice UID="6" Name="Pioneer DV-410V-3" Type="DVD" Comment="DVD с IR" Model="Pioneer DV-410V"
+                InterfaceType="IR">
+            <CommandList>
+                <EquipmentCommand Name="Power"       Command="DVDPower" />
+                <EquipmentCommand Name="Play"        Command="DVDPlay" />
+                <EquipmentCommand Name="Stop"        Command="DVDStop" />
+                <EquipmentCommand Name="Pause"       Command="DVDPause" />
+                <EquipmentCommand Name="Prev"        Command="DVDPrev" />
+                <EquipmentCommand Name="Next"        Command="DVDNext" />
+                <EquipmentCommand Name="Rew"         Command="DVDRev" />
+                <EquipmentCommand Name="Ff"          Command="DVDFf" />
+                <EquipmentCommand Name="Rec"         Command="DVDRec" />
+                <EquipmentCommand Name="Menu"        Command="DVDMenu" />
+                <EquipmentCommand Name="Exit"        Command="DVDExit" />
+                <EquipmentCommand Name="CursorUp"    Command="DVDCursorUp" />
+                <EquipmentCommand Name="CursorDown"  Command="DVDCursorDown" />
+                <EquipmentCommand Name="CursorLeft"  Command="DVDCursorLeft" />
+                <EquipmentCommand Name="CursorRight" Command="DVDCursorRight" />
+                <EquipmentCommand Name="CursorOk"    Command="DVDCursorOk" />
+                <EquipmentCommand Name="Track"       Command="DVDTrack" />
+                <EquipmentCommand Name="Chapter"     Command="DVDChapter" />
+                <EquipmentCommand Name="Repeat"      Command="DVDRepeat" />
+                <EquipmentCommand Name="Setup"       Command="DVDSetup" />
+                <EquipmentCommand Name="Return"      Command="DVDReturn" />
+            </CommandList>
+        </DVDPlayerDevice>
+        <DVDPlayerDevice UID="7" Name="Sony DVP-FX720-1" Type="DVD" Comment="DVD с RS232" Model="Sony DVP-FX720"
+                InterfaceType="RS232">
+            <CommandList>
+                <EquipmentCommand Name="Power"       Command="DVDPower" />
+                <EquipmentCommand Name="Play"        Command="DVDPlay" />
+                <EquipmentCommand Name="Stop"        Command="DVDStop" />
+                <EquipmentCommand Name="Pause"       Command="DVDPause" />
+                <EquipmentCommand Name="Prev"        Command="DVDPrev" />
+                <EquipmentCommand Name="Next"        Command="DVDNext" />
+                <EquipmentCommand Name="Rew"         Command="DVDRev" />
+                <EquipmentCommand Name="Ff"          Command="DVDFf" />
+                <EquipmentCommand Name="Rec"         Command="DVDRec" />
+                <EquipmentCommand Name="Menu"        Command="DVDMenu" />
+                <EquipmentCommand Name="Exit"        Command="DVDExit" />
+                <EquipmentCommand Name="CursorUp"    Command="DVDCursorUp" />
+                <EquipmentCommand Name="CursorDown"  Command="DVDCursorDown" />
+                <EquipmentCommand Name="CursorLeft"  Command="DVDCursorLeft" />
+                <EquipmentCommand Name="CursorRight" Command="DVDCursorRight" />
+                <EquipmentCommand Name="CursorOk"    Command="DVDCursorOk" />
+                <EquipmentCommand Name="Track"       Command="DVDTrack" />
+                <EquipmentCommand Name="Chapter"     Command="DVDChapter" />
+                <EquipmentCommand Name="Repeat"      Command="DVDRepeat" />
+                <EquipmentCommand Name="Setup"       Command="DVDSetup" />
+                <EquipmentCommand Name="Return"      Command="DVDReturn" />
+                <EquipmentCommand Name="GetState"    Command="DVDGetState" Answer="DVD_State"/>
+                <EquipmentCommand Name="GetPower"    Command="DVDGetPower" Answer="DVD_Power"/>
+                <EquipmentCommand Name="GetChapter"  Command="DVDGetChapter" Answer="DVD_Chapter"/>
+                <EquipmentCommand Name="GetTrack"    Command="DVDGetTrack" Answer="DVD_Track"/>
+                <EquipmentCommand Name="GetTime"     Command="DVDGetTime" Answer="DVD_Time"/>
+                <EquipmentCommand Name="GetPlayTime" Command="DVDGetPlayTime" Answer="DVD_PlayTime"/>
+                <EquipmentCommand Name="GetCurrentChapter"     Command="DVDGetCurrentChapter" Answer="DVD_CurrentChapter"/>
+                <EquipmentCommand Name="GetCurrentTrack" Command="DVDGetCurrentTrack" Answer="DVD_CurrentTrack"/>
+            </CommandList>
+        </DVDPlayerDevice>
+        <DVDPlayerDevice UID="8" Name="Sony DVP-FX720-2" Type="DVD" Comment="DVD с RS232" Model="Sony DVP-FX720"
+                InterfaceType="RS232">
+            <CommandList>
+                <EquipmentCommand Name="Power"       Command="DVDPower" />
+                <EquipmentCommand Name="Play"        Command="DVDPlay" />
+                <EquipmentCommand Name="Stop"        Command="DVDStop" />
+                <EquipmentCommand Name="Pause"       Command="DVDPause" />
+                <EquipmentCommand Name="Prev"        Command="DVDPrev" />
+                <EquipmentCommand Name="Next"        Command="DVDNext" />
+                <EquipmentCommand Name="Rew"         Command="DVDRev" />
+                <EquipmentCommand Name="Ff"          Command="DVDFf" />
+                <EquipmentCommand Name="Rec"         Command="DVDRec" />
+                <EquipmentCommand Name="Menu"        Command="DVDMenu" />
+                <EquipmentCommand Name="Exit"        Command="DVDExit" />
+                <EquipmentCommand Name="CursorUp"    Command="DVDCursorUp" />
+                <EquipmentCommand Name="CursorDown"  Command="DVDCursorDown" />
+                <EquipmentCommand Name="CursorLeft"  Command="DVDCursorLeft" />
+                <EquipmentCommand Name="CursorRight" Command="DVDCursorRight" />
+                <EquipmentCommand Name="CursorOk"    Command="DVDCursorOk" />
+                <EquipmentCommand Name="Track"       Command="DVDTrack" />
+                <EquipmentCommand Name="Chapter"     Command="DVDChapter" />
+                <EquipmentCommand Name="Repeat"      Command="DVDRepeat" />
+                <EquipmentCommand Name="Setup"       Command="DVDSetup" />
+                <EquipmentCommand Name="Return"      Command="DVDReturn" />
+                <EquipmentCommand Name="GetState"    Command="DVDGetState" Answer="DVD_State"/>
+                <EquipmentCommand Name="GetPower"    Command="DVDGetPower" Answer="DVD_Power"/>
+                <EquipmentCommand Name="GetChapter"  Command="DVDGetChapter" Answer="DVD_Chapter"/>
+                <EquipmentCommand Name="GetTrack"    Command="DVDGetTrack" Answer="DVD_Track"/>
+                <EquipmentCommand Name="GetTime"     Command="DVDGetTime" Answer="DVD_Time"/>
+                <EquipmentCommand Name="GetPlayTime" Command="DVDGetPlayTime" Answer="DVD_PlayTime"/>
+            </CommandList>
+        </DVDPlayerDevice>
+        <DVDPlayerDevice UID="9" Name="Sony DVP-FX720-3" Type="DVD" Comment="DVD с RS232" Model="Sony DVP-FX720"
+                InterfaceType="RS232">
+            <CommandList>
+                <EquipmentCommand Name="Power"       Command="DVDPower" />
+                <EquipmentCommand Name="Play"        Command="DVDPlay" />
+                <EquipmentCommand Name="Stop"        Command="DVDStop" />
+                <EquipmentCommand Name="Pause"       Command="DVDPause" />
+                <EquipmentCommand Name="Prev"        Command="DVDPrev" />
+                <EquipmentCommand Name="Next"        Command="DVDNext" />
+                <EquipmentCommand Name="Rew"         Command="DVDRev" />
+                <EquipmentCommand Name="Ff"          Command="DVDFf" />
+                <EquipmentCommand Name="Rec"         Command="DVDRec" />
+                <EquipmentCommand Name="Menu"        Command="DVDMenu" />
+                <EquipmentCommand Name="Exit"        Command="DVDExit" />
+                <EquipmentCommand Name="CursorUp"    Command="DVDCursorUp" />
+                <EquipmentCommand Name="CursorDown"  Command="DVDCursorDown" />
+                <EquipmentCommand Name="CursorLeft"  Command="DVDCursorLeft" />
+                <EquipmentCommand Name="CursorRight" Command="DVDCursorRight" />
+                <EquipmentCommand Name="CursorOk"    Command="DVDCursorOk" />
+                <EquipmentCommand Name="Track"       Command="DVDTrack" />
+                <EquipmentCommand Name="Chapter"     Command="DVDChapter" />
+                <EquipmentCommand Name="Repeat"      Command="DVDRepeat" />
+                <EquipmentCommand Name="Setup"       Command="DVDSetup" />
+                <EquipmentCommand Name="Return"      Command="DVDReturn" />
+                <EquipmentCommand Name="GetState"    Command="DVDGetState" Answer="DVD_State"/>
+                <EquipmentCommand Name="GetPower"    Command="DVDGetPower" Answer="DVD_Power"/>
+                <EquipmentCommand Name="GetChapter"  Command="DVDGetChapter" Answer="DVD_Chapter"/>
+                <EquipmentCommand Name="GetTrack"    Command="DVDGetTrack" Answer="DVD_Track"/>
+                <EquipmentCommand Name="GetTime"     Command="DVDGetTime" Answer="DVD_Time"/>
+                <EquipmentCommand Name="GetPlayTime" Command="DVDGetPlayTime" Answer="DVD_PlayTime"/>
+            </CommandList>
+        </DVDPlayerDevice>
+        <VideoCameraDevice UID="10" Name="JVC Everio GZ-MG330-1" Type="Видеокамера" Comment="Видеокамера без ВТУПК" Model="JVC Everio GZ-MG330"
+                PresetAmount="20" IsDomical="false" HasPreciseControl="false">
+            <CommandList>
+                <EquipmentCommand Name="CamTiltUp"     Command="CamTiltUp" />
+                <EquipmentCommand Name="CamTiltDown"   Command="CamTiltDown" />
+                <EquipmentCommand Name="CamPanLeft"    Command="CamPanLeft" />
+                <EquipmentCommand Name="CamPanRight"   Command="CamPanRight" />
+                <EquipmentCommand Name="CamZoomFar"    Command="CamZoomFar" />
+                <EquipmentCommand Name="CamZoomNear"   Command="CamZoomNear" />
+                <EquipmentCommand Name="CamStop"       Command="CamStop" />
+                <EquipmentCommand Name="CamPresetSave" Command="CamPresetSave" />
+                <EquipmentCommand Name="CamPresetLoad" Command="CamPresetLoad" />
+                <EquipmentCommand Name="CamHome"       Command="CamHome" />
+            </CommandList>
+        </VideoCameraDevice>
+        <VideoCameraDevice UID="11" Name="JVC Everio GZ-MG330-2" Type="Видеокамера" Comment="Видеокамера без ВТУПК" Model="JVC Everio GZ-MG330"
+                PresetAmount="20" IsDomical="false" HasPreciseControl="false">
+            <CommandList>
+                <EquipmentCommand Name="CamTiltUp"     Command="CamTiltUp" />
+                <EquipmentCommand Name="CamTiltDown"   Command="CamTiltDown" />
+                <EquipmentCommand Name="CamPanLeft"    Command="CamPanLeft" />
+                <EquipmentCommand Name="CamPanRight"   Command="CamPanRight" />
+                <EquipmentCommand Name="CamZoomFar"    Command="CamZoomFar" />
+                <EquipmentCommand Name="CamZoomNear"   Command="CamZoomNear" />
+                <EquipmentCommand Name="CamStop"       Command="CamStop" />
+                <EquipmentCommand Name="CamPresetSave" Command="CamPresetSave" />
+                <EquipmentCommand Name="CamPresetLoad" Command="CamPresetLoad" />
+                <EquipmentCommand Name="CamHome"       Command="CamHome" />
+            </CommandList>
+        </VideoCameraDevice>
+        <VideoCameraDevice UID="12" Name="JVC Everio GZ-MG330-3" Type="Видеокамера" Comment="Видеокамера без ВТУПК" Model="JVC Everio GZ-MG330"
+                PresetAmount="20" IsDomical="false" HasPreciseControl="false">
+            <CommandList>
+                <EquipmentCommand Name="CamTiltUp"     Command="CamTiltUp" />
+                <EquipmentCommand Name="CamTiltDown"   Command="CamTiltDown" />
+                <EquipmentCommand Name="CamPanLeft"    Command="CamPanLeft" />
+                <EquipmentCommand Name="CamPanRight"   Command="CamPanRight" />
+                <EquipmentCommand Name="CamZoomFar"    Command="CamZoomFar" />
+                <EquipmentCommand Name="CamZoomNear"   Command="CamZoomNear" />
+                <EquipmentCommand Name="CamStop"       Command="CamStop" />
+                <EquipmentCommand Name="CamPresetSave" Command="CamPresetSave" />
+                <EquipmentCommand Name="CamPresetLoad" Command="CamPresetLoad" />
+                <EquipmentCommand Name="CamHome"       Command="CamHome" />
+            </CommandList>
+        </VideoCameraDevice>
+        <VideoCameraDevice UID="13" Name="Panasonic SDR-H60-S-1" Type="Видеокамера" Comment="Видеокамера с ВТУПК" Model="Panasonic SDR-H60-S"
+                PresetAmount="20" IsDomical="false" HasPreciseControl="true" LowZoomBoundary="0" HighZoomBoundary="50">
+            <CommandList>
+                <EquipmentCommand Name="CamTiltUp"     Command="CamTiltUp" />
+                <EquipmentCommand Name="CamTiltDown"   Command="CamTiltDown" />
+                <EquipmentCommand Name="CamPanLeft"    Command="CamPanLeft" />
+                <EquipmentCommand Name="CamPanRight"   Command="CamPanRight" />
+                <EquipmentCommand Name="CamZoomFar"    Command="CamZoomFar" />
+                <EquipmentCommand Name="CamZoomNear"   Command="CamZoomNear" />
+                <EquipmentCommand Name="CamStop"       Command="CamStop" />
+                <EquipmentCommand Name="CamGetPos"     Command="CamGetPos" Answer="CamGetPos"/>
+                <EquipmentCommand Name="CamSetPos"     Command="CamSetPos" />
+            </CommandList>
+        </VideoCameraDevice>
+        <VideoCameraDevice UID="14" Name="Panasonic SDR-H60-S-2" Type="Видеокамера" Comment="Видеокамера с ВТУПК" Model="Panasonic SDR-H60-S"
+                PresetAmount="20" IsDomical="true" HasPreciseControl="true" LowZoomBoundary="0" HighZoomBoundary="50">
+            <CommandList>
+                <EquipmentCommand Name="CamTiltUp"     Command="CamTiltUp" />
+                <EquipmentCommand Name="CamTiltDown"   Command="CamTiltDown" />
+                <EquipmentCommand Name="CamPanLeft"    Command="CamPanLeft" />
+                <EquipmentCommand Name="CamPanRight"   Command="CamPanRight" />
+                <EquipmentCommand Name="CamZoomFar"    Command="CamZoomFar" />
+                <EquipmentCommand Name="CamZoomNear"   Command="CamZoomNear" />
+                <EquipmentCommand Name="CamStop"       Command="CamStop" />
+                <EquipmentCommand Name="CamGetPos"     Command="CamGetPos" Answer="CamGetPos"/>
+                <EquipmentCommand Name="CamSetPos"     Command="CamSetPos" />
+            </CommandList>
+        </VideoCameraDevice>
+        <VideoCameraDevice UID="15" Name="Panasonic SDR-H60-S-3" Type="Видеокамера" Comment="Видеокамера с ВТУПК" Model="Panasonic SDR-H60-S"
+                PresetAmount="20" IsDomical="false" HasPreciseControl="true" LowZoomBoundary="0" HighZoomBoundary="50">
+            <CommandList>
+                <EquipmentCommand Name="CamTiltUp"     Command="CamTiltUp" />
+                <EquipmentCommand Name="CamTiltDown"   Command="CamTiltDown" />
+                <EquipmentCommand Name="CamPanLeft"    Command="CamPanLeft" />
+                <EquipmentCommand Name="CamPanRight"   Command="CamPanRight" />
+                <EquipmentCommand Name="CamZoomFar"    Command="CamZoomFar" />
+                <EquipmentCommand Name="CamZoomNear"   Command="CamZoomNear" />
+                <EquipmentCommand Name="CamStop"       Command="CamStop" />
+                <EquipmentCommand Name="CamGetPos"     Command="CamGetPos" Answer="CamGetPos"/>
+                <EquipmentCommand Name="CamSetPos"     Command="CamSetPos" />
+            </CommandList>
+        </VideoCameraDevice>
+        <Light UID="16" Name="Освещение_1" Type="Освещение" Comment="Освещение в зале" Model="Стандартный">
+            <CommandList>
+                <EquipmentCommand Name="LightSetGroupState" Command="LightSetGroupState" />
+                <EquipmentCommand Name="LightGetGroupState" Command="LightGetGroupState" Answer="LightGroupState"/>
+                <EquipmentCommand Name="LightSetGroupLevel" Command="LightSetGroupLevel" />
+                <EquipmentCommand Name="LightGetGroupLevel" Command="LightGetGroupLevel" Answer="LightGroupLevel"/>
+            </CommandList>
+            <LightUnitList>
+                <LightUnit Name="Первый ряд" IsAdjustable="false" />
+                <LightUnit Name="Второй ряд" IsAdjustable="true" />
+                <LightUnit Name="Третий ряд" IsAdjustable="true" />
+                <LightUnit Name="Четвертый ряд" IsAdjustable="false" />
+                <LightUnit Name="Пятый ряд" IsAdjustable="true" />
+            </LightUnitList>
+        </Light>
+        <Light UID="17" Name="Освещение_2" Type="Освещение" Comment="Освещение в зале" Model="Стандартный">
+            <CommandList>
+                <EquipmentCommand Name="LightSetGroupState" Command="LightSetGroupState" />
+                <EquipmentCommand Name="LightGetGroupState" Command="LightGetGroupState" Answer="LightGroupState"/>
+                <EquipmentCommand Name="LightSetGroupLevel" Command="LightSetGroupLevel" />
+                <EquipmentCommand Name="LightGetGroupLevel" Command="LightGetGroupLevel" Answer="LightGroupLevel"/>
+            </CommandList>
+            <LightUnitList>
+                <LightUnit Name="Первый ряд" IsAdjustable="false" />
+                <LightUnit Name="Второй ряд" IsAdjustable="true" />
+                <LightUnit Name="Третий ряд" IsAdjustable="true" />
+                <LightUnit Name="Четвертый ряд" IsAdjustable="false" />
+                <LightUnit Name="Пятый ряд" IsAdjustable="true" />
+            </LightUnitList>
+        </Light>
+        <Light UID="18" Name="Освещение_3" Type="Освещение" Comment="Освещение в зале" Model="Стандартный">
+            <CommandList>
+                <EquipmentCommand Name="LightSetGroupState" Command="LightSetGroupState" />
+                <EquipmentCommand Name="LightGetGroupState" Command="LightGetGroupState" Answer="LightGroupState"/>
+                <EquipmentCommand Name="LightSetGroupLevel" Command="LightSetGroupLevel" />
+                <EquipmentCommand Name="LightGetGroupLevel" Command="LightGetGroupLevel" Answer="LightGroupLevel"/>
+            </CommandList>
+            <LightUnitList>
+                <LightUnit Name="Первый ряд" IsAdjustable="false" />
+                <LightUnit Name="Второй ряд" IsAdjustable="true" />
+                <LightUnit Name="Третий ряд" IsAdjustable="true" />
+                <LightUnit Name="Четвертый ряд" IsAdjustable="false" />
+                <LightUnit Name="Пятый ряд" IsAdjustable="true" />
+            </LightUnitList>
+        </Light>
+        <JupiterDevice UID="19" Name="Fusion970-1" Type="Видеостена" Comment="Видеостена" Model="Fusion970">
+            <CommandList>
+                <EquipmentCommand Name="GetPower"      Command="WallGetPower"      Answer="WallPower"/>
+                <EquipmentCommand Name="GetBrightness" Command="WallGetBrightness" Answer="WallBrightness"/>
+                <EquipmentCommand Name="GetPicMute"    Command="WallGetPicMute"    Answer="WallPicMute"/>
+                <EquipmentCommand Name="SetPower"      Command="WallSetPower"/>
+                <EquipmentCommand Name="SetBrightness" Command="WallSetBrightness"/>
+                <EquipmentCommand Name="SetPicMute"    Command="WallSetPicMute"/>
+            </CommandList>
+        </JupiterDevice>
+        <JupiterDevice UID="20" Name="Fusion970-2" Type="Видеостена" Comment="Видеостена" Model="Fusion970">
+            <CommandList>
+                <EquipmentCommand Name="GetPower"      Command="WallGetPower"      Answer="WallPower"/>
+                <EquipmentCommand Name="GetBrightness" Command="WallGetBrightness" Answer="WallBrightness"/>
+                <EquipmentCommand Name="GetPicMute"    Command="WallGetPicMute"    Answer="WallPicMute"/>
+                <EquipmentCommand Name="SetPower"      Command="WallSetPower"/>
+                <EquipmentCommand Name="SetBrightness" Command="WallSetBrightness"/>
+                <EquipmentCommand Name="SetPicMute"    Command="WallSetPicMute"/>
+            </CommandList>
+        </JupiterDevice>
+        <JupiterDevice UID="21" Name="Fusion970-3" Type="Видеостена" Comment="Видеостена" Model="Fusion970">
+            <CommandList>
+                <EquipmentCommand Name="GetPower"      Command="WallGetPower"      Answer="WallPower"/>
+                <EquipmentCommand Name="GetBrightness" Command="WallGetBrightness" Answer="WallBrightness"/>
+                <EquipmentCommand Name="GetPicMute"    Command="WallGetPicMute"    Answer="WallPicMute"/>
+                <EquipmentCommand Name="SetPower"      Command="WallSetPower"/>
+                <EquipmentCommand Name="SetBrightness" Command="WallSetBrightness"/>
+                <EquipmentCommand Name="SetPicMute"    Command="WallSetPicMute"/>
+            </CommandList>
+        </JupiterDevice>
+        <AudioMixer UID="22" Name="Аудиомикшер_1" Type="Аудиомикшер" Comment="Цифровой аудиомикшер" Model="Стандартный"
+                    InstanceID="1" HasMatrix="true">
+            <CommandList>
+                <EquipmentCommand Name="MixerSetTie" Command="MixerSetTie" />
+                <EquipmentCommand Name="MixerGetTie" Command="MixerGetTie" Answer="MixerTie"/>
+                <EquipmentCommand Name="MixerGetTies" Command="MixerGetTies" Answer="MixerTies"/>
+                <EquipmentCommand Name="MixerSetFader" Command="MixerSetFader" />
+                <EquipmentCommand Name="MixerGetFader" Command="MixerGetFader" Answer="MixerFader"/>
+            </CommandList>
+            <AudioMixerInputList>
+                <AudioMixerInput Name="Вх1"  Index="1"/>
+                <AudioMixerInput Name="Вх2"  Index="2"/>
+                <AudioMixerInput Name="Вх3"  Index="3" />
+                <AudioMixerInput Name="Вх4"  Index="4"/>
+            </AudioMixerInputList>
+            <AudioMixerOutputList>
+                <AudioMixerOutput Name="Выход1"  Index="1"/>
+                <AudioMixerOutput Name="Выход2"  Index="2"/>
+                <AudioMixerOutput Name="Выход3"  Index="3"/>
+                <AudioMixerOutput Name="Выход4"  Index="4"/>
+            </AudioMixerOutputList>
+            <AudioMixerFaderGroupList>
+                <AudioMixerFaderGroup Name="Общие">
+                    <AudioMixerFaderList>
+                        <AudioMixerFader InstanceID="1" Name="Грм" Band="Full" HasOnlineControl="true" />
+                        <AudioMixerFader InstanceID="2" Name="Тембр" Band="Band_60_20" HasOnlineControl="true" />
+                        <AudioMixerFader InstanceID="3" Name="Бас" Band="Band_15" HasOnlineControl="true" />
+                    </AudioMixerFaderList>
+                </AudioMixerFaderGroup>
+                <AudioMixerFaderGroup Name="Группа A">
+                    <AudioMixerFaderList>
+                        <AudioMixerFader InstanceID="4" Name="Грм" Band="Full" HasOnlineControl="true" />
+                        <AudioMixerFader InstanceID="5" Name="Тембр" Band="Band_60_20" HasOnlineControl="true" />
+                        <AudioMixerFader InstanceID="6" Name="Бас" Band="Band_15" HasOnlineControl="true" />
+                    </AudioMixerFaderList>
+                </AudioMixerFaderGroup>
+                <AudioMixerFaderGroup Name="Группа Б">
+                    <AudioMixerFaderList>
+                        <AudioMixerFader InstanceID="7" Name="Грм" Band="Full" HasOnlineControl="true" />
+                        <AudioMixerFader InstanceID="8" Name="Тембр" Band="Band_60_20" HasOnlineControl="true" />
+                        <AudioMixerFader InstanceID="9" Name="Бас" Band="Band_15" HasOnlineControl="true" />
+                    </AudioMixerFaderList>
+                </AudioMixerFaderGroup>
+                <AudioMixerFaderGroup Name="Группа В">
+                    <AudioMixerFaderList>
+                        <AudioMixerFader InstanceID="10" Name="Грм" Band="Full" HasOnlineControl="true" />
+                        <AudioMixerFader InstanceID="11" Name="Тембр" Band="Band_60_20" HasOnlineControl="true" />
+                        <AudioMixerFader InstanceID="12" Name="Бас" Band="Band_15" HasOnlineControl="true" />
+                    </AudioMixerFaderList>
+                </AudioMixerFaderGroup>
+            </AudioMixerFaderGroupList>
+        </AudioMixer>
+        <AudioMixer UID="23" Name="Аудиомикшер_2" Type="Аудиомикшер" Comment="Цифровой аудиомикшер" Model="Стандартный"
+                    InstanceID="1" HasMatrix="false">
+            <CommandList>
+                <EquipmentCommand Name="MixerSetTie" Command="MixerSetTie" />
+                <EquipmentCommand Name="MixerGetTie" Command="MixerGetTie" Answer="MixerTie"/>
+                <EquipmentCommand Name="MixerGetTies" Command="MixerGetTies" Answer="MixerTies"/>
+                <EquipmentCommand Name="MixerSetFader" Command="MixerSetFader" />
+                <EquipmentCommand Name="MixerGetFader" Command="MixerGetFader" Answer="MixerFader"/>
+            </CommandList>
+            <AudioMixerInputList>
+                <AudioMixerInput Name="Вх1" />
+                <AudioMixerInput Name="Вх2" />
+                <AudioMixerInput Name="Вх3" />
+                <AudioMixerInput Name="Вх4" />
+            </AudioMixerInputList>
+            <AudioMixerOutputList>
+                <AudioMixerOutput Name="Выход1" />
+                <AudioMixerOutput Name="Выход2" />
+                <AudioMixerOutput Name="Выход3" />
+                <AudioMixerOutput Name="Выход4" />
+            </AudioMixerOutputList>
+            <AudioMixerFaderGroupList>
+                <AudioMixerFaderGroup Name="Общие">
+                    <AudioMixerFaderList>
+                        <AudioMixerFader InstanceID="1" Name="Грм" Band="Full" HasOnlineControl="true" />
+                        <AudioMixerFader InstanceID="2" Name="Тембр" Band="Band_60_20" HasOnlineControl="true" />
+                        <AudioMixerFader InstanceID="3" Name="Бас" Band="Band_15" HasOnlineControl="true" />
+                        <AudioMixerFader InstanceID="4" Name="Грм" Band="Full" HasOnlineControl="true" />
+                    </AudioMixerFaderList>
+                </AudioMixerFaderGroup>
+                <AudioMixerFaderGroup Name="Группа A">
+                    <AudioMixerFaderList>
+                        <AudioMixerFader InstanceID="5" Name="Грм" Band="Full" HasOnlineControl="true" />
+                        <AudioMixerFader InstanceID="6" Name="Тембр" Band="Band_60_20" HasOnlineControl="true" />
+                        <AudioMixerFader InstanceID="7" Name="Бас" Band="Band_15" HasOnlineControl="true" />
+                        <AudioMixerFader InstanceID="8" Name="Грм" Band="Full" HasOnlineControl="true" />
+                    </AudioMixerFaderList>
+                </AudioMixerFaderGroup>
+                <AudioMixerFaderGroup Name="Группа Б">
+                    <AudioMixerFaderList>
+                        <AudioMixerFader InstanceID="9" Name="Грм" Band="Full" HasOnlineControl="true" />
+                        <AudioMixerFader InstanceID="10" Name="Тембр" Band="Band_60_20" HasOnlineControl="true" />
+                        <AudioMixerFader InstanceID="11" Name="Бас" Band="Band_15" HasOnlineControl="true" />
+                        <AudioMixerFader InstanceID="12" Name="Грм" Band="Full" HasOnlineControl="true" />
+                    </AudioMixerFaderList>
+                </AudioMixerFaderGroup>
+            </AudioMixerFaderGroupList>
+        </AudioMixer>
+        <AudioMixer UID="24" Name="Аудиомикшер_3" Type="Аудиомикшер" Comment="Цифровой аудиомикшер" Model="Стандартный"
+                    InstanceID="1" HasMatrix="true">
+            <CommandList>
+                <EquipmentCommand Name="MixerSetTie" Command="MixerSetTie" />
+                <EquipmentCommand Name="MixerGetTie" Command="MixerGetTie" Answer="MixerTie"/>
+                <EquipmentCommand Name="MixerGetTies" Command="MixerGetTies" Answer="MixerTies"/>
+                <EquipmentCommand Name="MixerSetFader" Command="MixerSetFader" />
+                <EquipmentCommand Name="MixerGetFader" Command="MixerGetFader" Answer="MixerFader"/>
+            </CommandList>
+            <AudioMixerInputList>
+                <AudioMixerInput Name="Вх1" />
+                <AudioMixerInput Name="Вх2" />
+                <AudioMixerInput Name="Вх3" />
+                <AudioMixerInput Name="Вх4" />
+            </AudioMixerInputList>
+            <AudioMixerOutputList>
+                <AudioMixerOutput Name="Выход1" />
+                <AudioMixerOutput Name="Выход2" />
+                <AudioMixerOutput Name="Выход3" />
+                <AudioMixerOutput Name="Выход4" />
+            </AudioMixerOutputList>
+            <AudioMixerFaderGroupList>
+                <AudioMixerFaderGroup Name="Общие">
+                    <AudioMixerFaderList>
+                        <AudioMixerFader InstanceID="1" Name="Грм" Band="Full" HasOnlineControl="true" />
+                        <AudioMixerFader InstanceID="2" Name="Тембр" Band="Band_60_20" HasOnlineControl="true" />
+                    </AudioMixerFaderList>
+                </AudioMixerFaderGroup>
+                <AudioMixerFaderGroup Name="Группа A">
+                    <AudioMixerFaderList>
+                        <AudioMixerFader InstanceID="3" Name="Грм" Band="Full" HasOnlineControl="true" />
+                        <AudioMixerFader InstanceID="4" Name="Тембр" Band="Band_60_20" HasOnlineControl="true" />
+                    </AudioMixerFaderList>
+                </AudioMixerFaderGroup>
+            </AudioMixerFaderGroupList>
+        </AudioMixer>
+
+        <VDCTerminalDevice UID="25" Name="Терминал ВКС_1" Type="Терминал ВКС" Comment="Терминал ВКС" Model="Стандартный">
+            <CommandList>
+                <EquipmentCommand Name="GetCallState"  Command="VCSGetCallState" Answer="VCSState"/>
+                <EquipmentCommand Name="GetStatus"     Command="VCSGetStatus" Answer="VCSStatus"/>
+                <EquipmentCommand Name="GetError"      Command="VCSGetError" Answer="VCSError"/>
+                <EquipmentCommand Name="IncomingCall"  Command="VCSCheckIncomingCall" Answer="VCSIncomingCall"/>
+                <EquipmentCommand Name="SetAutoAnswer" Command="VCSSetAutoAnswer" />
+                <EquipmentCommand Name="GetAutoAnswer" Command="VCSGetAutoAnswer" Answer="VCSAutoAnswer"/>
+                <EquipmentCommand Name="SetContent" Command="VCSSetContent" />
+                <EquipmentCommand Name="GetContent" Command="VCSGetContent" Answer="VCSContent"/>
+                <EquipmentCommand Name="SetPrivacy" Command="VCSSetPrivacy" />
+                <EquipmentCommand Name="GetPrivacy" Command="VCSGetPrivacy" Answer="VCSPrivacy"/>
+                <EquipmentCommand Name="SetDND" Command="VCSSetDND" />
+                <EquipmentCommand Name="GetDND" Command="VCSGetDND" Answer="VCSDND"/>
+                <EquipmentCommand Name="SetPIP" Command="VCSSetPIP" />
+                <EquipmentCommand Name="GetPIP" Command="VCSGetPIP" Answer="VCSPIP"/>
+                <EquipmentCommand Name="Dial"   Command="VCSDial" />
+                <EquipmentCommand Name="Reply"  Command="VCSReply" />
+                <EquipmentCommand Name="Redial" Command="VCSRedial" />
+                <EquipmentCommand Name="Disconnect" Command="VCSDisconnect" />
+            </CommandList>
+        </VDCTerminalDevice>
+        <VDCTerminalDevice UID="26" Name="Терминал ВКС_2" Type="Терминал ВКС" Comment="Терминал ВКС" Model="Стандартный">
+            <CommandList>
+                <EquipmentCommand Name="GetCallState"  Command="VCSGetCallState" Answer="VCSState"/>
+                <EquipmentCommand Name="GetStatus"     Command="VCSGetStatus" Answer="VCSStatus"/>
+                <EquipmentCommand Name="GetError"      Command="VCSGetError" Answer="VCSError"/>
+                <EquipmentCommand Name="IncomingCall"  Command="VCSCheckIncomingCall" Answer="VCSIncomingCall"/>
+                <EquipmentCommand Name="SetAutoAnswer" Command="VCSSetAutoAnswer" />
+                <EquipmentCommand Name="GetAutoAnswer" Command="VCSGetAutoAnswer" Answer="VCSAutoAnswer"/>
+                <EquipmentCommand Name="SetContent" Command="VCSSetContent" />
+                <EquipmentCommand Name="GetContent" Command="VCSGetContent" Answer="VCSContent"/>
+                <EquipmentCommand Name="SetPrivacy" Command="VCSSetPrivacy" />
+                <EquipmentCommand Name="GetPrivacy" Command="VCSGetPrivacy" Answer="VCSPrivacy"/>
+                <EquipmentCommand Name="SetDND" Command="VCSSetDND" />
+                <EquipmentCommand Name="GetDND" Command="VCSGetDND" Answer="VCSDND"/>
+                <EquipmentCommand Name="SetPIP" Command="VCSSetPIP" />
+                <EquipmentCommand Name="GetPIP" Command="VCSGetPIP" Answer="VCSPIP"/>
+                <EquipmentCommand Name="Dial"   Command="VCSDial" />
+                <EquipmentCommand Name="Reply"  Command="VCSReply" />
+                <EquipmentCommand Name="Redial" Command="VCSRedial" />
+                <EquipmentCommand Name="Disconnect" Command="VCSDisconnect" />
+            </CommandList>
+        </VDCTerminalDevice>
+        <VDCTerminalDevice UID="27" Name="Терминал ВКС_3" Type="Терминал ВКС" Comment="Терминал ВКС" Model="Стандартный">
+            <CommandList>
+                <EquipmentCommand Name="GetCallState"  Command="VCSGetCallState" Answer="VCSState"/>
+                <EquipmentCommand Name="GetStatus"     Command="VCSGetStatus" Answer="VCSStatus"/>
+                <EquipmentCommand Name="GetError"      Command="VCSGetError" Answer="VCSError"/>
+                <EquipmentCommand Name="IncomingCall"  Command="VCSCheckIncomingCall" Answer="VCSIncomingCall"/>
+                <EquipmentCommand Name="SetAutoAnswer" Command="VCSSetAutoAnswer" />
+                <EquipmentCommand Name="GetAutoAnswer" Command="VCSGetAutoAnswer" Answer="VCSAutoAnswer"/>
+                <EquipmentCommand Name="SetContent" Command="VCSSetContent" />
+                <EquipmentCommand Name="GetContent" Command="VCSGetContent" Answer="VCSContent"/>
+                <EquipmentCommand Name="SetPrivacy" Command="VCSSetPrivacy" />
+                <EquipmentCommand Name="GetPrivacy" Command="VCSGetPrivacy" Answer="VCSPrivacy"/>
+                <EquipmentCommand Name="SetDND" Command="VCSSetDND" />
+                <EquipmentCommand Name="GetDND" Command="VCSGetDND" Answer="VCSDND"/>
+                <EquipmentCommand Name="SetPIP" Command="VCSSetPIP" />
+                <EquipmentCommand Name="GetPIP" Command="VCSGetPIP" Answer="VCSPIP"/>
+                <EquipmentCommand Name="Dial"   Command="VCSDial" />
+                <EquipmentCommand Name="Reply"  Command="VCSReply" />
+                <EquipmentCommand Name="Redial" Command="VCSRedial" />
+                <EquipmentCommand Name="Disconnect" Command="VCSDisconnect" />
+            </CommandList>
+        </VDCTerminalDevice>
+        <VDCServer UID="28" Name="Сервер ВКС_1" Type="Сервер ВКС" Comment="Сервер ВКС" Model="Стандартный">
+            <CommandList>
+                <EquipmentCommand Name="CheckConference" Command="MVSCheckConference" Answer="MVSCheckConference"/>
+                <EquipmentCommand Name="GetParticipantList" Command="MVSGetParticipantList" Answer="MVSParticipantNotify"/>
+                <EquipmentCommand Name="CreateConference" Command="MVSCreateConference" Answer="MVSCreateConference"/>
+                <EquipmentCommand Name="UpdateConference" Command="MVSUpdateConference" Answer="MVSUpdateConference"/>
+                <EquipmentCommand Name="DestroyConference" Command="MVSDestroyConference" Answer="MVSDestroyConference"/>
+                <EquipmentCommand Name="AddParticipant" Command="MVSAddParticipant" Answer="MVSParticipantNotify"/>
+                <EquipmentCommand Name="RemoveParticipant" Command="MVSRemoveParticipant" Answer="MVSParticipantNotify"/>
+                <EquipmentCommand Name="FocusParticipant" Command="MVSFocusParticipant"/>
+            </CommandList>
+            <ScreenLayoutList>
+                <ScreenLayout LayoutNumber="1"
+                              LayoutName="Polycom!"
+                              LayoutPictureBytes="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"/>
+                <ScreenLayout LayoutNumber="2"
+                              LayoutName="Tandberg?"
+                              LayoutPictureBytes="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"/>
+            </ScreenLayoutList>
+        </VDCServer>
+        <VDCServer UID="29" Name="Сервер ВКС_2" Type="Сервер ВКС" Comment="Сервер ВКС" Model="Стандартный">
+            <CommandList>
+                <EquipmentCommand Name="CheckConference" Command="MVSCheckConference" Answer="MVSCheckConference"/>
+                <EquipmentCommand Name="GetParticipantList" Command="MVSGetParticipantList" Answer="MVSParticipantNotify"/>
+                <EquipmentCommand Name="CreateConference" Command="MVSCreateConference" Answer="MVSCreateConference"/>
+                <EquipmentCommand Name="UpdateConference" Command="MVSUpdateConference" Answer="MVSUpdateConference"/>
+                <EquipmentCommand Name="DestroyConference" Command="MVSDestroyConference" Answer="MVSDestroyConference"/>
+                <EquipmentCommand Name="AddParticipant" Command="MVSAddParticipant" Answer="MVSParticipantNotify"/>
+                <EquipmentCommand Name="RemoveParticipant" Command="MVSRemoveParticipant" Answer="MVSParticipantNotify"/>
+                <EquipmentCommand Name="FocusParticipant" Command="MVSFocusParticipant"/>
+            </CommandList>
+            <ScreenLayoutList>
+                <ScreenLayout LayoutNumber="1"
+                              LayoutName="Polycom!"
+                              LayoutPictureBytes="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"/>
+                <ScreenLayout LayoutNumber="2"
+                              LayoutName="Tandberg?"
+                              LayoutPictureBytes="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"/>
+            </ScreenLayoutList>
+        </VDCServer>
+        <VDCServer UID="30" Name="Сервер ВКС_3" Type="Сервер ВКС" Comment="Сервер ВКС" Model="Стандартный">
+            <CommandList>
+                <EquipmentCommand Name="CheckConference" Command="MVSCheckConference" Answer="MVSCheckConference"/>
+                <EquipmentCommand Name="GetParticipantList" Command="MVSGetParticipantList" Answer="MVSParticipantNotify"/>
+                <EquipmentCommand Name="CreateConference" Command="MVSCreateConference" Answer="MVSCreateConference"/>
+                <EquipmentCommand Name="UpdateConference" Command="MVSUpdateConference" Answer="MVSUpdateConference"/>
+                <EquipmentCommand Name="DestroyConference" Command="MVSDestroyConference" Answer="MVSDestroyConference"/>
+                <EquipmentCommand Name="AddParticipant" Command="MVSAddParticipant" Answer="MVSParticipantNotify"/>
+                <EquipmentCommand Name="RemoveParticipant" Command="MVSRemoveParticipant" Answer="MVSParticipantNotify"/>
+                <EquipmentCommand Name="FocusParticipant" Command="MVSFocusParticipant"/>
+            </CommandList>
+            <ScreenLayoutList>
+                <ScreenLayout LayoutNumber="1"
+                              LayoutName="Polycom!"
+                              LayoutPictureBytes="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"/>
+                <ScreenLayout LayoutNumber="2"
+                              LayoutName="Tandberg?"
+                              LayoutPictureBytes="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"/>
+            </ScreenLayoutList>
+        </VDCServer>
+        <StandardSourceDevice UID="99" Name="Аппаратный рабочий стол" Type="Стандартный источник изображения" Comment="" Model="Стандартный">
+            <CommandList>
+            </CommandList>
+        </StandardSourceDevice>
+    </DeviceList>
+    <SourceList>
+        <Image UID="-1" Name="Изображение" Type="Изображение" Comment="Изображение">
+            <CommandList />
+        </Image>
+        <Video UID="-1" Name="Видеофайл" Type="Видеофайл" Comment="Видеофайл">
+            <CommandList />
+        </Video>
+        <VNC UID="-1" Name="Удаленный рабочий стол" Type="Удаленный рабочий стол" Comment="Удаленный рабочий стол">
+            <CommandList />
+        </VNC>
+        <BusinessGraphics UID="-1" Name="Бизнес-графика" Type="Бизнес-графика" Comment="Бизнес-графика">
+            <CommandList />
+        </BusinessGraphics>
+      <WordDocument UID="-1" Name="Документ Word" Type="Документ Word" Comment="Документ Word">
+        <CommandList />
+      </WordDocument>
+      <IEDocument UID="-1" Name="Internet Explorer" Type="Internet Explorer" Comment="Internet Explorer">
+        <CommandList />
+      </IEDocument>
+
+        <DVDPlayerSource UID="4" Name="Pioneer DV-410V-1" Type="DVD" Comment="DVD с IR" Model="Pioneer DV-410V" Input="1">
+            <CommandList />
+        </DVDPlayerSource>
+        <DVDPlayerSource UID="5" Name="Pioneer DV-410V-2" Type="DVD" Comment="DVD с IR" Model="Pioneer DV-410V" Input="2">
+            <CommandList />
+        </DVDPlayerSource>
+        <DVDPlayerSource UID="6" Name="Pioneer DV-410V-3" Type="DVD" Comment="DVD с IR" Model="Pioneer DV-410V" Input="3">
+            <CommandList />
+        </DVDPlayerSource>
+        <DVDPlayerSource UID="7" Name="Sony DVP-FX720-1" Type="DVD" Comment="DVD с RS232" Model="Sony DVP-FX720" Input="4">
+            <CommandList />
+        </DVDPlayerSource>
+        <DVDPlayerSource UID="8" Name="Sony DVP-FX720-2" Type="DVD" Comment="DVD с RS232" Model="Sony DVP-FX720" Input="5">
+            <CommandList />
+        </DVDPlayerSource>
+        <DVDPlayerSource UID="9" Name="Sony DVP-FX720-3" Type="DVD" Comment="DVD с RS232" Model="Sony DVP-FX720" Input="6">
+            <CommandList />
+        </DVDPlayerSource>
+        <VideoCameraSource UID="10" Name="JVC Everio GZ-MG330-1" Type="Видеокамера" Comment="Видеокамера без ВТУПК" Model="JVC Everio GZ-MG330" Input="7">
+            <CommandList />
+        </VideoCameraSource>
+        <VideoCameraSource UID="11" Name="JVC Everio GZ-MG330-2" Type="Видеокамера" Comment="Видеокамера без ВТУПК" Model="JVC Everio GZ-MG330" Input="8">
+            <CommandList />
+        </VideoCameraSource>
+        <VideoCameraSource UID="12" Name="JVC Everio GZ-MG330-3" Type="Видеокамера" Comment="Видеокамера без ВТУПК" Model="JVC Everio GZ-MG330" Input="9">
+            <CommandList />
+        </VideoCameraSource>
+        <VideoCameraSource UID="13" Name="Panasonic SDR-H60-S-1" Type="Видеокамера" Comment="Видеокамера с ВТУПК" Model="Panasonic SDR-H60-S" Input="10">
+            <CommandList />
+        </VideoCameraSource>
+        <VideoCameraSource UID="14" Name="Panasonic SDR-H60-S-2" Type="Видеокамера" Comment="Видеокамера с ВТУПК" Model="Panasonic SDR-H60-S" Input="11">
+            <CommandList />
+        </VideoCameraSource>
+        <VideoCameraSource UID="15" Name="Panasonic SDR-H60-S-3" Type="Видеокамера" Comment="Видеокамера с ВТУПК" Model="Panasonic SDR-H60-S" Input="12">
+            <CommandList />
+        </VideoCameraSource>
+        <VDCTerminalSource UID="25" Name="Терминал ВКС_1" Type="Терминал ВКС" Comment="Терминал ВКС" Model="Стандартный" Input="0">
+            <CommandList />
+        </VDCTerminalSource>
+        <VDCTerminalSource UID="26" Name="Терминал ВКС_2" Type="Терминал ВКС" Comment="Терминал ВКС" Model="Стандартный" Input="0">
+            <CommandList />
+        </VDCTerminalSource>
+        <VDCTerminalSource UID="27" Name="Терминал ВКС_3" Type="Терминал ВКС" Comment="Терминал ВКС" Model="Стандартный" Input="0">
+            <CommandList />
+        </VDCTerminalSource>
+
+        <StandardSourceSource UID="99" Name="Аппаратный рабочий стол" Type="Стандартный источник изображения" Comment="" Model="Стандартный" Input="16">
+            <CommandList />
+        </StandardSourceSource>
+      <PowerPoint UID="-1" Name="Презентация PowerPoint" Type="Презентация PowerPoint" Comment="Презентация PowerPoint">
+        <CommandList />
+      </PowerPoint>
+    </SourceList>
+    <DisplayList>
+        <Monitor UID="50" Name="BenQ  E2200HD" Type="Дисплей пассивный" Comment="" Model="BenQ  E2200HD" Output="1" Width="1280" Height="1024" RefreshRate="60">
+            <CommandList />
+            <MappingList>
+                <Mapping Source="Pioneer DV-410V-1">
+                    <CommandList>
+                        <Command></Command>
+                    </CommandList>
+                </Mapping>
+                <Mapping Source="Sony DVP-FX720-1">
+                    <CommandList>
+                        <Command></Command>
+                    </CommandList>
+                </Mapping>
+                <Mapping Source="JVC Everio GZ-MG330-1">
+                    <CommandList>
+                        <Command></Command>
+                    </CommandList>
+                </Mapping>
+                <Mapping Source="Panasonic SDR-H60-S-1">
+                    <CommandList>
+                        <Command></Command>
+                    </CommandList>
+                </Mapping>
+            </MappingList>
+        </Monitor>
+        <Monitor UID="51" Name="ViewSonic VA702 (1)" Type="Дисплей пассивный" Comment="" Model="ViewSonic VA702" Output="2" Width="800" Height="600" RefreshRate="60">
+            <CommandList />
+            <MappingList>
+                <Mapping Source="Терминал ВКС_1">
+                    <CommandList>
+                        <Command></Command>
+                    </CommandList>
+                </Mapping>
+            </MappingList>
+        </Monitor>
+        <Monitor UID="52" Name="ViewSonic VA702 (2)" Type="Дисплей пассивный" Comment="" Model="ViewSonic VA702" Output="3" Width="800" Height="600" RefreshRate="60">
+            <CommandList />
+            <MappingList>
+                <Mapping Source="Терминал ВКС_1">
+                    <CommandList>
+                        <Command></Command>
+                    </CommandList>
+                </Mapping>
+            </MappingList>
+        </Monitor>
+        <ComputerDisplay UID="-1" Name="local" Type="Дисплей активный" Comment="" Model="IBM PC" AgentUID="local" Uri="net.tcp://localhost:790/Agent" Width="1280" Height="1024">
+            <CommandList/>
+            <MappingList>
+                <Mapping Source="Изображение">
+                    <CommandList>
+                        <Command></Command>
+                    </CommandList>
+                </Mapping>
+                <Mapping Source="Видеофайл">
+                    <CommandList>
+                        <Command></Command>
+                    </CommandList>
+                </Mapping>
+                <Mapping Source="Удаленный рабочий стол">
+                    <CommandList>
+                        <Command></Command>
+                    </CommandList>
+                </Mapping>
+                <Mapping Source="Бизнес-графика">
+                    <CommandList>
+                        <Command></Command>
+                    </CommandList>
+                </Mapping>
+              <Mapping Source="Презентация PowerPoint">
+                <CommandList>
+                  <Command></Command>
+                </CommandList>
+              </Mapping>
+
+              <Mapping Source="Документ Word">
+                <CommandList>
+                  <Command></Command>
+                </CommandList>
+              </Mapping>
+
+              <Mapping Source="Internet Explorer">
+                <CommandList>
+                  <Command></Command>
+                </CommandList>
+              </Mapping>
+            </MappingList>
+        </ComputerDisplay>
+        <ComputerDisplay UID="-1" Name="infovis_agent_1" Type="Дисплей активный" Comment="" Model="IBM PC" AgentUID="infovis_agent_1" Uri="net.tcp://infovis_agent_1:790/Agent" Width="1024" Height="768">
+            <CommandList/>
+            <MappingList>
+                <Mapping Source="Изображение">
+                    <CommandList>
+                        <Command></Command>
+                    </CommandList>
+                </Mapping>
+                <Mapping Source="Видеофайл">
+                    <CommandList>
+                        <Command></Command>
+                    </CommandList>
+                </Mapping>
+                <Mapping Source="Удаленный рабочий стол">
+                    <CommandList>
+                        <Command></Command>
+                    </CommandList>
+                </Mapping>
+                <Mapping Source="Бизнес-графика">
+                    <CommandList>
+                        <Command></Command>
+                    </CommandList>
+                </Mapping>
+              <Mapping Source="Презентация PowerPoint">
+                <CommandList>
+                  <Command></Command>
+                </CommandList>
+              </Mapping>
+            </MappingList>
+        </ComputerDisplay>
+        <ComputerDisplay UID="-1" Name="infovis_agent_2" Type="Дисплей активный" Comment="" Model="IBM PC" AgentUID="infovis_agent_2" Uri="net.tcp://infovis_agent_2:790/Agent" Width="1024" Height="768">
+            <CommandList/>
+            <MappingList>
+                <Mapping Source="Изображение">
+                    <CommandList>
+                        <Command></Command>
+                    </CommandList>
+                </Mapping>
+                <Mapping Source="Видеофайл">
+                    <CommandList>
+                        <Command></Command>
+                    </CommandList>
+                </Mapping>
+                <Mapping Source="Удаленный рабочий стол">
+                    <CommandList>
+                        <Command></Command>
+                    </CommandList>
+                </Mapping>
+                <Mapping Source="Бизнес-графика">
+                    <CommandList>
+                        <Command></Command>
+                    </CommandList>
+                </Mapping>
+              <Mapping Source="Презентация PowerPoint">
+                <CommandList>
+                  <Command></Command>
+                </CommandList>
+              </Mapping>
+            </MappingList>
+        </ComputerDisplay>
+        <JupiterDisplay UID="19" Name="Fusion970-1" Type="Видеостена" Comment="" Model="Fusion970" AgentUID="zxp-infovis" Uri="net.tcp://zxp-infovis:790/Agent" Width="5120" Height="1024"
+                    SegmentRows="1" SegmentColumns="4" SegmentWidth="1280" SegmentHeight="1024" ResourceAvailability="4">
+            <CommandList />
+            <MappingList>
+                <JupiterMapping Source="Pioneer DV-410V-1" VideoIn="1">
+                    <CommandList>
+                        <Command></Command>
+                    </CommandList>
+                </JupiterMapping>
+                <JupiterMapping Source="Sony DVP-FX720-1" VideoIn="2">
+                    <CommandList>
+                        <Command></Command>
+                    </CommandList>
+                </JupiterMapping>
+                <JupiterMapping Source="JVC Everio GZ-MG330-1" VideoIn="5">
+                    <CommandList>
+                        <Command></Command>
+                    </CommandList>
+                </JupiterMapping>
+                <JupiterMapping Source="Panasonic SDR-H60-S-2" VideoIn="7">
+                    <CommandList>
+                        <Command></Command>
+                    </CommandList>
+                </JupiterMapping>
+                <JupiterMapping Source="Panasonic SDR-H60-S-1" VideoIn="6">
+                    <CommandList>
+                        <Command></Command>
+                    </CommandList>
+                </JupiterMapping>
+                <JupiterMapping Source="Panasonic SDR-H60-S-1" VideoIn="1">
+                    <CommandList>
+                        <Command></Command>
+                    </CommandList>
+                </JupiterMapping>
+                <JupiterMapping Source="Panasonic SDR-H60-S-1" VideoIn="2">
+                    <CommandList>
+                        <Command></Command>
+                    </CommandList>
+                </JupiterMapping>
+
+                <JupiterMapping Source="Изображение">
+                    <CommandList>
+                        <Command></Command>
+                    </CommandList>
+                </JupiterMapping>
+                <JupiterMapping Source="Видеофайл">
+                    <CommandList>
+                        <Command></Command>
+                    </CommandList>
+                </JupiterMapping>
+                <JupiterMapping Source="Удаленный рабочий стол">
+                    <CommandList>
+                        <Command></Command>
+                    </CommandList>
+                </JupiterMapping>
+                <JupiterMapping Source="Бизнес-графика">
+                    <CommandList>
+                        <Command></Command>
+                    </CommandList>
+                </JupiterMapping>
+              <JupiterMapping Source="Презентация PowerPoint">
+                <CommandList>
+                  <Command></Command>
+                </CommandList>
+              </JupiterMapping>
+
+            </MappingList>
+            <InOutConfigList>
+                <InOutConfig VideoIn="1" SwitchOut="1" WindowType="Video" Comment="" />
+                <InOutConfig VideoIn="2" SwitchOut="2" WindowType="Video" Comment="" />
+                <InOutConfig VideoIn="3" SwitchOut="3" WindowType="Video" Comment="" />
+                <InOutConfig VideoIn="4" SwitchOut="4" WindowType="Video" Comment="" />
+                <InOutConfig VideoIn="5" SwitchOut="5" WindowType="RGB" Comment="" />
+                <InOutConfig VideoIn="6" SwitchOut="6" WindowType="RGB" Comment="" />
+                <InOutConfig VideoIn="7" SwitchOut="7" WindowType="RGB" Comment="" />
+                <InOutConfig VideoIn="8" SwitchOut="8" WindowType="RGB" Comment="" />
+            </InOutConfigList>
+        </JupiterDisplay>
+    </DisplayList>
+    <LabelList>
+        <Label Id="1" Name="label1" IsSystem="1" />
+        <Label Id="2" Name="label2" IsSystem="1" />
+        <Label Id="3" Name="label3" IsSystem="1" />
+        <Label Id="4" Name="label4" IsSystem="1" />
+        <Label Id="5" Name="label5" IsSystem="1" />
+    </LabelList>
+</Configuration>

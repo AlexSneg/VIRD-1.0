@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema id="LabelStorage" elementFormDefault="qualified"
+    targetNamespace="urn:labelstorage-schema"
+    xmlns="urn:labelstorage-schema"
+    xmlns:us="urn:labelstorage-schema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:element name="LabelStorage">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element minOccurs="0" maxOccurs="unbounded" name="Label">
+          <xsd:complexType>
+            <xsd:attribute name="Id" use="required" type="xsd:int" />
+            <xsd:attribute name="Name" use="required">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:minLength value="1" />
+                  <xsd:maxLength value="50" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:attribute>
+            <xsd:attribute name="IsSystem" use="required" type="xsd:boolean" />
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+    <xsd:key name="NameUnique">
+      <xsd:selector xpath="us:Label"/>
+      <xsd:field xpath="@Name"/>
+    </xsd:key>
+    <xsd:key name="IdUnique">
+      <xsd:selector xpath="us:Label"/>
+      <xsd:field xpath="@Id"/>
+    </xsd:key>
+  </xsd:element>
+</xsd:schema>

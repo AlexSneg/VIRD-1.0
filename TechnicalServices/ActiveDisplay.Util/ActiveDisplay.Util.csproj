@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{44F60260-E5C4-4A96-92EF-CA36F9D36DCB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TechnicalServices.ActiveDisplay.Util</RootNamespace>
+    <AssemblyName>ActiveDisplay.Util</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Security_Release|AnyCPU' ">
+    <OutputPath>bin\Security_Release\</OutputPath>
+    <DefineConstants>TRACE;Security_Release</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Security_Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Security_Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;Security_Release</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActiveDisplayClient.cs" />
+    <Compile Include="ActiveDisplayServerModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DomainServices\EnvironmentConfiguration\ConfigModule\ConfigModule.csproj">
+      <Project>{72986126-520F-46B7-9134-465AEFEFBC0A}</Project>
+      <Name>ConfigModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DomainServices\EquipmentManagement\AgentCommon\AgentCommon.csproj">
+      <Project>{559093DD-568D-4FF9-BC1F-C9CE2AFDC027}</Project>
+      <Name>AgentCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Domain\PresentationShow\ShowCommon\ShowCommon.csproj">
+      <Project>{E5937096-3879-468B-9E4A-11A600479191}</Project>
+      <Name>ShowCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Communication\Communication.csproj">
+      <Project>{4F0FFB74-D607-435D-8C14-372DF3500E1B}</Project>
+      <Name>Communication %28TechnicalServices\Communication\Communication%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{4E56777C-8690-47AB-9FD7-4D65677862FA}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Interfaces\Interfaces.csproj">
+      <Project>{E7BED6ED-753D-4D11-96BD-273C88FE10A6}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Persistence\CommonPersistence\CommonPersistence.csproj">
+      <Project>{E8497275-E440-4495-AA40-9EA20EEB8BA2}</Project>
+      <Name>CommonPersistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TechnicalServices.Exceptions\TechnicalServices.Exceptions.csproj">
+      <Project>{B7D71050-C178-4F87-86CB-9ED39DE165BA}</Project>
+      <Name>TechnicalServices.Exceptions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TechnicalServices.Util\TechnicalServices.Util.csproj">
+      <Project>{9507520D-9DBD-4AE6-9D34-1DB5E672F55B}</Project>
+      <Name>TechnicalServices.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>call $(SolutionDir)bin\Tools\copy_library.cmd $(TargetPath) $(SolutionDir) $(ConfigurationName)</PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SeriesDefinitions">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="1" maxOccurs="50" name="SeriesInfo">
+                <xs:complexType>
+                  <xs:attribute name="Name" type="xs:string" use="required" />
+                  <xs:attribute name="Summary" type="xs:float" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PointsDefinitions">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="1" maxOccurs="1000" name="PointInfo">
+                <xs:complexType>
+                  <xs:attribute name="Name" type="xs:string" use="required" />
+                  <xs:attribute name="Value" type="xs:float" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataIntersections">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="1" maxOccurs="50000" name="DataInfo">
+                <xs:complexType>
+                  <xs:attribute name="Series" type="xs:string" use="required" />
+                  <xs:attribute name="Point" type="xs:string" use="required" />
+                  <xs:attribute name="Value" type="xs:float" use="required" />
+                </xs:complexType>
+                
+                <xs:keyref name="seriesSource" refer="SeriesNameUnique">
+                  <xs:selector xpath="."/>
+                  <xs:field xpath="@Series"/>
+                </xs:keyref>
+                <xs:keyref name="pointsSource" refer="PointInfoUnique">
+                  <xs:selector xpath="."/>
+                  <xs:field xpath="@Point"/>
+                </xs:keyref>
+                
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:key name="SeriesNameUnique">
+      <xs:selector xpath="SeriesDefinitions/SeriesInfo"/>
+      <xs:field xpath="@Name"/>
+    </xs:key>
+
+    <xs:key name="PointInfoUnique">
+      <xs:selector xpath="PointsDefinitions/PointInfo"/>
+      <xs:field xpath="@Name"/>
+    </xs:key>
+
+    <xs:key name="DataIntersectionsUnique">
+      <xs:selector xpath="DataIntersections/DataInfo"/>
+      <xs:field xpath="@Series"/>
+      <xs:field xpath="@Point"/>
+    </xs:key>
+  
+  </xs:element>
+</xs:schema>

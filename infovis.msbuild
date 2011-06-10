@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="MainBuild" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets"/>
+
+    <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <Target Name="MainBuild" DependsOnTargets="DeleteFiles">
+        <Message Text="Starting Main Build"/>
+        <MSBuild Projects="InfoVis.sln" Targets="Clean; Rebuild" Properties="Configuration=Release"/>
+    </Target>
+
+    <Target Name="MainBuildSecurity" DependsOnTargets="DeleteFiles">
+        <Message Text="Starting Main Build"/>
+        <MSBuild Projects="InfoVis.sln" Targets="Clean; Rebuild" Properties="Configuration=Security_Release"/>
+    </Target>
+
+    <Target Name="Test" DependsOnTargets="BuildTest; DeleteFiles">
+        <Message Text="Starting to Test"/>
+    <!--    <Exec WorkingDirectory="UnitTests\bin\Debug\" Command='"$(VS90COMNTOOLS)..\IDE\mstest.exe" /nologo /testcontainer:UnitTests.dll /resultsfile:..\..\testResults.trx' />-->
+        <CallTarget Targets="ClearSourceStorage"/>
+    </Target>
+
+    <Target Name="DeleteFiles">
+<!--        <Delete Files="UnitTests\testResults.trx" />-->
+    </Target>
+
+    <Target Name="BuildTest">
+        <Message Text="Starting to Build"/>
+        <MSBuild Projects="UnitTests.sln" Targets="Clean; Rebuild" Properties="Configuration=Debug" />
+    </Target>
+
+    <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <!--
+    <Target Name="DevDeploy">
+        <Exec Command='bin\Tools\psexec "C:\Polymedia_Deploy\Tools\Dev_UninstallService.cmd" \\infovis_dev' IgnoreExitCode='true'/>
+        <Exec Command='del /F /S /Q \\infovis_dev\polymedia\*.*'  />
+
+        <Exec Command="xcopy bin\*.* \\infovis_dev\polymedia\  /E /R /Y" />
+        <Exec Command="xcopy Reference\Syncfusion\*.* \\infovis_dev\polymedia\PresentationDesigner\  /E /R /Y" />
+        <Exec Command="xcopy Reference\Syncfusion\*.* \\infovis_dev\polymedia\PresentationPlayer\  /E /R /Y" />
+        <Exec Command="xcopy Reference\Syncfusion\*.* \\infovis_dev\polymedia\Configurator\  /E /R /Y" />
+        <Exec Command="xcopy Reference\Syncfusion\*.* \\infovis_dev\polymedia\Administration\  /E /R /Y" />
+        <Exec Command="xcopy Reference\Syncfusion\*.* \\infovis_dev\polymedia\ActiveDisplayAgent\  /E /R /Y" />
+        <Exec Command="xcopy Reference\Syncfusion\*.* \\infovis_dev\polymedia\Player\  /E /R /Y" />
+
+        <Exec Command='bin\Tools\psexec -d "C:\Polymedia_Deploy\Tools\Dev_InstallService.cmd" \\infovis_dev' IgnoreExitCode='true'/>
+    </Target>
+     -->
+    <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+    <PropertyGroup>
+        <Major>0</Major>
+        <Minor>0</Minor>
+        <Build>0</Build>
+        <Revision>0</Revision>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <VersionFilePath>Reference\Version</VersionFilePath>
+        <DeployPath>\\infovis_test\polymedia\</DeployPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <SyncfusionFiles Include="Reference\Syncfusion\*.*" Exclude="**\.svn\**\*.svn-base;**\.svn\all-wcprops;**\.svn\entries;**\.svn\format;**\.svn\dir-prop-base;**\.svn\tmp\tempfile.tmp" />
+        <BinariesFiles  Include="bin\**" Exclude="**\.svn\**\*.svn-base;**\.svn\all-wcprops;**\.svn\entries;**\.svn\format;**\.svn\dir-prop-base;**\.svn\tmp\tempfile.tmp" />
+        <SourceFiles  Include="**\*.*" Exclude="**\.svn\**\*.svn-base;**\.svn\all-wcprops;**\.svn\entries;**\.svn\format;**\.svn\dir-prop-base;**\.svn\tmp\tempfile.tmp" />
+        <VersionFiles Include="**\AssemblyInfo.cs" Exclude="Prototypes\**\*;Reference\**\*;UnitTests\**\*;bin\**\*"/>
+        <InstallerFiles Include="Installer\*.exe" Exclude="**\.svn\**\*.svn-base;**\.svn\all-wcprops;**\.svn\entries;**\.svn\format;**\.svn\dir-prop-base;**\.svn\tmp\tempfile.tmp" />
+    </ItemGroup>
+
+    <Target Name="TestAutoDeploySecurity">
+        <CallTarget Targets="MakeBuildSecurity"/>
+    </Target>
+
+    <Target Name="TestAutoDeploy">
+        <CallTarget Targets="MakeBuild"/>
+    </Target>
+
+    <Target Name="SetDevPath">
+        <CreateProperty Value="\\infovis_dev\polymedia\">
+            <Output TaskParameter="Value" PropertyName="VersionDeployPath"/>
+        </CreateProperty>
+    </Target>
+
+    <Target Name="ClearSourceStorage">
+        <RemoveDir Directories="bin\VisualizationCore\LocalSources\32ed4eae349a4310b2e525c9a94fbc93" />
+    </Target>
+
+    <Target Name="MakeBuildSecurity">
+        <CallTarget Targets="LoadVersionBuild_Test"/>
+        <CallTarget Targets="MakeDirectory_Test_Security"/>
+        <!--<Error Text="Не удалось создать директорию '$(VersionDeployPath)'" Condition="'$(VersionDeployPath)'==''" />-->
+        <Message Text="$(VersionDeployPath)" />
+
+        <CallTarget Targets="UpdateAssemblyVersion"/>
+
+        <CallTarget Targets="CompileSecurity"/>
+        <CallTarget Targets="CopyBinary"/>
+        <CallTarget Targets="CopySyncfusion"/>
+
+        <CallTarget Targets="MakeInstaller"/>
+        <CallTarget Targets="CopyInstaller"/>
+
+        <CallTarget Targets="CopySource"/>
+<!--        <CallTarget Targets="RegistryCode_Test"/>-->
+    </Target>
+
+    <Target Name="MakeBuild">
+        <CallTarget Targets="LoadVersionBuild_Test"/>
+        <CallTarget Targets="IncrementBuild_Test"/>
+        <CallTarget Targets="SaveVersionRevision_Test"/>
+        <CallTarget Targets="MakeDirectory_Test"/>
+        <!--<Error Text="Не удалось создать директорию '$(VersionDeployPath)'" Condition="'$(VersionDeployPath)'==''" />-->
+        <Message Text="$(VersionDeployPath)" />
+
+        <CallTarget Targets="UpdateAssemblyVersion"/>
+
+        <CallTarget Targets="Compile"/>
+        <CallTarget Targets="CopyBinary"/>
+        <CallTarget Targets="CopySyncfusion"/>
+
+        <CallTarget Targets="MakeInstaller"/>
+        <CallTarget Targets="CopyInstaller"/>
+
+        <CallTarget Targets="CopySource"/>
+<!--        <CallTarget Targets="RegistryCode_Test"/>-->
+    </Target>
+
+    <Target Name="MakeRevision">
+        <CallTarget Targets="LoadVersionRevision_Test"/>
+        <CallTarget Targets="IncrementRevision_Test"/>
+        <CallTarget Targets="SaveVersionRevision_Test"/>
+        <CallTarget Targets="MakeDirectory_Test"/>
+        <!--<Error Text="Не удалось создать директорию '@(VersionDeployPath)'" Condition="'@(VersionDeployPath)'==''" />-->
+        <CallTarget Targets="UpdateAssemblyVersion"/>
+
+        <CallTarget Targets="Compile"/>
+        <CallTarget Targets="CopyBinary"/>
+        <CallTarget Targets="CopySyncfusion"/>
+
+        <CallTarget Targets="MakeInstaller"/>
+        <CallTarget Targets="CopyInstaller"/>
+
+        <CallTarget Targets="CopySource"/>
+<!--        <CallTarget Targets="RegistryCode_Test"/>-->
+    </Target>
+
+    <Target Name="RegistryCode_Test">
+        <Exec Command='bin\Tools\psexec -d "C:\Polymedia_Deploy\Tools\Test_InstallService.cmd" \\infovis_test' IgnoreExitCode='true'/>
+    </Target>
+
+    <Target Name="Compile" DependsOnTargets="MainBuild;Test" />
+    <Target Name="CompileSecurity" DependsOnTargets="MainBuildSecurity;Test" />
+
+    <Target Name="UpdateAssemblyVersion">
+        <FileUpdate Files="@(VersionFiles)" Regex='AssemblyVersion\("(\d+)\.(\d+)\.(\d+)\.(\d+)"\)' ReplacementText='AssemblyVersion("$(Major).$(Minor).$(Build).$(Revision)")'/>
+        <FileUpdate Files="@(VersionFiles)" Regex='AssemblyFileVersion\("(\d+)\.(\d+)\.(\d+)\.(\d+)"\)' ReplacementText='AssemblyFileVersion("$(Major).$(Minor).$(Build).$(Revision)")'/>
+    </Target>
+
+    <Target Name="CopyBinary">
+        <Copy SourceFiles="@(BinariesFiles)" DestinationFiles="@(BinariesFiles->'$(VersionDeployPath)%(RecursiveDir)%(Filename)%(Extension)')" />
+    </Target>
+
+    <Target Name="CopySource">
+        <MakeDir Directories="$(VersionDeployPath)\Source"/>
+        <Copy SourceFiles="@(SourceFiles)" DestinationFiles="@(SourceFiles->'$(VersionDeployPath)Source\%(RecursiveDir)%(Filename)%(Extension)')" />
+    </Target>
+
+    <Target Name="MakeInstaller">
+        <!--<Exec Command="Installer\makeinstaller.cmd" WorkingDirectory="Installer" ContinueOnError="true" />-->
+        <Exec Command='"C:\Program Files\NSIS\makensis.exe" /V1 "InfoVisAgent.nsi"' WorkingDirectory="Installer" ContinueOnError="false" />
+        <Exec Command='"C:\Program Files\NSIS\makensis.exe" /V1 "InfoVisClient.nsi"' WorkingDirectory="Installer" ContinueOnError="false" />
+        <Exec Command='"C:\Program Files\NSIS\makensis.exe" /V1 "InfoVisServer.nsi"' WorkingDirectory="Installer" ContinueOnError="false" />
+        <Exec Command='"C:\Program Files\NSIS\makensis.exe" /V1 "InfoVisPlugins.nsi"' WorkingDirectory="Installer" ContinueOnError="false" />
+    </Target>
+
+    <Target Name="CopyInstaller">
+        <MakeDir Directories="$(VersionDeployPath)\Installer"/>
+        <Copy SourceFiles="@(InstallerFiles)" DestinationFiles="@(InstallerFiles->'$(VersionDeployPath)Installer\%(RecursiveDir)%(Filename)%(Extension)')" />
+    </Target>
+
+    <Target Name="CopySyncfusion">
+        <Copy SourceFiles="@(SyncfusionFiles)" DestinationFolder="$(VersionDeployPath)PresentationDesigner\" />
+        <Copy SourceFiles="@(SyncfusionFiles)" DestinationFolder="$(VersionDeployPath)Player\" />
+        <Copy SourceFiles="@(SyncfusionFiles)" DestinationFolder="$(VersionDeployPath)Configurator\" />
+        <Copy SourceFiles="@(SyncfusionFiles)" DestinationFolder="$(VersionDeployPath)Administration\" />
+        <Copy SourceFiles="@(SyncfusionFiles)" DestinationFolder="$(VersionDeployPath)ActiveDisplayAgent\" />
+    </Target>
+
+    <Target Name="MakeDirectory_Test">
+        <MakeDir Directories="$(DeployPath)$(Major).$(Minor).$(Build).$(Revision)\">
+            <Output TaskParameter="DirectoriesCreated" PropertyName="VersionDeployPath"/>
+        </MakeDir>
+    </Target>
+
+    <Target Name="MakeDirectory_Test_Security">
+        <MakeDir Directories="$(DeployPath)$(Major).$(Minor).$(Build).$(Revision)_Security\">
+            <Output TaskParameter="DirectoriesCreated" PropertyName="VersionDeployPath"/>
+        </MakeDir>
+    </Target>
+
+    <Target Name="LoadVersionBuild_Test">
+        <ReadLinesFromFile File="$(VersionFilePath)\major.txt">
+            <Output TaskParameter="Lines" PropertyName="Major"/>
+        </ReadLinesFromFile>
+        <ReadLinesFromFile File="$(VersionFilePath)\minor.txt">
+            <Output TaskParameter="Lines" PropertyName="Minor"/>
+        </ReadLinesFromFile>
+        <ReadLinesFromFile File="$(VersionFilePath)\build.txt">
+            <Output TaskParameter="Lines" PropertyName="Build"/>
+        </ReadLinesFromFile>
+    </Target>
+
+    <Target Name="LoadVersionRevision_Test" DependsOnTargets="LoadVersionBuild_Test">
+        <ReadLinesFromFile File="$(VersionFilePath)\revision.txt">
+            <Output TaskParameter="Lines" PropertyName="Revision"/>
+        </ReadLinesFromFile>
+    </Target>
+
+    <Target Name="SaveVersionRevision_Test">
+        <WriteLinesToFile File="$(VersionFilePath)\major.txt" Lines="$(Major)" Overwrite="true"/>
+        <WriteLinesToFile File="$(VersionFilePath)\minor.txt" Lines="$(Minor)" Overwrite="true"/>
+        <WriteLinesToFile File="$(VersionFilePath)\build.txt" Lines="$(Build)" Overwrite="true"/>
+        <WriteLinesToFile File="$(VersionFilePath)\revision.txt" Lines="$(Revision)" Overwrite="true"/>
+    </Target>
+
+    <Target Name="IncrementRevision_Test">
+        <Math.Add Numbers="$(Revision);1">
+            <Output TaskParameter="Result" PropertyName="Revision" />
+        </Math.Add>
+    </Target>
+
+    <Target Name="IncrementBuild_Test">
+        <Math.Add Numbers="$(Build);1">
+            <Output TaskParameter="Result" PropertyName="Build" />
+        </Math.Add>
+    </Target>
+
+    <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <PropertyGroup>
+        <DesignServiceLocal>net.tcp://localhost:789/DesignService</DesignServiceLocal>
+        <DesignServiceHost>net.tcp://infovis_dev:789/DesignService</DesignServiceHost>
+    </PropertyGroup>
+
+    <Target Name="UpdateConfigFile_infovis_agent_1">
+        <FileUpdate Files="\\infovis_agent_1\polymedia\PresentationDesigner\DesignerHost.exe.config" Regex='$(DesignServiceLocal)' ReplacementText='$(DesignServiceHost)'/>
+        <FileUpdate Files="\\infovis_agent_1\polymedia\ActiveDisplayAgent\AgentHost.exe.config" Regex='$(DesignServiceLocal)' ReplacementText='$(DesignServiceHost)'/>
+        <FileUpdate Files="\\infovis_agent_1\polymedia\Player\PlayerHost.exe.config" Regex='$(DesignServiceLocal)' ReplacementText='$(DesignServiceHost)'/>
+    </Target>
+
+    <Target Name="UpdateConfigFile_infovis_agent_2">
+        <FileUpdate Files="\\infovis_agent_2\polymedia\PresentationDesigner\DesignerHost.exe.config" Regex='$(DesignServiceLocal)' ReplacementText='$(DesignServiceHost)'/>
+        <FileUpdate Files="\\infovis_agent_2\polymedia\ActiveDisplayAgent\AgentHost.exe.config" Regex='$(DesignServiceLocal)' ReplacementText='$(DesignServiceHost)'/>
+        <FileUpdate Files="\\infovis_agent_2\polymedia\Player\PlayerHost.exe.config" Regex='$(DesignServiceLocal)' ReplacementText='$(DesignServiceHost)'/>
+    </Target>
+
+    <Target Name="UpdateConfigFile_jupiter">
+        <FileUpdate Files="\\zxp-infovis\polymedia\PresentationDesigner\DesignerHost.exe.config" Regex='$(DesignServiceLocal)' ReplacementText='$(DesignServiceHost)'/>
+        <FileUpdate Files="\\zxp-infovis\polymedia\ActiveDisplayAgent\AgentHost.exe.config" Regex='$(DesignServiceLocal)' ReplacementText='$(DesignServiceHost)'/>
+        <FileUpdate Files="\\zxp-infovis\polymedia\Player\PlayerHost.exe.config" Regex='$(DesignServiceLocal)' ReplacementText='$(DesignServiceHost)'/>
+    </Target>
+
+    <Target Name="UpdateConfigFile_Client">
+        <FileUpdate Files="\\infovis_dev\server\PresentationDesigner\DesignerHost.exe.config" Regex='$(DesignServiceLocal)' ReplacementText='$(DesignServiceHost)'/>
+        <FileUpdate Files="\\infovis_dev\server\Player\PlayerHost.exe.config" Regex='$(DesignServiceLocal)' ReplacementText='$(DesignServiceHost)'/>
+    </Target>
+
+    <Target Name="UpdateConfigFile_infovis_dev">
+    </Target>
+
+    <Target Name="deploy_agent_1_Test">
+        <!--<Exec Command="bin\Tools\kill_agent_1.cmd"/>-->
+        <Exec Command="xcopy $(VersionDeployPath) \\infovis_agent_1\polymedia\  /E /R /Y"/>
+        <CallTarget Targets="UpdateConfigFile_infovis_agent_1" />
+        <Exec Command="bin\Tools\restart_agent_1.cmd"/>
+    </Target>
+
+    <Target Name="deploy_agent_2_Test">
+        <!--<Exec Command="bin\Tools\kill_agent_2.cmd"/>-->
+        <Exec Command="xcopy $(VersionDeployPath) \\infovis_agent_2\polymedia\  /E /R /Y"/>
+        <CallTarget Targets="UpdateConfigFile_infovis_agent_2" />
+        <Exec Command="bin\Tools\restart_agent_2.cmd"/>
+    </Target>
+
+    <Target Name="deploy_jupiter_Test">
+        <!--<Exec Command="bin\Tools\kill_jupiter.cmd"/>-->
+        <Exec Command="xcopy $(VersionDeployPath) \\zxp-infovis\polymedia\  /E /R /Y"/>
+        <CallTarget Targets="UpdateConfigFile_jupiter" />
+        <Exec Command="bin\Tools\restart_jupiter.cmd"/>
+    </Target>
+
+    <Target Name="deploy_infovis_dev">
+        <!--<Exec Command="bin\Tools\kill_jupiter.cmd"/>-->
+        <Exec Command="xcopy $(VersionDeployPath) \\infovis_dev\server\  /E /R /Y"/>
+        <CallTarget Targets="UpdateConfigFile_infovis_dev" />
+        <CallTarget Targets="UpdateConfigFile_Client" />
+        <Exec Command="bin\Tools\restart_infovis_dev.cmd"/>
+    </Target>
+
+</Project>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema id="UserStorage" elementFormDefault="qualified"
+    targetNamespace="urn:userstorage-schema"
+    xmlns="urn:userstorage-schema"
+    xmlns:us="urn:userstorage-schema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:element name="UserStorage">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element maxOccurs="unbounded" name="UserInfo">
+					<xsd:complexType>
+                        <xsd:attribute name="Id" use="required" type="xsd:int" />
+						<xsd:attribute name="Name" use="required">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:string">
+									<xsd:minLength value="1" />
+									<xsd:maxLength value="32" />
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:attribute>
+						<xsd:attribute name="Hash" use="required" >
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:base64Binary">
+									<xsd:minLength value="16" />
+									<xsd:maxLength value="16" />
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:attribute>
+						<xsd:attribute name="FullName" use="optional" type="xsd:string" />
+						<xsd:attribute name="Date" use="optional" type="xsd:date" />
+						<xsd:attribute name="Enable" use="required" type="xsd:boolean" />
+						<xsd:attribute name="IsOperator" use="required" type="xsd:boolean" />
+						<xsd:attribute name="IsAdmin" use="required" type="xsd:boolean" />
+                        <xsd:attribute name="Priority" use="optional" type="xsd:integer" />
+						<xsd:attribute name="Comment" use="optional" type="xsd:string" />
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+		<xsd:key name="NameUnique">
+			<xsd:selector xpath="us:UserInfo"/>
+			<xsd:field xpath="@Name"/>
+		</xsd:key>
+        <xsd:key name="IdUnique">
+            <xsd:selector xpath="us:UserInfo"/>
+            <xsd:field xpath="@Id"/>
+        </xsd:key>
+    </xsd:element>	
+</xsd:schema>

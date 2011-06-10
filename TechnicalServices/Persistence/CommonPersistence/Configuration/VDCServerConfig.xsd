@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    xmlns="urn:configuration-schema"
+    xmlns:config="urn:configuration-schema"
+    targetNamespace="urn:configuration-schema">
+
+  <xsd:include schemaLocation="CommonConfig.xsd" />
+
+  <xsd:element name="VDCServer" substitutionGroup="config:DeviceType">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="config:DeviceTypeType">
+          <xsd:sequence>
+            <xsd:element name="ScreenLayoutList" minOccurs="0" maxOccurs="1">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="ScreenLayout" minOccurs="0" maxOccurs="unbounded">
+                    <xsd:complexType>
+                      <xsd:attribute name="LayoutNumber" type="xsd:int" />
+                      <xsd:attribute name="LayoutName" type="xsd:string" />
+                      <xsd:attribute name="LayoutPictureBytes" type="xsd:string" />
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+         <xsd:attribute name="ServerAddress" type="xsd:string" default="0.0.0.0" />
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>

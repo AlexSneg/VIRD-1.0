@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    xmlns="urn:presentation-schema"
+    xmlns:config="urn:presentation-schema"
+    targetNamespace="urn:presentation-schema">
+
+  <xsd:include schemaLocation="basePresentation.xsd" />
+
+  <xsd:element name="Light" substitutionGroup="config:Device">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="config:DeviceType">
+          <xsd:sequence>
+            <xsd:element name="LightUnitList" minOccurs="0" maxOccurs="1">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="LightUnit" minOccurs="0" maxOccurs="unbounded">
+                    <xsd:complexType>
+                      <xsd:attribute name="Name" type="xsd:string" use="required" />
+                      <xsd:attribute name="Brightness" type="xsd:int" use="required" />
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>

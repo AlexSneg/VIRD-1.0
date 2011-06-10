@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F8E3693A-0B2B-49B3-9556-CCB1C82B8A6B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hosts.Plugins.BusinessGraphics</RootNamespace>
+    <AssemblyName>BusinessGraphics</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Security_Release|AnyCPU' ">
+    <OutputPath>bin\Security_Release\</OutputPath>
+    <DefineConstants>TRACE;Security_Release</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Security_Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Security_Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;Security_Release</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="dotnetCharting.WinForms, Version=5.2.3274.32069, Culture=neutral, PublicKeyToken=c3f34d622663b9f1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Reference\dotNetCharting\dotnetCharting.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Core, Version=6.303.1.8, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Diagram.Base, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Diagram.Windows, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Shared.Base, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Tools.Windows, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configurator\BusinessGraphicsConfiguratorModule.cs" />
+    <Compile Include="Designer\BusinessGraphicsDesignerModule.cs" />
+    <Compile Include="BusinessGraphicsModule.cs" />
+    <Compile Include="Player\BusinessGraphicsController.cs" />
+    <Compile Include="Player\BusinessGraphicsPlayerModule.cs" />
+    <Compile Include="Player\ChartManageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Player\ChartManageControl.Designer.cs">
+      <DependentUpon>ChartManageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Server\BusinessGraphicsServerModule.cs" />
+    <Compile Include="SystemModule\Design\BusinessGraphicsResourceInfo.cs" />
+    <Compile Include="SystemModule\Config\BusinessGraphicsSourceConfig.cs" />
+    <Compile Include="SystemModule\Config\BusinessGraphicsModule.cs" />
+    <Compile Include="SystemModule\Design\BusinessGraphicsSourceDesign.cs" />
+    <Compile Include="SystemModule\Design\BusinessGraphicsModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemModule\BusinessGraphicsSystemModule.cs" />
+    <Compile Include="SystemModule\Design\BusinessGraphicsSourceDesignPartial\DataWorker.cs" />
+    <Compile Include="SystemModule\Design\BusinessGraphicsSourceDesignPartial\FileWorker.cs" />
+    <Compile Include="SystemModule\Design\BusinessGraphicsSourceDesignPartial\MapWorker.cs" />
+    <Compile Include="SystemModule\Design\BusinessGraphicsStyleConverter.cs" />
+    <Compile Include="SystemModule\Design\ChartEditor.cs" />
+    <Compile Include="SystemModule\Design\ChartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemModule\Design\ChartForm.Designer.cs">
+      <DependentUpon>ChartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemModule\Design\ChartProperyProvider.cs" />
+    <Compile Include="SystemModule\Design\Helpers\DbfHelper.cs" />
+    <Compile Include="SystemModule\Design\Helpers\DataChartXmlReader.cs" />
+    <Compile Include="SystemModule\Design\Helpers\ODBCProvider.cs" />
+    <Compile Include="SystemModule\Design\InvalidXmlSchemaException.cs" />
+    <Compile Include="SystemModule\Design\RangeCollectionEditor.cs" />
+    <Compile Include="SystemModule\Design\SeriesListConverter.cs" />
+    <Compile Include="SystemModule\Design\ShapeFileUIEditor.cs" />
+    <Compile Include="SystemModule\Design\StyleResourceInfo.cs" />
+    <Compile Include="UI\AreaWrapper.cs" />
+    <Compile Include="UI\BusinessGraphicsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BusinessGraphicsForm.Designer.cs">
+      <DependentUpon>BusinessGraphicsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ChartSetupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ChartSetupForm.Designer.cs">
+      <DependentUpon>ChartSetupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ChartWrapper.cs" />
+    <Compile Include="UI\Controls\CustomChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\CustomChart.Zooming.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\Wrappers\AxisTickSettingsWrapper.cs" />
+    <Compile Include="UI\Controls\Wrappers\AxisSettingsWrapper.cs" />
+    <Compile Include="UI\Controls\Wrappers\BackgroundSettingsWrapper.cs" />
+    <Compile Include="UI\Controls\Wrappers\ChartAreaSettingsWrapper.cs" />
+    <Compile Include="UI\Controls\Wrappers\ChartSettingsWrapper.cs" />
+    <Compile Include="UI\Controls\Wrappers\ColorSettingsWrapper.cs" />
+    <Compile Include="UI\Controls\Wrappers\BoxSettingsWrapper.cs" />
+    <Compile Include="UI\Controls\Wrappers\FontSettingsWrapper.cs" />
+    <Compile Include="UI\Controls\Wrappers\SmartLabelSettingsWrapper.cs" />
+    <Compile Include="UI\Controls\Wrappers\DefaultElementSettingsWrapper.cs" />
+    <Compile Include="UI\Controls\Wrappers\HotspotSettingsWrapper.cs" />
+    <Compile Include="UI\Controls\Wrappers\LabelSettingsWrapper.cs" />
+    <Compile Include="UI\Controls\Wrappers\LegendBoxSettingsWrapper.cs" />
+    <Compile Include="UI\Controls\Wrappers\LegendEntrySettingsWrapper.cs" />
+    <Compile Include="UI\Controls\Wrappers\LineSettingsWrapper.cs" />
+    <Compile Include="UI\Controls\Wrappers\ScaleRangeSettingsWrapper.cs" />
+    <Compile Include="UI\Controls\Wrappers\ShadowSettingsWrapper.cs" />
+    <Compile Include="UI\Controls\Wrappers\TimeIntervalAdvancedSettingsWrapper.cs" />
+    <Compile Include="UI\Controls\Wrappers\TimeScaleLabelInfoSettingsWrapper.cs" />
+    <Compile Include="UI\Controls\Wrappers\TimeSpanSettingsWrapper.cs" />
+    <Compile Include="UI\Controls\Wrappers\TruncationSettingsWrapper.cs" />
+    <Compile Include="UI\DefaultElementWrapper.cs" />
+    <Compile Include="UI\DiagramTypeEnumConverter.cs" />
+    <Compile Include="UI\InputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\InputForm.Designer.cs">
+      <DependentUpon>InputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SeriesEditControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\SeriesEditControl.Designer.cs">
+      <DependentUpon>SeriesEditControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SeriesEditor.cs" />
+    <Compile Include="Visualizator\BusinessGraphicsVisualizatorModule.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\DomainServices\EnvironmentConfiguration\ConfigModule\ConfigModule.csproj">
+      <Project>{72986126-520F-46B7-9134-465AEFEFBC0A}</Project>
+      <Name>ConfigModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\TechnicalServices\Entity\Entity.csproj">
+      <Project>{4E56777C-8690-47AB-9FD7-4D65677862FA}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\TechnicalServices\Interfaces\Interfaces.csproj">
+      <Project>{E7BED6ED-753D-4D11-96BD-273C88FE10A6}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\TechnicalServices\Licensing\Licensing\Licensing.csproj">
+      <Project>{8A19E402-388E-4847-94C7-285D83509D42}</Project>
+      <Name>Licensing %28TechnicalServices\Licensing\Licensing%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\TechnicalServices\Persistence\CommonPersistence\CommonPersistence.csproj">
+      <Project>{E8497275-E440-4495-AA40-9EA20EEB8BA2}</Project>
+      <Name>CommonPersistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\TechnicalServices\TechnicalServices.Common\TechnicalServices.Common.csproj">
+      <Project>{535A2090-3619-450C-88F2-1F2067673D64}</Project>
+      <Name>TechnicalServices.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\TechnicalServices\TechnicalServices.Exceptions\TechnicalServices.Exceptions.csproj">
+      <Project>{B7D71050-C178-4F87-86CB-9ED39DE165BA}</Project>
+      <Name>TechnicalServices.Exceptions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SystemModule\Config\BusinessGraphicsConfig.xsd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SystemModule\Design\BusinessGraphicsDesign.xsd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Player\ChartManageControl.resx">
+      <DependentUpon>ChartManageControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemModule\Design\ChartForm.resx">
+      <DependentUpon>ChartForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\BusinessGraphicsForm.resx">
+      <DependentUpon>BusinessGraphicsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ChartSetupForm.resx">
+      <DependentUpon>ChartSetupForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\InputForm.resx">
+      <DependentUpon>InputForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SeriesEditControl.resx">
+      <DependentUpon>SeriesEditControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SystemModule\Design\XMLFileSchema.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resource\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>xcopy $(TargetPath) $(SolutionDir)bin\Plugins\BusinessGraphics /Y
+xcopy $(SolutionDir)Reference\dotNetCharting\dotnetCharting.WinForms.dll $(SolutionDir)bin\Plugins\BusinessGraphics /Y
+call $(SolutionDir)bin\Tools\copy_module.cmd $(TargetPath) $(SolutionDir) $(ConfigurationName)
+call $(SolutionDir)bin\Tools\copy_module.cmd $(SolutionDir)Reference\dotNetCharting\dotnetCharting.WinForms.dll $(SolutionDir) $(ConfigurationName)
+
+xcopy $(ProjectDir)SystemModule\Config\BusinessGraphicsConfig.xsd $(SolutionDir)TechnicalServices\Persistence\CommonPersistence\Configuration /Y
+xcopy $(ProjectDir)SystemModule\Config\BusinessGraphicsConfig.xsd $(SolutionDir)bin\Plugins\BusinessGraphics /Y
+call $(SolutionDir)bin\Tools\copy_moduleconfiguration.cmd $(ProjectDir)SystemModule\Config\BusinessGraphicsConfig.xsd $(SolutionDir) $(ConfigurationName)
+
+xcopy $(ProjectDir)SystemModule\Design\BusinessGraphicsDesign.xsd $(SolutionDir)TechnicalServices\Persistence\CommonPersistence\Presentation /Y
+xcopy $(ProjectDir)SystemModule\Design\BusinessGraphicsDesign.xsd $(SolutionDir)bin\Plugins\BusinessGraphics /Y
+call $(SolutionDir)bin\Tools\copy_presentation.cmd $(ProjectDir)SystemModule\Design\BusinessGraphicsDesign.xsd $(SolutionDir) $(ConfigurationName)
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>

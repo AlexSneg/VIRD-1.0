@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    xmlns="urn:presentation-schema"
+    xmlns:config="urn:presentation-schema"
+    targetNamespace="urn:presentation-schema">
+
+  <xsd:include schemaLocation="basePresentation.xsd" />
+
+  <xsd:element name="AudioMixer" substitutionGroup="config:Device">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="config:DeviceType">
+          <xsd:sequence>
+            <xsd:element name="AudioMixerMatrix" minOccurs="0" maxOccurs="1">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="AudioMixerMatrixUnit" minOccurs="0" maxOccurs="unbounded">
+                    <xsd:complexType>
+                      <xsd:attribute name="Input" type="xsd:string" use="required" />
+                      <xsd:attribute name="Output" type="xsd:string" use="required" />
+                      <xsd:attribute name="OnOffState" type="xsd:boolean" use="optional" default="false" />
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="AudioMixerFaderGroupList" minOccurs="0" maxOccurs="1">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="AudioMixerFaderGroup" minOccurs="0" maxOccurs="unbounded">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element name="AudioMixerFaderList" minOccurs="0" maxOccurs="1">
+                          <xsd:complexType>
+                            <xsd:sequence>
+                              <xsd:element name="AudioMixerFader" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:complexType>
+                                  <xsd:attribute name="InstanceID" type="xsd:string" use="required" />
+                                  <xsd:attribute name="Mute" type="xsd:boolean" use="optional" default="false" />
+                                  <xsd:attribute name="BandValue" type="xsd:int" use="required" />
+                                </xsd:complexType>
+                              </xsd:element>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                      </xsd:sequence>
+                      <xsd:attribute name="Name" type="xsd:string" use="required" />
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>

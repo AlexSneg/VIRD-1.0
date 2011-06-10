@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Preset>
+    <Name></Name>
+    <PropertyList/>
+    <CommandList>
+        <EquipmentCommand Name="LightSetGroupState" Command="LightSetGroupState" />
+        <EquipmentCommand Name="LightGetGroupState" Command="LightGetGroupState" Answer="LightGroupState"/>
+        <EquipmentCommand Name="LightSetGroupLevel" Command="LightSetGroupLevel" />
+        <EquipmentCommand Name="LightGetGroupLevel" Command="LightGetGroupLevel" Answer="LightGroupLevel"/>
+    </CommandList>
+</Preset>

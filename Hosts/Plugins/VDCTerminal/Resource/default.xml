@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Preset>
+    <Name></Name>
+    <PropertyList/>
+    <CommandList>
+        <EquipmentCommand Name="GetCallState"  Command="VCSGetCallState" Answer="VCSState"/>
+        <EquipmentCommand Name="GetStatus"     Command="VCSGetStatus" Answer="VCSStatus"/>
+        <EquipmentCommand Name="GetError"      Command="VCSGetError" Answer="VCSError"/>
+        <EquipmentCommand Name="IncomingCall"  Command="VCSCheckIncomingCall" Answer="VCSIncomingCall"/>
+        <EquipmentCommand Name="SetAutoAnswer" Command="VCSSetAutoAnswer" />
+        <EquipmentCommand Name="GetAutoAnswer" Command="VCSGetAutoAnswer" Answer="VCSAutoAnswer"/>
+        <EquipmentCommand Name="SetContent" Command="VCSSetContent" />
+        <EquipmentCommand Name="GetContent" Command="VCSGetContent" Answer="VCSContent"/>
+        <EquipmentCommand Name="SetPrivacy" Command="VCSSetPrivacy" />
+        <EquipmentCommand Name="GetPrivacy" Command="VCSGetPrivacy" Answer="VCSPrivacy"/>
+        <EquipmentCommand Name="SetDND" Command="VCSSetDND" />
+        <EquipmentCommand Name="GetDND" Command="VCSGetDND" Answer="VCSDND"/>
+        <EquipmentCommand Name="SetPIP" Command="VCSSetPIP" />
+        <EquipmentCommand Name="GetPIP" Command="VCSGetPIP" Answer="VCSPIP"/>
+        <EquipmentCommand Name="Dial"   Command="VCSDial" />
+        <EquipmentCommand Name="Reply"  Command="VCSReply" />
+        <EquipmentCommand Name="Redial" Command="VCSRedial" />
+        <EquipmentCommand Name="Disconnect" Command="VCSDisconnect" />
+    </CommandList>
+</Preset>

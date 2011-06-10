@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    xmlns="urn:presentation-schema"
+    xmlns:config="urn:presentation-schema"
+    targetNamespace="urn:presentation-schema">
+
+  <xsd:include schemaLocation="basePresentation.xsd" />
+
+  <xsd:element name="JupiterDisplay" substitutionGroup="Display">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="ActiveDisplay" />
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="JupiterDevice" substitutionGroup="Device">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="DeviceType">
+          <xsd:attribute name="OnOffState" type="xsd:boolean" use="optional" default="true" />
+          <xsd:attribute name="PictureMute" type="xsd:boolean" use="optional" default="false" />
+          <xsd:attribute name="Brightness" type="xsd:int" use="optional" default="60" />
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="JupiterWindow" substitutionGroup="Window">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="ActiveWindowType">
+          <xsd:attribute name="VideoIn" type="xsd:int" use="required" />
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>

@@ -1,0 +1,15 @@
+C:\Projects\Polymedia\Dev\trunk\TechnicalServices\Communication\TcpExternalSystemController\bin\Debug\TcpExternalSystemController.dll
+C:\Projects\Polymedia\Dev\trunk\TechnicalServices\Communication\TcpExternalSystemController\bin\Debug\TcpExternalSystemController.pdb
+C:\Projects\Polymedia\Dev\trunk\TechnicalServices\Communication\TcpExternalSystemController\bin\Debug\Interfaces.dll
+C:\Projects\Polymedia\Dev\trunk\TechnicalServices\Communication\TcpExternalSystemController\bin\Debug\Entity.dll
+C:\Projects\Polymedia\Dev\trunk\TechnicalServices\Communication\TcpExternalSystemController\bin\Debug\CommonPersistence.dll
+C:\Projects\Polymedia\Dev\trunk\TechnicalServices\Communication\TcpExternalSystemController\bin\Debug\TechnicalServices.Exceptions.dll
+C:\Projects\Polymedia\Dev\trunk\TechnicalServices\Communication\TcpExternalSystemController\bin\Debug\TechnicalServices.Common.dll
+C:\Projects\Polymedia\Dev\trunk\TechnicalServices\Communication\TcpExternalSystemController\bin\Debug\Interfaces.pdb
+C:\Projects\Polymedia\Dev\trunk\TechnicalServices\Communication\TcpExternalSystemController\bin\Debug\Entity.pdb
+C:\Projects\Polymedia\Dev\trunk\TechnicalServices\Communication\TcpExternalSystemController\bin\Debug\CommonPersistence.pdb
+C:\Projects\Polymedia\Dev\trunk\TechnicalServices\Communication\TcpExternalSystemController\bin\Debug\TechnicalServices.Exceptions.pdb
+C:\Projects\Polymedia\Dev\trunk\TechnicalServices\Communication\TcpExternalSystemController\bin\Debug\TechnicalServices.Common.pdb
+C:\Projects\Polymedia\Dev\trunk\TechnicalServices\Communication\TcpExternalSystemController\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\Polymedia\Dev\trunk\TechnicalServices\Communication\TcpExternalSystemController\obj\Debug\TcpExternalSystemController.dll
+C:\Projects\Polymedia\Dev\trunk\TechnicalServices\Communication\TcpExternalSystemController\obj\Debug\TcpExternalSystemController.pdb

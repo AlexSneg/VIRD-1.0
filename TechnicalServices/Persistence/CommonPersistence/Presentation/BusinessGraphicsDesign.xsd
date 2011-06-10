@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    xmlns="urn:presentation-schema"
+    xmlns:present="urn:presentation-schema"
+    targetNamespace="urn:presentation-schema">
+
+  <xsd:include schemaLocation="basePresentation.xsd" />
+
+  <xsd:element name="BusinessGraphics" substitutionGroup="Source">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="SourceType">
+          <xsd:attribute name="ODBCRefreshInterval" type="xsd:int" use="optional" default="0" />
+          <xsd:attribute name="DiagramType" type="xsd:string" use="optional" />
+          <xsd:attribute name="DiagramStyle" type="xsd:string" use="optional" />
+          <xsd:attribute name="DiagramStyleData" type="xsd:string" use="optional" />
+          <xsd:attribute name="SubDiagramStyleData" type="xsd:string" use="optional" />
+          <xsd:attribute name="AllowSubDiagram" type="xsd:boolean" use="optional" default="false" />
+          <xsd:attribute name="AllowUserInteraction" type="xsd:boolean" use="optional" default="true" />
+          <xsd:attribute name="SubDiagramType" type="xsd:string" use="optional" />
+          <xsd:attribute name="SubDiagramStyle" type="xsd:string" use="optional" />
+          <xsd:attribute name="DefaultSeries" type="xsd:string" use="optional" />
+          <xsd:attribute name="ValueRangesString" type="xsd:string" use="optional"/>
+          <xsd:attribute name="VisibleSeries" type="xsd:string" use="optional"/>
+          <xsd:attribute name="AutoSetMode" type="xsd:boolean" use="optional" />
+          <xsd:attribute name="H" type="xsd:double" />
+          <xsd:attribute name="B" type="xsd:double" />
+          <xsd:attribute name="L" type="xsd:double" />
+          <xsd:attribute name="Hp" type="xsd:double" />
+          <xsd:attribute name="Bp" type="xsd:double" />
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>

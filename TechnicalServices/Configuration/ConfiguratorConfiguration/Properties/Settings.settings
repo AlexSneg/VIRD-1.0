@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ConfiguratorConfiguration.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ConfigurationFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ModuleConfiguration</Value>
+    </Setting>
+    <Setting Name="ScenarioFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Presentation</Value>
+    </Setting>
+    <Setting Name="ScenarioSchemaFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Presentation\presentation.xsd</Value>
+    </Setting>
+    <Setting Name="LocalSourceFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">LocalSources</Value>
+    </Setting>
+    <Setting Name="GlobalSourceFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">GlobalSources</Value>
+    </Setting>
+    <Setting Name="ModuleFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Module</Value>
+    </Setting>
+    <Setting Name="ConfigurationFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ModuleConfiguration.xml</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

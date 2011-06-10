@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    xmlns="urn:presentation-schema"
+    xmlns:present="urn:presentation-schema"
+    targetNamespace="urn:presentation-schema">
+
+  <xsd:include schemaLocation="basePresentation.xsd" />
+
+  <xsd:element name="VDCTerminalSource" substitutionGroup="Source">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="HardwareSource">
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="VDCTerminalDevice" substitutionGroup="Device">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="DeviceType">
+          <xsd:sequence>
+            <xsd:element name="Abonent" minOccurs="0" maxOccurs="1">
+              <xsd:complexType>
+                <xsd:attribute name="Name" type="xsd:string" use="required" />
+                <xsd:attribute name="Number1" type="xsd:string" use="optional" default="0.0.0.0" />
+                <xsd:attribute name="Number2" type="xsd:string" use="optional" />
+                <xsd:attribute name="ConnectionState" type="xsd:string" use="optional" default="Auto" />
+                <xsd:attribute name="ConnectionQuality" type="xsd:string" use="optional" default="Auto" />
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+          <xsd:attribute name="DirectNumber" type="xsd:string" use="optional" />
+          <xsd:attribute name="ConnectionState" type="xsd:string" use="optional" default="Connected" />
+          <xsd:attribute name="PeopleConnect" type="xsd:boolean" use="optional" default="false" />
+          <xsd:attribute name="Privacy" type="xsd:boolean" use="optional" default="false" />
+          <xsd:attribute name="DND" type="xsd:boolean" use="optional" default="false" />
+          <xsd:attribute name="AutoResponse" type="xsd:boolean" use="optional" default="true" />
+          <xsd:attribute name="PiP" type="xsd:boolean" use="optional" default="true" />
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>

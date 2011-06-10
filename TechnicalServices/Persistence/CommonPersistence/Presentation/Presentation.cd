@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TechnicalServices.Persistence.SystemPersistence.Presentation.Presentation" Collapsed="true">
+    <Position X="6.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAQAAgAAAEAIAAQAQAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\presentation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechnicalServices.Persistence.SystemPersistence.Presentation.Slide" Collapsed="true">
+    <Position X="2.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACABABEAAgAABAAGgAAAQAAAAABAAAAAAABAAAAQA=</HashCode>
+      <FileName>Presentation\presentation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechnicalServices.Persistence.SystemPersistence.Presentation.Source" Collapsed="true">
+    <Position X="4" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\presentation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechnicalServices.Persistence.SystemPersistence.Presentation.HardwareSource" Collapsed="true">
+    <Position X="5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\presentation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechnicalServices.Persistence.SystemPersistence.Presentation.SoftwareSource" Collapsed="true">
+    <Position X="2.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAIAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Presentation\presentation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechnicalServices.Persistence.SystemPersistence.Presentation.Device" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\presentation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechnicalServices.Persistence.SystemPersistence.Presentation.Display" Collapsed="true">
+    <Position X="8.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAABgAAAAAAAAEAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\presentation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechnicalServices.Persistence.SystemPersistence.Presentation.Window" Collapsed="true">
+    <Position X="4.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABkAAAgAAAAAAAEAAAAAIAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\presentation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechnicalServices.Persistence.SystemPersistence.Presentation.Equipment&lt;T&gt;" Collapsed="true">
+    <Position X="5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAEAAAAAAQAAAAIAAQAEAAAAAAAAQAACAAAABA=</HashCode>
+      <FileName>Presentation\presentation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechnicalServices.Persistence.SystemPersistence.Presentation.Link" Collapsed="true">
+    <Position X="4.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAQAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAgAA=</HashCode>
+      <FileName>Presentation\presentation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechnicalServices.Persistence.SystemPersistence.Presentation.Command" Collapsed="true">
+    <Position X="2.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\presentation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechnicalServices.Persistence.SystemPersistence.Presentation.ActiveDisplay" Collapsed="true">
+    <Position X="9.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Presentation\presentation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechnicalServices.Persistence.SystemPersistence.Presentation.PassiveDisplay" Collapsed="true">
+    <Position X="7.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\presentation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="TechnicalServices.Persistence.SystemPersistence.Presentation.SlideState" Collapsed="true">
+    <Position X="2.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAEIAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\presentation.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

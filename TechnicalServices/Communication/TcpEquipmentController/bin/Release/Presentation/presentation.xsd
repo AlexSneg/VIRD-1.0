@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="urn:presentation-schema"
+    xmlns="urn:presentation-schema"
+	xmlns:present="urn:presentation-schema">
+
+    <xsd:include schemaLocation="basePresentation.xsd" />
+    <!-- 
+		Секция для плагинов.
+	Инсталяция плагина проверяет, 
+	что она ставиться на сервере, 
+	копирует свой XSD в нужную 
+	директорию и прописывает 
+			его тут
+	В данный момент копирование XSD 
+	от плагинов осуществляется через 
+		Post Build Event 
+-->
+    <xsd:include schemaLocation="DVDPlayerDesign.xsd" />
+    <xsd:include schemaLocation="GangSwitchDesign.xsd" />
+    <xsd:include schemaLocation="ImageDesign.xsd" />
+    <xsd:include schemaLocation="JupiterDesign.xsd" />
+    <xsd:include schemaLocation="MonitorDesign.xsd" />
+    <xsd:include schemaLocation="VideoCameraDesign.xsd" />
+    <xsd:include schemaLocation="VideoDesign.xsd" />
+    <xsd:include schemaLocation="VNCDesign.xsd" />
+    <xsd:include schemaLocation="ComputerDesign.xsd" />
+    <xsd:include schemaLocation="VDCTerminalDesign.xsd" />
+    <xsd:include schemaLocation="BusinessGraphicsDesign.xsd" />
+    <xsd:include schemaLocation="LightDesign.xsd" />
+    <xsd:include schemaLocation="AudioMixerDesign.xsd" />
+    <xsd:include schemaLocation="VDCServerDesign.xsd" />
+    <xsd:include schemaLocation="StandardSourceDesign.xsd" />
+  <xsd:include schemaLocation="PowerPointPresentationDesign.xsd" />
+  <xsd:include schemaLocation="WordDocumentDesign.xsd" />
+  <xsd:include schemaLocation="IEDocumentDesign.xsd" />
+
+  <!--<xsd:include schemaLocation="passiveDisplayPresentation.xsd" />
+	<xsd:include schemaLocation="hardwareSourcePresentation.xsd" />
+	<xsd:include schemaLocation="softwareSourcePresentation.xsd" />-->
+
+</xsd:schema>

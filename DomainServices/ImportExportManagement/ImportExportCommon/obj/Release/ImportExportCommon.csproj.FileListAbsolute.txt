@@ -1,0 +1,14 @@
+C:\Projects\Polymedia\Dev\trunk\DomainServices\ImportExportManagement\ImportExportCommon\bin\Release\Presentation\basePresentation.xsd
+C:\Projects\Polymedia\Dev\trunk\DomainServices\ImportExportManagement\ImportExportCommon\bin\Release\Presentation\presentation.xml
+C:\Projects\Polymedia\Dev\trunk\DomainServices\ImportExportManagement\ImportExportCommon\bin\Release\Presentation\presentation.xsd
+C:\Projects\Polymedia\Dev\trunk\DomainServices\ImportExportManagement\ImportExportCommon\bin\Release\ImportExportCommon.dll
+C:\Projects\Polymedia\Dev\trunk\DomainServices\ImportExportManagement\ImportExportCommon\bin\Release\ImportExportCommon.pdb
+C:\Projects\Polymedia\Dev\trunk\DomainServices\ImportExportManagement\ImportExportCommon\bin\Release\CommonPersistence.dll
+C:\Projects\Polymedia\Dev\trunk\DomainServices\ImportExportManagement\ImportExportCommon\bin\Release\Entity.dll
+C:\Projects\Polymedia\Dev\trunk\DomainServices\ImportExportManagement\ImportExportCommon\bin\Release\TechnicalServices.Exceptions.dll
+C:\Projects\Polymedia\Dev\trunk\DomainServices\ImportExportManagement\ImportExportCommon\bin\Release\Entity.pdb
+C:\Projects\Polymedia\Dev\trunk\DomainServices\ImportExportManagement\ImportExportCommon\bin\Release\TechnicalServices.Exceptions.pdb
+C:\Projects\Polymedia\Dev\trunk\DomainServices\ImportExportManagement\ImportExportCommon\bin\Release\CommonPersistence.pdb
+C:\Projects\Polymedia\Dev\trunk\DomainServices\ImportExportManagement\ImportExportCommon\obj\Release\ResolveAssemblyReference.cache
+C:\Projects\Polymedia\Dev\trunk\DomainServices\ImportExportManagement\ImportExportCommon\obj\Release\ImportExportCommon.dll
+C:\Projects\Polymedia\Dev\trunk\DomainServices\ImportExportManagement\ImportExportCommon\obj\Release\ImportExportCommon.pdb

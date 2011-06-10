@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="urn:configuration-schema"
+    xmlns:config="urn:configuration-schema"
+    elementFormDefault="qualified"
+    targetNamespace="urn:configuration-schema">
+
+    <xsd:element name="Configuration">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="DeviceList">
+                    <xsd:complexType>
+                        <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+                            <xsd:element ref="DeviceType"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="SourceList">
+                    <xsd:complexType>
+                        <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+                            <xsd:element ref="SourceType"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="DisplayList">
+                    <xsd:complexType>
+                        <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+                            <xsd:element ref="DisplayType"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="LabelList">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element minOccurs="0" maxOccurs="unbounded" name="Label">
+                                <xsd:complexType>
+                                    <xsd:attribute name="Id" type="xsd:nonNegativeInteger" use="required"/>
+                                    <xsd:attribute name="Name" type="xsd:token" use="required"/>
+                                    <xsd:attribute name="IsSystem" type="xsd:boolean" use="required"/>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="Name" type="xsd:string" use="required" />
+            <xsd:attribute name="Comment" type="xsd:string" use="required" />
+            <xsd:attribute name="LastChangeDate" type="xsd:dateTime" use="required" />
+        </xsd:complexType>
+        <!--Уникальность имени device-->
+        <xsd:key name="deviceNameUnique">
+            <xsd:selector xpath="config:DeviceList/*"/>
+            <xsd:field xpath="@Name"/>
+        </xsd:key>
+        <!--Уникальность имени source-->
+        <xsd:key name="sourceNameUnique">
+            <xsd:selector xpath="config:SourceList/*"/>
+            <xsd:field xpath="@Name"/>
+        </xsd:key>
+        <!--Уникальность имени display-->
+        <xsd:key name="displayNameUnique">
+            <xsd:selector xpath="config:DisplayList/*"/>
+            <xsd:field xpath="@Name"/>
+        </xsd:key>
+        <!--Уникальность значений label-->
+        <xsd:key name="labelUnique">
+            <xsd:selector xpath="config:LabelList/*"/>
+            <xsd:field xpath="@Name"/>
+        </xsd:key>
+    </xsd:element>
+
+    <xsd:element name="DeviceType" type="DeviceTypeType"/>
+    <xsd:element name="SourceType" type="SourceTypeType"/>
+    <xsd:element name="DisplayType" type="DisplayTypeType"/>
+    <xsd:element name="Mapping" type="MappingType">
+        <xsd:keyref name="sourceNameRef" refer="config:sourceNameUnique">
+            <xsd:selector xpath="."/>
+            <xsd:field xpath="@Source"/>
+        </xsd:keyref>
+    </xsd:element>
+
+    <xsd:complexType name="EquipmentType" abstract="true">
+        <xsd:sequence>
+            <xsd:element name="CommandList">
+                <xsd:complexType>
+                    <xsd:sequence minOccurs="0" maxOccurs="unbounded" >
+                        <xsd:element name="EquipmentCommand">
+                            <xsd:complexType>
+                                <xsd:attribute name="Name" use="required" type="xsd:token" />
+                                <xsd:attribute name="Command" use="required" type="xsd:string" />
+                                <xsd:attribute name="Answer" use="optional" type="xsd:string" default="OK"/>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+        <xsd:attribute name="Name" use="required">
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:token">
+                    <xsd:minLength value="2" />
+                    <xsd:maxLength value="64" />
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:attribute>
+        <xsd:attribute name="Type" use="required">
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:token">
+                    <xsd:minLength value="2" />
+                    <xsd:maxLength value="64" />
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:attribute>
+        <xsd:attribute name="Model" type="xsd:string" use="optional" />
+        <xsd:attribute name="Comment" type="xsd:string" use="optional" />
+        <xsd:attribute name="UID" type="xsd:int" use="required" />
+    </xsd:complexType>
+
+    <xsd:complexType name="SourceTypeType" abstract="true">
+        <xsd:complexContent>
+            <xsd:extension base="EquipmentType"/>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="HardwareSourceTypeType" abstract="true">
+        <xsd:complexContent>
+            <xsd:extension base="SourceTypeType">
+                <xsd:attribute name="Input" type="xsd:nonNegativeInteger" use="required" />
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="DeviceTypeType" abstract="true">
+        <xsd:complexContent>
+            <xsd:extension base="EquipmentType"/>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="MappingType">
+        <xsd:sequence>
+            <xsd:element name="CommandList">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="0" maxOccurs="unbounded" name="Command" type="xsd:string" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+        <xsd:attribute name="Source" type="xsd:token" use="required" />
+    </xsd:complexType>
+
+    <xsd:complexType name="DisplayTypeType" abstract="true">
+        <xsd:complexContent>
+            <xsd:extension base="EquipmentType">
+                <xsd:sequence>
+                    <xsd:element name="MappingList">
+                        <xsd:complexType>
+                            <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+                                <xsd:element ref="Mapping" />
+                                <!--Ссылка на Source
+                                    <xsd:keyref name="sourceNameRef" refer="config:sourceNameUnique">
+										<xsd:selector xpath="."/>
+										<xsd:field xpath="@Source"/>
+									</xsd:keyref>-->
+                            </xsd:sequence>
+                        </xsd:complexType>
+                        <!--Уникальность Source внутри Mapping-->
+                        <!--<xsd:key name="sourceNameUniqueInMapping">
+                            <xsd:selector xpath="./*"/>
+                            <xsd:field xpath="@Source"/>
+                        </xsd:key>-->
+                    </xsd:element>
+                </xsd:sequence>
+                <xsd:attribute name="Width" type="xsd:nonNegativeInteger" use="required" />
+                <xsd:attribute name="Height" type="xsd:nonNegativeInteger" use="required" />
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+
+    <xsd:complexType name="PassiveDisplayTypeType" abstract="true">
+        <xsd:complexContent>
+            <xsd:extension base="DisplayTypeType">
+                <xsd:attribute name="Output" type="xsd:nonNegativeInteger" use="required" />
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="ComputerTypeType" abstract="true">
+        <xsd:complexContent>
+            <xsd:extension base="DisplayTypeType">
+                <xsd:attribute name="AgentUID" type="xsd:string" use="required"/>
+                <xsd:attribute name="Uri" type="xsd:string" use="required"/>
+                <xsd:attribute name="WidthM" type="xsd:decimal"/>
+                <xsd:attribute name="HeightM" type="xsd:decimal"/>
+                <xsd:attribute name="DistanceM" type="xsd:int"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+</xsd:schema>

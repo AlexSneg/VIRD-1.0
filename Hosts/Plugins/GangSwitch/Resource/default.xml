@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Preset>
+    <Name></Name>
+    <PropertyList/>
+    <CommandList>
+        <EquipmentCommand Name="SwitchOn"   Command="SwitchOn" />
+        <EquipmentCommand Name="SwitchOff"  Command="SwitchOff" />
+        <EquipmentCommand Name="SwitchGet"  Command="SwitchGet" Answer="Switch"/>
+    </CommandList>
+</Preset>

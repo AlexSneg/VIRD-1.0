@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{535A2090-3619-450C-88F2-1F2067673D64}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TechnicalServices.Common</RootNamespace>
+    <AssemblyName>TechnicalServices.Common</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Security_Release|AnyCPU' ">
+    <OutputPath>bin\Security_Release\</OutputPath>
+    <DefineConstants>TRACE;Security_Release</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Security_Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Security_Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;Security_Release</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractStorage.cs" />
+    <Compile Include="Caching\Cache.cs" />
+    <Compile Include="Classes\Events.cs" />
+    <Compile Include="Command\Command.cs" />
+    <Compile Include="Command\CommandInvoker.cs" />
+    <Compile Include="CorrectNameCollectionEditor.cs" />
+    <Compile Include="Editor\ClonableObjectCollectionEditorAdv.cs" />
+    <Compile Include="Editor\CollectionEditorAdv.cs" />
+    <Compile Include="Editor\EditorReadonlyAttribute.cs" />
+    <Compile Include="Editor\LabelCollectionEditor.cs" />
+    <Compile Include="Editor\ReadOnlyCollectionEditorAdv.cs" />
+    <Compile Include="ReadOnly\ReadOnlyCollectionEditor.cs" />
+    <Compile Include="FileTransferObject.cs" />
+    <Compile Include="KeyCollection.cs" />
+    <Compile Include="Locking\ObjectKeyCreator.cs" />
+    <Compile Include="Notification\NotificationManager.cs" />
+    <Compile Include="Notification\Notifier.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadOnly\IReadOnlyWrapper.cs" />
+    <Compile Include="ReadOnly\ReadOnlyObject.cs" />
+    <Compile Include="TypeConverters\CollectionNameConverter.cs" />
+    <Compile Include="TypeConverters\CommonEnumConverter.cs" />
+    <Compile Include="TypeConverters\ExpandableNameConverter.cs" />
+    <Compile Include="TypeConverters\FontFamilyConverter.cs" />
+    <Compile Include="TypeConverters\FontSizeConverter.cs" />
+    <Compile Include="TypeConverters\Int16ConverterLocalized.cs" />
+    <Compile Include="TypeConverters\Int32ConverterLocalized.cs" />
+    <Compile Include="TypeConverters\LabelIsSystemConverter.cs" />
+    <Compile Include="TypeConverters\ModelConverter.cs" />
+    <Compile Include="TypeConverters\NonNegativeInt16Converter.cs" />
+    <Compile Include="TypeConverters\NonNegativeInt32Converter.cs" />
+    <Compile Include="TypeConverters\NotNullStringConverter.cs" />
+    <Compile Include="TypeConverters\OnOffConverter.cs" />
+    <Compile Include="TypeConverters\ResourceDescriptorConverter.cs" />
+    <Compile Include="TypeConverters\ResourceFileInfoFullFileNameTypeConverter.cs" />
+    <Compile Include="TypeConverters\SourceConverter.cs" />
+    <Compile Include="TypeConverters\YesNoConverter.cs" />
+    <Compile Include="Utils\Identity.cs" />
+    <Compile Include="Utils\WatchDog.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{4E56777C-8690-47AB-9FD7-4D65677862FA}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Persistence\CommonPersistence\CommonPersistence.csproj">
+      <Project>{E8497275-E440-4495-AA40-9EA20EEB8BA2}</Project>
+      <Name>CommonPersistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TechnicalServices.Exceptions\TechnicalServices.Exceptions.csproj">
+      <Project>{B7D71050-C178-4F87-86CB-9ED39DE165BA}</Project>
+      <Name>TechnicalServices.Exceptions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>call $(SolutionDir)bin\Tools\copy_library.cmd $(TargetPath) $(SolutionDir) $(ConfigurationName)
+call $(SolutionDir)bin\Tools\copy_to_plugin.cmd $(TargetPath) $(SolutionDir)</PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Preset"
+    targetNamespace="http://tempuri.org/Preset.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/Preset.xsd"
+    xmlns:mstns="http://tempuri.org/Preset.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+    <xs:element name="Preset" >
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Name" type="xs:string"  />
+                <xs:element name="PropertyList">
+                    <xs:complexType>
+                        <xs:sequence minOccurs="0" maxOccurs="unbounded" >
+                            <xs:element name="NameValuePair">
+                                <xs:complexType>
+                                    <xs:attribute name="Name" type="xs:string" />
+                                    <xs:attribute name="Value" type="xs:string" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="CommandList">
+                    <xs:complexType>
+                        <xs:sequence minOccurs="0" maxOccurs="unbounded" >
+                            <xs:element name="EquipmentCommand">
+                                <xs:complexType>
+                                    <xs:attribute name="Name" use="required" type="xsd:token" />
+                                    <xs:attribute name="Command" use="required" type="xsd:string" />
+                                    <xs:attribute name="Answer" use="optional" type="xsd:string" default="OK"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+</xs:element>
+</xs:schema>

@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{01A253E6-D508-433F-9254-0E55C402FF8A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hosts.Plugins.WordDocument</RootNamespace>
+    <AssemblyName>WordDocument</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Security_Release|AnyCPU' ">
+    <OutputPath>bin\Security_Release\</OutputPath>
+    <DefineConstants>TRACE;Security_Release</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Security_Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Security_Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;Security_Release</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.DSOFramer, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Reference\DSO\AxInterop.DSOFramer.dll</HintPath>
+    </Reference>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Interop.DSOFramer, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Reference\DSO\Interop.DSOFramer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Reference\Office 2003\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="Office, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Reference\Office 2003\Office.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Core, Version=6.303.1.8, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Grid.Base, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Grid.Windows, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Shared.Base, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Shared.Windows, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Tools.Base, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Tools.Windows, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Constants.cs" />
+    <Compile Include="Common\DsoFramerHelper.cs" />
+    <Compile Include="Common\WordDocument.cs" />
+    <Compile Include="Common\WordShowCommand.cs" />
+    <Compile Include="Common\WordUtils.cs" />
+    <Compile Include="Configurator\WordDocumentConfiguratorModule.cs" />
+    <Compile Include="Designer\WordDocumentDesignerModule.cs" />
+    <Compile Include="Player\PlayerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Player\PlayerControl.Designer.cs">
+      <DependentUpon>PlayerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Player\PlayerController.cs" />
+    <Compile Include="Player\WordDocumentPlayerModule.cs" />
+    <Compile Include="WordDocumentModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Server\WordDocumentServerModule.cs" />
+    <Compile Include="SystemModule\Config\WordDocumentModule.cs" />
+    <Compile Include="SystemModule\Config\WordDocumentSourceConfig.cs" />
+    <Compile Include="SystemModule\Design\WordDocumentModule.cs" />
+    <Compile Include="SystemModule\Design\WordDocumentSourceDesign.cs" />
+    <Compile Include="SystemModule\WordDocumentSystemModule.cs" />
+    <Compile Include="UI\AxHost.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\AxHost.Designer.cs">
+      <DependentUpon>AxHost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\WordForm.Designer.cs">
+      <DependentUpon>WordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visualizator\WordDocumentVisualizatorModule.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\DomainServices\EnvironmentConfiguration\ConfigModule\ConfigModule.csproj">
+      <Project>{72986126-520F-46B7-9134-465AEFEFBC0A}</Project>
+      <Name>ConfigModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\TechnicalServices\Entity\Entity.csproj">
+      <Project>{4E56777C-8690-47AB-9FD7-4D65677862FA}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\TechnicalServices\Interfaces\Interfaces.csproj">
+      <Project>{E7BED6ED-753D-4D11-96BD-273C88FE10A6}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\TechnicalServices\Licensing\Licensing\Licensing.csproj">
+      <Project>{8A19E402-388E-4847-94C7-285D83509D42}</Project>
+      <Name>Licensing %28TechnicalServices\Licensing\Licensing%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\TechnicalServices\Persistence\CommonPersistence\CommonPersistence.csproj">
+      <Project>{E8497275-E440-4495-AA40-9EA20EEB8BA2}</Project>
+      <Name>CommonPersistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\TechnicalServices\TechnicalServices.Common\TechnicalServices.Common.csproj">
+      <Project>{535A2090-3619-450C-88F2-1F2067673D64}</Project>
+      <Name>TechnicalServices.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\TechnicalServices\TechnicalServices.Exceptions\TechnicalServices.Exceptions.csproj">
+      <Project>{B7D71050-C178-4F87-86CB-9ED39DE165BA}</Project>
+      <Name>TechnicalServices.Exceptions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SystemModule\Config\WordDocumentConfig.xsd" />
+    <None Include="SystemModule\Design\WordDocumentDesign.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Player\PlayerControl.resx">
+      <DependentUpon>PlayerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AxHost.resx">
+      <DependentUpon>AxHost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WordForm.resx">
+      <DependentUpon>WordForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Resource\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>xcopy $(TargetPath) $(SolutionDir)bin\Plugins\WordDocument /Y
+xcopy $(TargetDir)AxInterop.DSOFramer.dll $(SolutionDir)bin\Plugins\WordDocument\ /Y
+xcopy $(TargetDir)Interop.DSOFramer.dll $(SolutionDir)bin\Plugins\WordDocument\ /Y
+xcopy $(TargetDir)Microsoft.Office.Interop.Word.dll $(SolutionDir)bin\Plugins\WordDocument\ /Y
+xcopy $(TargetDir)Office.dll $(SolutionDir)bin\Plugins\WordDocument\ /Y
+
+call $(SolutionDir)bin\Tools\copy_module.cmd $(TargetPath) $(SolutionDir) $(ConfigurationName)
+call $(SolutionDir)bin\Tools\copy_module.cmd $(TargetDir)AxInterop.DSOFramer.dll $(SolutionDir) $(ConfigurationName)
+call $(SolutionDir)bin\Tools\copy_module.cmd $(TargetDir)Interop.DSOFramer.dll $(SolutionDir) $(ConfigurationName)
+call $(SolutionDir)bin\Tools\copy_module.cmd $(TargetDir)Microsoft.Office.Interop.Word.dll $(SolutionDir) $(ConfigurationName)
+call $(SolutionDir)bin\Tools\copy_module.cmd $(TargetDir)Office.dll $(SolutionDir) $(ConfigurationName)
+
+xcopy $(ProjectDir)SystemModule\Config\WordDocumentConfig.xsd $(SolutionDir)TechnicalServices\Persistence\CommonPersistence\Configuration /Y
+xcopy $(ProjectDir)SystemModule\Config\WordDocumentConfig.xsd $(SolutionDir)bin\Plugins\WordDocument /Y
+call $(SolutionDir)bin\Tools\copy_moduleconfiguration.cmd $(ProjectDir)SystemModule\Config\WordDocumentConfig.xsd $(SolutionDir) $(ConfigurationName)
+
+xcopy $(ProjectDir)SystemModule\Design\WordDocumentDesign.xsd $(SolutionDir)TechnicalServices\Persistence\CommonPersistence\Presentation /Y
+xcopy $(ProjectDir)SystemModule\Design\WordDocumentDesign.xsd $(SolutionDir)bin\Plugins\WordDocument /Y
+call $(SolutionDir)bin\Tools\copy_presentation.cmd $(ProjectDir)SystemModule\Design\WordDocumentDesign.xsd $(SolutionDir) $(ConfigurationName)</PostBuildEvent>
+  </PropertyGroup>
+</Project>

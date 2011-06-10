@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{461F4748-AC6C-4EAD-9A0A-383744D8C9BC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hosts.Plugins.Monitor</RootNamespace>
+    <AssemblyName>Monitor</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Security_Release|AnyCPU' ">
+    <OutputPath>bin\Security_Release\</OutputPath>
+    <DefineConstants>TRACE;Security_Release</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Security_Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Security_Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;Security_Release</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configurator\MonitorConfiguratorModule.cs" />
+    <Compile Include="Designer\MonitorDesignerModule.cs" />
+    <Compile Include="MonitorModule.cs" />
+    <Compile Include="Player\MonitorPlayerModule.cs" />
+    <Compile Include="Server\MonitorServerModule.cs" />
+    <Compile Include="SystemModule\Config\MonitorDisplayConfig.cs" />
+    <Compile Include="SystemModule\Config\MonitorModule.cs" />
+    <Compile Include="SystemModule\Design\MonitorDisplayDesign.cs" />
+    <Compile Include="SystemModule\Design\MonitorModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemModule\MonitorSystemModule.cs" />
+    <Compile Include="Visualizator\MonitorVisualizatorModule.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\DomainServices\EnvironmentConfiguration\ConfigModule\ConfigModule.csproj">
+      <Project>{72986126-520F-46B7-9134-465AEFEFBC0A}</Project>
+      <Name>ConfigModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\TechnicalServices\Entity\Entity.csproj">
+      <Project>{4E56777C-8690-47AB-9FD7-4D65677862FA}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\TechnicalServices\HardwareEquipment.Util\HardwareEquipment.Util.csproj">
+      <Project>{17C0CC9F-CBFA-413B-AF56-E6FACF11ECE8}</Project>
+      <Name>HardwareEquipment.Util</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\TechnicalServices\Interfaces\Interfaces.csproj">
+      <Project>{E7BED6ED-753D-4D11-96BD-273C88FE10A6}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\TechnicalServices\Licensing\Licensing\Licensing.csproj">
+      <Project>{8A19E402-388E-4847-94C7-285D83509D42}</Project>
+      <Name>Licensing %28TechnicalServices\Licensing\Licensing%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\TechnicalServices\Persistence\CommonPersistence\CommonPersistence.csproj">
+      <Project>{E8497275-E440-4495-AA40-9EA20EEB8BA2}</Project>
+      <Name>CommonPersistence</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SystemModule\Config\MonitorConfig.xsd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SystemModule\Design\MonitorDesign.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resource\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>xcopy $(TargetPath) $(SolutionDir)bin\Plugins\Monitor /Y
+call $(SolutionDir)bin\Tools\copy_module.cmd $(TargetPath) $(SolutionDir) $(ConfigurationName)
+
+xcopy $(ProjectDir)SystemModule\Config\MonitorConfig.xsd $(SolutionDir)TechnicalServices\Persistence\CommonPersistence\Configuration Y
+xcopy $(ProjectDir)SystemModule\Config\MonitorConfig.xsd $(SolutionDir)bin\Plugins\Monitor /Y
+call $(SolutionDir)bin\Tools\copy_moduleconfiguration.cmd $(ProjectDir)SystemModule\Config\MonitorConfig.xsd $(SolutionDir) $(ConfigurationName)
+
+xcopy $(ProjectDir)SystemModule\Design\MonitorDesign.xsd $(SolutionDir)TechnicalServices\Persistence\CommonPersistence\Presentation /Y
+xcopy $(ProjectDir)SystemModule\Design\MonitorDesign.xsd $(SolutionDir)bin\Plugins\Monitor /Y
+call $(SolutionDir)bin\Tools\copy_presentation.cmd $(ProjectDir)SystemModule\Design\MonitorDesign.xsd $(SolutionDir) $(ConfigurationName)
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>

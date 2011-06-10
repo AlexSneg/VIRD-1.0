@@ -1,0 +1,709 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9660EDA9-0B2C-4EE3-97BD-CCAF8F82208D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UI.PresentationDesign.DesignUI</RootNamespace>
+    <AssemblyName>DesignUI</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Security_Release|AnyCPU' ">
+    <OutputPath>bin\Security_Release\</OutputPath>
+    <DefineConstants>TRACE;Security_Release</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Security_Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Security_Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;Security_Release</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.DSOFramer, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\DSO\AxInterop.DSOFramer.dll</HintPath>
+    </Reference>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Interop.DSOFramer, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\DSO\Interop.DSOFramer.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Core, Version=6.302.0.30, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Syncfusion\Syncfusion.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Diagram.Base, Version=6.302.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Syncfusion\Syncfusion.Diagram.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Diagram.Windows, Version=6.302.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Syncfusion\Syncfusion.Diagram.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Edit.Windows, Version=6.302.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Syncfusion\Syncfusion.Edit.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Base, Version=6.302.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Syncfusion\Syncfusion.Grid.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Windows, Version=6.302.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Syncfusion\Syncfusion.Grid.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Base, Version=6.302.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Syncfusion\Syncfusion.Shared.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Windows, Version=6.302.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Syncfusion\Syncfusion.Shared.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Base, Version=6.302.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Syncfusion\Syncfusion.Tools.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Windows, Version=6.302.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Syncfusion\Syncfusion.Tools.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\CommandListController.cs" />
+    <Compile Include="Controllers\DeviceCommandListController.cs" />
+    <Compile Include="Controllers\DisplayController.cs" />
+    <Compile Include="Controllers\DisplayViewer.cs" />
+    <Compile Include="Controllers\EquipmentController.cs" />
+    <Compile Include="Controllers\FindItemController.cs" />
+    <Compile Include="Controllers\GraphTools\DeactivateEventTool.cs" />
+    <Compile Include="Controllers\Interfaces\IControllerAssignable.cs" />
+    <Compile Include="Controllers\Interfaces\IDisplayViewer.cs" />
+    <Compile Include="Controllers\Interfaces\ISelectionController.cs" />
+    <Compile Include="Controllers\LayoutController.cs" />
+    <Compile Include="Controllers\MonitoringController.cs" />
+    <Compile Include="Controllers\PlayerController.cs" />
+    <Compile Include="Controllers\PlayerEquipmentController.cs" />
+    <Compile Include="Controllers\PlayerSourcesController.cs" />
+    <Compile Include="Controllers\PreparePresentationController.cs" />
+    <Compile Include="Controllers\PresentationController.cs" />
+    <Compile Include="Controllers\PresentationControllerBase.cs" />
+    <Compile Include="Controllers\PresentationListController.cs" />
+    <Compile Include="Controllers\PresentationOverviewController.cs" />
+    <Compile Include="Controllers\GraphTools\PresentationPanTool.cs" />
+    <Compile Include="Controllers\GraphTools\SlideCreationTool.cs" />
+    <Compile Include="Controllers\GraphTools\PresentationSelectionTool.cs" />
+    <Compile Include="Controllers\SlideGraphController.cs" />
+    <Compile Include="Controllers\SourceCommandListController.cs" />
+    <Compile Include="Controllers\SourcesController.cs" />
+    <Compile Include="Controllers\GraphTools\ToolDescr.cs" />
+    <Compile Include="Controls\Config\FilePathTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Config\FilePathTextBox.Designer.cs">
+      <DependentUpon>FilePathTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DisplayList\DisplayListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DisplayList\DisplayListControl.Designer.cs">
+      <DependentUpon>DisplayListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DisplayList\DisplayTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\DisplayList\DisplayGroupNode.cs" />
+    <Compile Include="Controls\DisplayList\DisplayNode.cs" />
+    <Compile Include="Controls\DisplayMonitor\MonitorRectangle.cs" />
+    <Compile Include="Controls\Equipment\DeviceNode.cs" />
+    <Compile Include="Controls\DisplayMonitor\DisplayMonitorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DisplayMonitor\DisplayMonitorControl.Designer.cs">
+      <DependentUpon>DisplayMonitorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Equipment\EquipmentTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Equipment\PlayerEquipmentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Equipment\PlayerEquipmentControl.Designer.cs">
+      <DependentUpon>PlayerEquipmentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ManagementControl\CommandListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ManagementControl\CommandListControl.Designer.cs">
+      <DependentUpon>CommandListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ManagementControl\ManagementControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ManagementControl\ManagementControl.Designer.cs">
+      <DependentUpon>ManagementControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Preparation\AgentPrepareProgressControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Preparation\AgentPrepareProgressControl.Designer.cs">
+      <DependentUpon>AgentPrepareProgressControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SourceList\PlayerSourcesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SourceList\PlayerSourcesControl.Designer.cs">
+      <DependentUpon>PlayerSourcesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SourceProperties\ServiceProvidingContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\ConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ConfigForm.Designer.cs">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DisplayGroupProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DisplayGroupProperties.Designer.cs">
+      <DependentUpon>DisplayGroupProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DisplayPropsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DisplayPropsForm.Designer.cs">
+      <DependentUpon>DisplayPropsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FindItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FindItemForm.Designer.cs">
+      <DependentUpon>FindItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LayoutPreviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LayoutPreviewForm.Designer.cs">
+      <DependentUpon>LayoutPreviewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PlayerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PlayerForm.Designer.cs">
+      <DependentUpon>PlayerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PowerPointForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PowerPointForm.Designer.cs">
+      <DependentUpon>PowerPointForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PreparePresentationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PreparePresentationForm.Designer.cs">
+      <DependentUpon>PreparePresentationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ResourceExistsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ResourceExistsDialog.Designer.cs">
+      <DependentUpon>ResourceExistsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SelectActiveDisplayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SelectActiveDisplayForm.Designer.cs">
+      <DependentUpon>SelectActiveDisplayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SourcePropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SourcePropertiesForm.Designer.cs">
+      <DependentUpon>SourcePropertiesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Description.cs" />
+    <Compile Include="Helpers\GridViewTabEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helpers\PresentationStatusInfo.cs" />
+    <Compile Include="Helpers\SwitchableGroupView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helpers\ZoomComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="History\ControllerHistoryCommand.cs" />
+    <Compile Include="History\SlideDeviceHistoryCommand.cs" />
+    <Compile Include="Model\SlideLayout.cs" />
+    <Compile Include="Helpers\ToolStripTabEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="History\CommandDescriptor.cs" />
+    <Compile Include="History\PresentationHistoryCommand.cs" />
+    <Compile Include="Model\PresentationExtensions.cs" />
+    <Compile Include="Model\PresentationModel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\DiagramViewBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\FocusManagerExt.cs" />
+    <Compile Include="Views\IBoundsInfo.cs" />
+    <Compile Include="Views\ImageNode.cs" />
+    <Compile Include="Views\PresentationView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\PresentationLabel.cs" />
+    <Compile Include="Views\PreviewDiagram.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\SlideLayoutDiagram.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\SlideLayoutVeiw.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\SlideLink.cs" />
+    <Compile Include="Controllers\GraphTools\SlideLinkTool.cs" />
+    <Compile Include="Views\SlideView.cs" />
+    <Compile Include="Views\PresentationDiagram.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Equipment\EquipmentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Equipment\EquipmentControl.Designer.cs">
+      <DependentUpon>EquipmentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Filtering\PresentationFilterControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Filtering\PresentationFilterControl.Designer.cs">
+      <DependentUpon>PresentationFilterControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SlideGraph\PresentationOverviewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SlideGraph\PresentationOverviewControl.Designer.cs">
+      <DependentUpon>PresentationOverviewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Filtering\SlideFilterControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Filtering\SlideFilterControl.Designer.cs">
+      <DependentUpon>SlideFilterControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Layout\SlideLayoutControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Layout\SlideLayoutControl.Designer.cs">
+      <DependentUpon>SlideLayoutControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SourceProperties\SourcePropertiesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SourceProperties\SourcePropertiesControl.Designer.cs">
+      <DependentUpon>SourcePropertiesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SourceList\SourcesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SourceList\SourcesControl.Designer.cs">
+      <DependentUpon>SourcesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ISourceNode.cs" />
+    <Compile Include="Views\SourceCategory.cs" />
+    <Compile Include="Views\SourceGroupBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\SourceResourcesView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\SourceWindow.cs" />
+    <Compile Include="Helpers\ZoomComboHelper.cs" />
+    <Compile Include="Forms\PresentationDesignerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PresentationDesignerForm.Designer.cs">
+      <DependentUpon>PresentationDesignerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PresentationListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PresentationListForm.Designer.cs">
+      <DependentUpon>PresentationListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PresentationPropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PresentationPropertiesForm.Designer.cs">
+      <DependentUpon>PresentationPropertiesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SlidePropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SlidePropertiesForm.Designer.cs">
+      <DependentUpon>SlidePropertiesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controls\SlideGraph\SlideDiagramControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SlideGraph\SlideDiagramControl.Designer.cs">
+      <DependentUpon>SlideDiagramControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\IUndoRedoAction.cs" />
+    <Compile Include="History\PropertyChangedHistoryEntry.cs" />
+    <Compile Include="Services\UndoService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="licenses.licx" />
+    <EmbeddedResource Include="Forms\PresentationDesignerForm.resx">
+      <DependentUpon>PresentationDesignerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SlideGraph\SlideDiagramControl.resx">
+      <DependentUpon>SlideDiagramControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DomainServices\EnvironmentConfiguration\ConfigModule\ConfigModule.csproj">
+      <Project>{72986126-520F-46B7-9134-465AEFEFBC0A}</Project>
+      <Name>ConfigModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DomainServices\EquipmentManagement\AgentCommon\AgentCommon.csproj">
+      <Project>{559093DD-568D-4FF9-BC1F-C9CE2AFDC027}</Project>
+      <Name>AgentCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DomainServices\EquipmentManagement\AgentManagement.csproj">
+      <Project>{5E969409-A300-4BE3-9AE6-AD37DEFB955B}</Project>
+      <Name>AgentManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DomainServices\ImportExportManagement\ImportExportCommon\ImportExportCommon.csproj">
+      <Project>{AFEAEEBE-DF0C-4CA7-8DB6-CF5ED03B755D}</Project>
+      <Name>ImportExportCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Domain\PresentationDesign\DesignClient\DesignClient.csproj">
+      <Project>{A9C44F75-6CF1-4FF9-824D-E9F6F3DE88BA}</Project>
+      <Name>DesignClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Domain\PresentationDesign\DesignCommon\DesignCommon.csproj">
+      <Project>{38B1C5EB-22AE-447C-B4AB-11EE196EE4E0}</Project>
+      <Name>DesignCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Domain\PresentationShow\ShowClient\ShowClient.csproj">
+      <Project>{4427515D-30DF-41FB-B45D-95B02AB13D4E}</Project>
+      <Name>ShowClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Domain\PresentationShow\ShowCommon\ShowCommon.csproj">
+      <Project>{E5937096-3879-468B-9E4A-11A600479191}</Project>
+      <Name>ShowCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PowerPointLib\PowerPointLib.csproj">
+      <Project>{4FDFCDFE-8693-4920-A207-496335396760}</Project>
+      <Name>PowerPointLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TechnicalServices\Communication\Communication.csproj">
+      <Project>{4F0FFB74-D607-435D-8C14-372DF3500E1B}</Project>
+      <Name>Communication %28TechnicalServices\Communication\Communication%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TechnicalServices\Configuration\ClientConfiguration\ClientConfiguration.csproj">
+      <Project>{DF9B4D93-21FC-48E3-BDDF-186CE63E58FA}</Project>
+      <Name>ClientConfiguration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TechnicalServices\Configuration\CommonConfiguration\CommonConfiguration.csproj">
+      <Project>{B66A226C-E5F7-4E4F-8552-E3D5ED11412A}</Project>
+      <Name>CommonConfiguration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TechnicalServices\Entity\Entity.csproj">
+      <Project>{4E56777C-8690-47AB-9FD7-4D65677862FA}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TechnicalServices\Interfaces\Interfaces.csproj">
+      <Project>{E7BED6ED-753D-4D11-96BD-273C88FE10A6}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TechnicalServices\Persistence\CommonPersistence\CommonPersistence.csproj">
+      <Project>{E8497275-E440-4495-AA40-9EA20EEB8BA2}</Project>
+      <Name>CommonPersistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TechnicalServices\Persistence\CommonPresentation\CommonPresentation.csproj">
+      <Project>{ECBC393F-60B1-4A66-B48D-7B303DE777FB}</Project>
+      <Name>CommonPresentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TechnicalServices\Security\SecurityCommon\SecurityCommon.csproj">
+      <Project>{AE4B1128-7295-4337-8238-59ED888EED92}</Project>
+      <Name>SecurityCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TechnicalServices\Security\Security\Security.csproj">
+      <Project>{2DDA70C0-E4D2-4EF7-884A-A84E01226684}</Project>
+      <Name>Security %28TechnicalServices\Security\Security%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TechnicalServices\TechnicalServices.Common\TechnicalServices.Common.csproj">
+      <Project>{535A2090-3619-450C-88F2-1F2067673D64}</Project>
+      <Name>TechnicalServices.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TechnicalServices\TechnicalServices.Exceptions\TechnicalServices.Exceptions.csproj">
+      <Project>{B7D71050-C178-4F87-86CB-9ED39DE165BA}</Project>
+      <Name>TechnicalServices.Exceptions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TechnicalServices\TechnicalServices.Util\TechnicalServices.Util.csproj">
+      <Project>{9507520D-9DBD-4AE6-9D34-1DB5E672F55B}</Project>
+      <Name>TechnicalServices.Util</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\CommonUI.csproj">
+      <Project>{CE5BE2DA-DFAE-4C28-A040-43FE8B8323C4}</Project>
+      <Name>CommonUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ImportExportUI\ImportExportUI.csproj">
+      <Project>{D098F373-B3ED-452D-9BEF-4B677757092A}</Project>
+      <Name>ImportExportUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\Config\FilePathTextBox.resx">
+      <DependentUpon>FilePathTextBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DisplayList\DisplayListControl.resx">
+      <DependentUpon>DisplayListControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DisplayList\DisplayTreeView.resx">
+      <DependentUpon>DisplayTreeView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DisplayMonitor\DisplayMonitorControl.resx">
+      <DependentUpon>DisplayMonitorControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Equipment\EquipmentControl.resx">
+      <DependentUpon>EquipmentControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Equipment\PlayerEquipmentControl.resx">
+      <DependentUpon>PlayerEquipmentControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Filtering\PresentationFilterControl.resx">
+      <DependentUpon>PresentationFilterControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ManagementControl\CommandListControl.resx">
+      <DependentUpon>CommandListControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ManagementControl\ManagementControl.resx">
+      <DependentUpon>ManagementControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Preparation\AgentPrepareProgressControl.resx">
+      <DependentUpon>AgentPrepareProgressControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SlideGraph\PresentationOverviewControl.resx">
+      <DependentUpon>PresentationOverviewControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Filtering\SlideFilterControl.resx">
+      <DependentUpon>SlideFilterControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Layout\SlideLayoutControl.resx">
+      <DependentUpon>SlideLayoutControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SourceList\PlayerSourcesControl.resx">
+      <DependentUpon>PlayerSourcesControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SourceProperties\SourcePropertiesControl.resx">
+      <DependentUpon>SourcePropertiesControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SourceList\SourcesControl.resx">
+      <DependentUpon>SourcesControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Resources\createSlide.cur" />
+    <EmbeddedResource Include="Forms\ConfigForm.resx">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DisplayGroupProperties.resx">
+      <DependentUpon>DisplayGroupProperties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DisplayPropsForm.resx">
+      <DependentUpon>DisplayPropsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FindItemForm.resx">
+      <DependentUpon>FindItemForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LayoutPreviewForm.resx">
+      <DependentUpon>LayoutPreviewForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PlayerForm.resx">
+      <DependentUpon>PlayerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PowerPointForm.resx">
+      <DependentUpon>PowerPointForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PreparePresentationForm.resx">
+      <DependentUpon>PreparePresentationForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PresentationListForm.resx">
+      <DependentUpon>PresentationListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PresentationPropertiesForm.resx">
+      <DependentUpon>PresentationPropertiesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ResourceExistsDialog.resx">
+      <DependentUpon>ResourceExistsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SelectActiveDisplayForm.resx">
+      <DependentUpon>SelectActiveDisplayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SlidePropertiesForm.resx">
+      <DependentUpon>SlidePropertiesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SourcePropertiesForm.resx">
+      <DependentUpon>SourcePropertiesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\windows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\object_14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picts_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ntwrk_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\44.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down.png" />
+    <Content Include="Resources\fullsize.jpg" />
+    <Content Include="Resources\layoutBackground.png" />
+    <Content Include="Resources\preview.png" />
+    <None Include="Resources\up.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>xcopy $(TargetPath) $(SolutionDir)bin\PresentationDesigner\ /Y
+xcopy $(TargetPath) $(SolutionDir)bin\Player\  /Y
+xcopy $(TargetPath) $(SolutionDir)bin\Administration\  /Y
+xcopy $(TargetDir)Interop.DSOFramer.dll $(SolutionDir)bin\PresentationDesigner\ /Y
+xcopy $(TargetDir)Interop.DSOFramer.dll $(SolutionDir)bin\Player\  /Y
+xcopy $(TargetDir)Interop.DSOFramer.dll $(SolutionDir)bin\Administration\  /Y
+xcopy $(TargetDir)AxInterop.DSOFramer.dll $(SolutionDir)bin\PresentationDesigner\ /Y
+xcopy $(TargetDir)AxInterop.DSOFramer.dll $(SolutionDir)bin\Player\  /Y
+xcopy $(TargetDir)AxInterop.DSOFramer.dll $(SolutionDir)bin\Administration\  /Y</PostBuildEvent>
+  </PropertyGroup>
+</Project>

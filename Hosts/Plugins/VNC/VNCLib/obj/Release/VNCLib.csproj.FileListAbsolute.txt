@@ -1,0 +1,7 @@
+C:\Projects\Polymedia\Dev\trunk\Hosts\Plugins\VNC\VNCLib\bin\Release\VNCLib.dll
+C:\Projects\Polymedia\Dev\trunk\Hosts\Plugins\VNC\VNCLib\bin\Release\VNCLib.pdb
+C:\Projects\Polymedia\Dev\trunk\Hosts\Plugins\VNC\VNCLib\obj\Release\ResolveAssemblyReference.cache
+C:\Projects\Polymedia\Dev\trunk\Hosts\Plugins\VNC\VNCLib\obj\Release\VncLib.RemoteDesktop.resources
+C:\Projects\Polymedia\Dev\trunk\Hosts\Plugins\VNC\VNCLib\obj\Release\VNCLib.csproj.GenerateResource.Cache
+C:\Projects\Polymedia\Dev\trunk\Hosts\Plugins\VNC\VNCLib\obj\Release\VNCLib.dll
+C:\Projects\Polymedia\Dev\trunk\Hosts\Plugins\VNC\VNCLib\obj\Release\VNCLib.pdb

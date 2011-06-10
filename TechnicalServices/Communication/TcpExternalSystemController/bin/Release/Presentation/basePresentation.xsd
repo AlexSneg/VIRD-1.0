@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="urn:presentation-schema"
+    xmlns:present="urn:presentation-schema"
+    elementFormDefault="qualified"
+    targetNamespace="urn:presentation-schema">
+
+  <xsd:import namespace="urn:serializableDictionary" schemaLocation="serializableDictionary.xsd" />
+  <xsd:element name="Presentation">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="DisplayGroupList" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="DisplayGroup" minOccurs="0" maxOccurs="unbounded">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="DisplayNameList" minOccurs="0" maxOccurs="1">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="Name" minOccurs="0" maxOccurs="unbounded" type="xsd:string" />
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                  <xsd:attribute name="Name" type="xsd:string" use="required" />
+                  <xsd:attribute name="Comment" type="xsd:string" use="optional" />
+                  <xsd:attribute name="Width" type="xsd:nonNegativeInteger" use="required" />
+                  <xsd:attribute name="Height" type="xsd:nonNegativeInteger" use="required" />
+                  <xsd:attribute name="Type" type="xsd:string" use="required" />
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element ref="SlidePositionList" minOccurs="0" maxOccurs="1" />
+        <xsd:element ref="DisplayPositionList" minOccurs="0" maxOccurs="1" />
+        <xsd:element ref="LinkDictionary" minOccurs="0" maxOccurs="1" />
+        <xsd:element ref="SlideList" minOccurs="0" maxOccurs="1" >
+        </xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="Name" type="xsd:string" use="required" />
+      <xsd:attribute name="StartSlide" type="xsd:nonNegativeInteger" use="optional" />
+      <xsd:attribute name="UniqueName" type="xsd:string" use="required" />
+      <xsd:attribute name="Author" type="xsd:string" use="optional" />
+      <xsd:attribute name="CreationDate" type="xsd:dateTime" use="required" />
+      <xsd:attribute name="LastChangeDate" type="xsd:dateTime" use="required" />
+      <xsd:attribute name="Comment" use="optional">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="500" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:attribute>
+    </xsd:complexType>
+    <xsd:key name="slideIdUnique">
+      <xsd:selector xpath="present:SlideList/*"/>
+      <xsd:field xpath="@ID"/>
+    </xsd:key>
+    <xsd:keyref name="slideIdUniqueRef" refer="present:slideIdUnique">
+      <xsd:selector xpath="."/>
+      <xsd:field xpath="@StartSlide"/>
+    </xsd:keyref>
+  </xsd:element>
+
+  <xsd:element name="SlidePositionList">
+    <xsd:complexType>
+      <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+        <xsd:element name="item">
+          <xsd:complexType>
+            <xsd:sequence minOccurs="1" maxOccurs="1">
+              <xsd:element name="key">
+                <xsd:complexType>
+                  <xsd:sequence minOccurs="1" maxOccurs="1">
+                    <xsd:element xmlns:q1="urn:serializableDictionary" ref="q1:int" />
+                  </xsd:sequence>
+                </xsd:complexType>
+                <xsd:keyref name="positionSlideRef" refer="present:slideIdUnique">
+                  <xsd:selector xpath="./*" />
+                  <xsd:field xpath="." />
+                </xsd:keyref>
+              </xsd:element>
+              <xsd:element name="value">
+                <xsd:complexType>
+                  <xsd:sequence minOccurs="1" maxOccurs="1">
+                    <xsd:element xmlns:q2="urn:serializableDictionary" ref="q2:Point" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="DisplayPositionList">
+    <xsd:complexType>
+      <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+        <xsd:element name="item">
+          <xsd:complexType>
+            <xsd:sequence minOccurs="1" maxOccurs="1">
+              <xsd:element name="key">
+                <xsd:complexType>
+                  <xsd:sequence minOccurs="1" maxOccurs="1">
+                    <xsd:element xmlns:q5="urn:serializableDictionary" ref="q5:string" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="value">
+                <xsd:complexType>
+                  <xsd:sequence minOccurs="1" maxOccurs="1">
+                    <xsd:element xmlns:q5="urn:serializableDictionary" ref="q5:int" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="LinkDictionary">
+    <xsd:complexType>
+      <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+        <xsd:element name="item">
+          <xsd:complexType>
+            <xsd:sequence minOccurs="1" maxOccurs="1">
+              <xsd:element name="key">
+                <xsd:complexType>
+                  <xsd:sequence minOccurs="1" maxOccurs="1">
+                    <xsd:element xmlns:q3="urn:serializableDictionary" ref="q3:int" />
+                  </xsd:sequence>
+                </xsd:complexType>
+                <xsd:keyref name="linkSlideRef" refer="present:slideIdUnique">
+                  <xsd:selector xpath="./*" />
+                  <xsd:field xpath="." />
+                </xsd:keyref>
+              </xsd:element>
+              <xsd:element name="value">
+                <xsd:complexType>
+                  <xsd:sequence minOccurs="1" maxOccurs="1">
+                    <xsd:element xmlns:q4="urn:serializableDictionary" ref="q4:SlideLinkList" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:complexType name="valueType">
+    <xsd:sequence minOccurs="1" maxOccurs="1">
+      <xsd:element name="Point" xmlns="urn:serializableDictionary">
+        <xsd:complexType>
+          <xsd:sequence minOccurs="1" maxOccurs="1">
+            <xsd:element name="X" type="xsd:nonNegativeInteger" />
+            <xsd:element name="Y" type="xsd:nonNegativeInteger" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:element name="SlideList">
+    <xsd:complexType>
+      <xsd:sequence maxOccurs="unbounded">
+        <xsd:element name="Slide" >
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="DeviceList" type="DeviceListType" minOccurs="0" maxOccurs="1" />
+              <xsd:element name="SourceList" type="SourceListType" minOccurs="0" maxOccurs="1" />
+              <xsd:element name="DisplayList" type="DisplayListType" minOccurs="0" maxOccurs="1" />
+            </xsd:sequence>
+            <xsd:attribute name="ID" type="xsd:nonNegativeInteger" use="required" />
+            <xsd:attribute name="Name" use="required">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string" >
+                  <xsd:maxLength value="100" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:attribute>
+            <xsd:attribute name="Comment" use="optional">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="500" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:attribute>
+            <xsd:attribute name="Label" type="xsd:string" use="optional" />
+            <xsd:attribute name="Time" type="xsd:nonNegativeInteger" use="optional" />
+            <xsd:attribute name="State" type="xsd:string" use="optional" />
+            <xsd:attribute name="Author" type="xsd:string" use="optional" />
+            <xsd:attribute name="Modified" type="xsd:dateTime" use="optional" />
+          </xsd:complexType>
+          <!--
+                    Уникальность имени device в DeviceList
+					<xsd:key name="deviceNameUnique">
+						<xsd:selector xpath="present:DeviceList/*"/>
+						<xsd:field xpath="@Name"/>
+					</xsd:key>
+					Уникальность имени source в SourceList
+					<xsd:key name="sourceNameUnique">
+						<xsd:selector xpath="present:SourceList/*"/>
+						<xsd:field xpath="@Name"/>
+					</xsd:key>
+                    -->
+          <!--Уникальность id source в SourceList-->
+          <xsd:key name="sourceIdUnique">
+            <xsd:selector xpath="present:SourceList/*"/>
+            <xsd:field xpath="@Id"/>
+          </xsd:key>
+          <!--
+                    Уникальность имени display в DisplayList
+					<xsd:key name="displayNameUnique">
+						<xsd:selector xpath="present:DisplayList/*"/>
+						<xsd:field xpath="@Name"/>
+					</xsd:key>
+                    -->
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:complexType name="LinkListType">
+    <xsd:sequence>
+      <xsd:element name="Link" minOccurs="0" maxOccurs="unbounded">
+        <xsd:complexType>
+          <xsd:attribute name="IsDefault" type="xsd:boolean" />
+          <xsd:attribute name="NextSlide" type="xsd:nonNegativeInteger" />
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="DeviceListType">
+    <xsd:sequence>
+      <xsd:element ref="Device" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:element name="Device" type="DeviceType" />
+
+  <xsd:complexType name="DeviceType" abstract="true">
+    <xsd:complexContent>
+      <xsd:extension base="Equipment">
+        <xsd:attribute name="ResourceId" use="optional" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="SourceListType">
+    <xsd:sequence>
+      <xsd:element ref="Source" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:element name="Source" type="SourceType" />
+
+  <xsd:complexType name="SourceType" abstract="true">
+    <xsd:complexContent>
+      <xsd:extension base="Equipment">
+        <xsd:attribute name="IsLocal" use="optional" type="xsd:boolean" />
+        <xsd:attribute name="ResourceId" use="optional" type="xsd:string" />
+        <xsd:attribute name="Id" use="required" type="xsd:string" />
+        <xsd:attribute name="Device" use="optional" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="HardwareSource" abstract="true">
+    <xsd:complexContent>
+      <xsd:extension base="SourceType" />
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="SoftwareSource" abstract="true">
+    <xsd:complexContent>
+      <xsd:extension base="SourceType">
+        <xsd:attribute name="Path" use="optional" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="DisplayListType">
+    <xsd:sequence>
+      <xsd:element ref="Display" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="WindowType">
+    <xsd:attribute name="Left" type="xsd:int" />
+    <xsd:attribute name="Top" type="xsd:int" />
+    <xsd:attribute name="Width" type="xsd:nonNegativeInteger" />
+    <xsd:attribute name="Height" type="xsd:nonNegativeInteger" />
+    <xsd:attribute name="ZOrder" type="xsd:byte" use="optional" />
+    <xsd:attribute name="Source" type="xsd:string" />
+   </xsd:complexType>
+
+  <xsd:element name="Window" type="WindowType" />
+
+  <xsd:complexType name="ActiveWindowType">
+    <xsd:complexContent>
+      <xsd:extension base="WindowType">
+        <xsd:attribute name="CroppingLeft" type="xsd:nonNegativeInteger" use="optional" default="0" />
+        <xsd:attribute name="CroppingRight" type="xsd:nonNegativeInteger" use="optional" default="0" />
+        <xsd:attribute name="CroppingTop" type="xsd:nonNegativeInteger" use="optional" default="0" />
+        <xsd:attribute name="CroppingBottom" type="xsd:nonNegativeInteger" use="optional" default="0" />
+        <xsd:attribute name="BorderVisible" type="xsd:boolean" use="optional" default="false" />
+        <xsd:attribute name="BorderWidth" type="xsd:int" use="optional" default="0" />
+        <xsd:attribute name="BorderColor" type="xsd:string" use="optional" default="0000FF" />
+        <xsd:attribute name="TitleVisible" type="xsd:boolean" use="optional" default="false" />
+        <xsd:attribute name="TitleText" type="xsd:string" use="optional" />
+        <xsd:attribute name="TitleFont" type="xsd:string" use="optional" default="Arial" />
+        <xsd:attribute name="TitleSize" type="xsd:int" use="optional" default="14" />
+        <xsd:attribute name="TitleColor" type="xsd:string" use="optional" default="FFFFFF" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:element name="ActiveWindow" type="ActiveWindowType" substitutionGroup="Window" />
+
+  <xsd:element name="Display" type="DisplayType" />
+
+  <xsd:complexType name="DisplayType" abstract="true">
+    <xsd:complexContent>
+      <xsd:extension base="Equipment">
+        <xsd:sequence>
+          <xsd:element name="WindowList" minOccurs="0" maxOccurs="1">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="Window" minOccurs="0" maxOccurs="unbounded" />
+                <!--
+                                <xsd:element name="Window" minOccurs="1" maxOccurs="unbounded" type="WindowType">
+                                    <xsd:keyref name="sourceNameRef" refer="present:sourceNameUnique" >
+                                        <xsd:selector xpath="." />
+                                        <xsd:field xpath="@Source" /> 
+                                    </xsd:keyref>
+                                </xsd:element>
+                                -->
+              </xsd:sequence>
+            </xsd:complexType>
+            <xsd:keyref name="sourceIdRef" refer="present:sourceIdUnique" >
+              <xsd:selector xpath="*" />
+              <xsd:field xpath="@Source" />
+            </xsd:keyref>
+          </xsd:element>
+        </xsd:sequence>
+        <xsd:attribute name="DisplayGroup" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+
+  <xsd:complexType name="Equipment" abstract="true">
+    <xsd:sequence>
+      <xsd:element name="CommandList" minOccurs="0" maxOccurs="1">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Command" minOccurs="0" maxOccurs="unbounded">
+              <xsd:complexType>
+                <xsd:attribute name="command" type="xsd:string" />
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="Type" type="xsd:string" />
+  </xsd:complexType>
+
+  <xsd:complexType name="PassiveDisplay" abstract="true">
+    <xsd:complexContent>
+      <xsd:extension base="DisplayType" />
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="ActiveDisplay" abstract="true">
+    <xsd:complexContent>
+      <xsd:extension base="DisplayType">
+        <xsd:attribute name="BackgroundImage" use="optional" type="xsd:string" />
+        <xsd:attribute name="IsVideoWall" use="optional" type="xsd:boolean" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+</xsd:schema>

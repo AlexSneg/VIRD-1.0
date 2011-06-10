@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Preset>
+    <Name>JVC Everio GZ-MG330</Name>
+    <PropertyList/>
+    <CommandList>
+        <EquipmentCommand Name="CamTiltUp"     Command="CamTiltUp" />
+        <EquipmentCommand Name="CamTiltDown"   Command="CamTiltDown" />
+        <EquipmentCommand Name="CamPanLeft"    Command="CamPanLeft" />
+        <EquipmentCommand Name="CamPanRight"   Command="CamPanRight" />
+        <EquipmentCommand Name="CamZoomFar"    Command="CamZoomFar" />
+        <EquipmentCommand Name="CamZoomNear"   Command="CamZoomNear" />
+        <EquipmentCommand Name="CamStop"       Command="CamStop" />
+        <EquipmentCommand Name="CamPresetSave" Command="CamPresetSave" />
+        <EquipmentCommand Name="CamPresetLoad" Command="CamPresetLoad" />
+        <EquipmentCommand Name="CamHome"       Command="CamHome" />
+    </CommandList>
+</Preset>

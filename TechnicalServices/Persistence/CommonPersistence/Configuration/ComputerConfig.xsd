@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    xmlns="urn:configuration-schema"
+    xmlns:config="urn:configuration-schema"
+    targetNamespace="urn:configuration-schema">
+
+	<xsd:include schemaLocation="CommonConfig.xsd" />
+
+  <xsd:element name="ComputerDisplay" substitutionGroup="config:DisplayType">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="config:ComputerTypeType">
+          <xsd:attribute name="RefreshRate" type="xsd:int" use="optional"/>
+<!--
+          <xsd:attribute name="WidthM" type="xsd:decimal" use="optional"/>
+          <xsd:attribute name="HeightM" type="xsd:decimal" use="optional"/>
+          <xsd:attribute name="DistanceM" type="xsd:int" use="optional"/>
+-->
+      </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>

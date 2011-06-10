@@ -1,0 +1,45 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TechnicalServices.Configuration.Server.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ModuleFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Module</Value>
+    </Setting>
+    <Setting Name="ConfigurationFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ModuleConfiguration</Value>
+    </Setting>
+    <Setting Name="ScenarioFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Presentation</Value>
+    </Setting>
+    <Setting Name="ScenarioSchemaFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Presentation\presentation.xsd</Value>
+    </Setting>
+    <Setting Name="LocalSourceFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">LocalSources</Value>
+    </Setting>
+    <Setting Name="GlobalSourceFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">GlobalSources</Value>
+    </Setting>
+    <Setting Name="UserStorageFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">.</Value>
+    </Setting>
+    <Setting Name="ControllerURI" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">tcp://localhost:7025</Value>
+    </Setting>
+    <Setting Name="ControllerLibrary" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">TcpEquipmentController,TechnicalServices.Communication.TcpEquipmentController.TcpControllerChannelServer</Value>
+    </Setting>
+    <Setting Name="ExternalSystemControllerUri" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">tcp://localhost:7026</Value>
+    </Setting>
+    <Setting Name="ExternalSystemControllerLibrary" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">TcpExternalSystemController,TechnicalServices.Communication.TcpExternalSystemController.TcpExternalSystemServer</Value>
+    </Setting>
+    <Setting Name="ControllerReceiveTimeout" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">5000</Value>
+    </Setting>
+    <Setting Name="ControllerCheckTimeout" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">5000</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

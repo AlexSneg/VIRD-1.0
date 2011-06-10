@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Preset>
+    <Name></Name>
+    <PropertyList/>
+    <CommandList>
+        <EquipmentCommand Name="CheckConference" Command="MVSCheckConference" Answer="MVSCheckConference"/>
+        <EquipmentCommand Name="GetParticipantList" Command="MVSGetParticipantList" Answer="MVSParticipantNotify"/>
+        <EquipmentCommand Name="CreateConference" Command="MVSCreateConference" Answer="MVSCreateConference"/>
+        <EquipmentCommand Name="UpdateConference" Command="MVSUpdateConference" Answer="MVSUpdateConference"/>
+        <EquipmentCommand Name="DestroyConference" Command="MVSDestroyConference" Answer="MVSDestroyConference"/>
+        <EquipmentCommand Name="AddParticipant" Command="MVSAddParticipant" Answer="MVSParticipantNotify"/>
+        <EquipmentCommand Name="RemoveParticipant" Command="MVSRemoveParticipant" Answer="MVSParticipantNotify"/>
+        <EquipmentCommand Name="FocusParticipant" Command="MVSFocusParticipant"/>
+    </CommandList>
+</Preset>

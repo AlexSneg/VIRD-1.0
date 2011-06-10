@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E8497275-E440-4495-AA40-9EA20EEB8BA2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TechnicalServices.Persistence.CommonPersistence</RootNamespace>
+    <AssemblyName>CommonPersistence</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Security_Release|AnyCPU' ">
+    <OutputPath>bin\Security_Release\</OutputPath>
+    <DefineConstants>TRACE;Security_Release</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Security_Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Security_Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;Security_Release</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\DisplayTypeCapture.cs" />
+    <Compile Include="Configuration\InvalideModuleConfiguration.cs" />
+    <Compile Include="Configuration\LabelStorage.cs">
+      <DependentUpon>LabelStorage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\ModuleConfiguration.cs">
+      <DependentUpon>ModuleConfiguration.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\DisplayTypeUriCapture.cs" />
+    <Compile Include="Configuration\Preset.cs" />
+    <Compile Include="Presentation\CollectionNameAttribute.cs" />
+    <Compile Include="Presentation\CollectionFormNameAttribute.cs" />
+    <Compile Include="Presentation\ISourceContentSize.cs" />
+    <Compile Include="Presentation\PropertiesNameAttribute.cs" />
+    <Compile Include="Presentation\IMemberwiseClone.cs" />
+    <Compile Include="Presentation\PropertySorterConverter\PropertyOrderAttribute.cs" />
+    <Compile Include="Presentation\PropertySorterConverter\PropertyOrderPair.cs" />
+    <Compile Include="Presentation\PropertySorterConverter\PropertySorter.cs" />
+    <Compile Include="Resource\DeviceResourceDescriptor.cs" />
+    <Compile Include="Resource\ForceDeviceResourceSaveAttribute.cs" />
+    <Compile Include="Resource\ResourceDescriptorAbstract.cs" />
+    <Compile Include="Resource\ResourceFileAttribute.cs" />
+    <Compile Include="Resource\ResourceInfo.cs" />
+    <Compile Include="Configuration\ValidationHelper.cs" />
+    <Compile Include="Presentation\IResourceProvider.cs" />
+    <Compile Include="Presentation\ISegmentationSupport.cs" />
+    <Compile Include="Presentation\ISourceSize.cs" />
+    <Compile Include="Presentation\LinkInfo.cs" />
+    <Compile Include="Presentation\presentation.cs">
+      <DependentUpon>presentation.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\PresentationExt.cs" />
+    <Compile Include="Presentation\PresentationInfo.cs" />
+    <Compile Include="Resource\ResourceDescriptor.cs" />
+    <Compile Include="Presentation\SlideBulk.cs" />
+    <Compile Include="Presentation\SlideExt.cs" />
+    <Compile Include="Presentation\SlideInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configuration\CommonConfig.xsd">
+    </Content>
+    <Content Include="Configuration\ModuleConfiguration.xml">
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configuration\ModuleConfiguration.xsd">
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configuration\LabelStorage.xml" />
+    <Content Include="Presentation\basePresentation.xsd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Presentation\presentation.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Presentation\presentation.xsd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Configuration\LabelStorage.xsd" />
+    <None Include="Configuration\Preset.xsd" />
+    <None Include="Presentation\Presentation.cd" />
+    <None Include="Presentation\serializableDictionary.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Entity\Entity.csproj">
+      <Project>{4E56777C-8690-47AB-9FD7-4D65677862FA}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TechnicalServices.Exceptions\TechnicalServices.Exceptions.csproj">
+      <Project>{B7D71050-C178-4F87-86CB-9ED39DE165BA}</Project>
+      <Name>TechnicalServices.Exceptions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>copy $(TargetPath) $(SolutionDir)bin\VisualizationCore\ /Y
+
+copy $(ProjectDir)Configuration\CommonConfig.xsd $(SolutionDir)Hosts\Plugins\Monitor\Config  /Y
+copy $(TargetPath) $(SolutionDir)bin\Plugins\Monitor\ /Y
+
+copy $(ProjectDir)Configuration\CommonConfig.xsd $(SolutionDir)Hosts\Plugins\DVDPlayer\Config  /Y
+copy $(TargetPath) $(SolutionDir)bin\Plugins\DVDPlayer\ /Y
+
+copy $(ProjectDir)Configuration\CommonConfig.xsd $(SolutionDir)Hosts\Plugins\Image\Config  /Y
+copy $(TargetPath) $(SolutionDir)bin\Plugins\Image\ /Y
+
+
+
+</PostBuildEvent>
+    <PostBuildEvent>rem ###############################################################
+rem $(SolutionDir)bin\
+rem ###############################################################
+
+call $(SolutionDir)bin\Tools\copy_library.cmd $(TargetPath) $(SolutionDir) $(ConfigurationName)
+call $(SolutionDir)bin\Tools\copy_to_plugin.cmd $(TargetPath) $(SolutionDir)
+
+rem ###############################################################
+rem $(SolutionDir)Hosts\Plugins\
+rem ###############################################################
+
+xcopy $(ProjectDir)Configuration\CommonConfig.xsd $(SolutionDir)Hosts\Plugins\Monitor\SystemModule\Config\  /Y
+xcopy $(ProjectDir)Configuration\CommonConfig.xsd $(SolutionDir)Hosts\Plugins\Image\SystemModule\Config\  /Y
+xcopy $(ProjectDir)Configuration\CommonConfig.xsd $(SolutionDir)Hosts\Plugins\DVDPlayer\SystemModule\Config\  /Y
+xcopy $(ProjectDir)Configuration\CommonConfig.xsd $(SolutionDir)Hosts\Plugins\Jupiter\SystemModule\Config\  /Y
+xcopy $(ProjectDir)Configuration\CommonConfig.xsd $(SolutionDir)Hosts\Plugins\Video\SystemModule\Config\  /Y
+xcopy $(ProjectDir)Configuration\CommonConfig.xsd $(SolutionDir)Hosts\Plugins\VideoCamera\SystemModule\Config\  /Y
+xcopy $(ProjectDir)Configuration\CommonConfig.xsd $(SolutionDir)Hosts\Plugins\VNC\SystemModule\Config\  /Y
+xcopy $(ProjectDir)Configuration\CommonConfig.xsd $(SolutionDir)Hosts\Plugins\GangSwitch\SystemModule\Config\  /Y
+xcopy $(ProjectDir)Configuration\CommonConfig.xsd $(SolutionDir)Hosts\Plugins\Computer\SystemModule\Config\  /Y
+xcopy $(ProjectDir)Configuration\CommonConfig.xsd $(SolutionDir)Hosts\Plugins\VDCTerminal\SystemModule\Config\  /Y
+xcopy $(ProjectDir)Configuration\CommonConfig.xsd $(SolutionDir)Hosts\Plugins\BusinessGraphics\SystemModule\Config\  /Y
+xcopy $(ProjectDir)Configuration\CommonConfig.xsd $(SolutionDir)Hosts\Plugins\Light\SystemModule\Config\  /Y
+xcopy $(ProjectDir)Configuration\CommonConfig.xsd $(SolutionDir)Hosts\Plugins\AudioMixer\SystemModule\Config\  /Y
+xcopy $(ProjectDir)Configuration\CommonConfig.xsd $(SolutionDir)Hosts\Plugins\VDCServer\SystemModule\Config\  /Y
+xcopy $(ProjectDir)Configuration\CommonConfig.xsd $(SolutionDir)Hosts\Plugins\StandardSource\SystemModule\Config\  /Y
+xcopy $(ProjectDir)Configuration\CommonConfig.xsd $(SolutionDir)Hosts\Plugins\PowerPointPresentation\SystemModule\Config\  /Y
+
+xcopy $(ProjectDir)Presentation\basePresentation.xsd $(SolutionDir)Hosts\Plugins\Monitor\SystemModule\Design\  /Y
+xcopy $(ProjectDir)Presentation\basePresentation.xsd $(SolutionDir)Hosts\Plugins\Image\SystemModule\Design\  /Y
+xcopy $(ProjectDir)Presentation\basePresentation.xsd $(SolutionDir)Hosts\Plugins\DVDPlayer\SystemModule\Design\  /Y
+xcopy $(ProjectDir)Presentation\basePresentation.xsd $(SolutionDir)Hosts\Plugins\Jupiter\SystemModule\Design\  /Y
+xcopy $(ProjectDir)Presentation\basePresentation.xsd $(SolutionDir)Hosts\Plugins\Video\SystemModule\Design\  /Y
+xcopy $(ProjectDir)Presentation\basePresentation.xsd $(SolutionDir)Hosts\Plugins\VideoCamera\SystemModule\Design\  /Y
+xcopy $(ProjectDir)Presentation\basePresentation.xsd $(SolutionDir)Hosts\Plugins\VNC\SystemModule\Design\  /Y
+xcopy $(ProjectDir)Presentation\basePresentation.xsd $(SolutionDir)Hosts\Plugins\GangSwitch\SystemModule\Design\  /Y
+xcopy $(ProjectDir)Presentation\basePresentation.xsd $(SolutionDir)Hosts\Plugins\Computer\SystemModule\Design\  /Y
+xcopy $(ProjectDir)Presentation\basePresentation.xsd $(SolutionDir)Hosts\Plugins\VDCTerminal\SystemModule\Design\  /Y
+xcopy $(ProjectDir)Presentation\basePresentation.xsd $(SolutionDir)Hosts\Plugins\BusinessGraphics\SystemModule\Design\  /Y
+xcopy $(ProjectDir)Presentation\basePresentation.xsd $(SolutionDir)Hosts\Plugins\Light\SystemModule\Design\  /Y
+xcopy $(ProjectDir)Presentation\basePresentation.xsd $(SolutionDir)Hosts\Plugins\AudioMixer\SystemModule\Design\  /Y
+xcopy $(ProjectDir)Presentation\basePresentation.xsd $(SolutionDir)Hosts\Plugins\VDCServer\SystemModule\Design\  /Y
+xcopy $(ProjectDir)Presentation\basePresentation.xsd $(SolutionDir)Hosts\Plugins\StandardSource\SystemModule\Design\  /Y
+xcopy $(ProjectDir)Presentation\basePresentation.xsd $(SolutionDir)Hosts\Plugins\PowerPointPresentation\SystemModule\Design\  /Y
+
+xcopy $(ProjectDir)Presentation\serializableDictionary.xsd $(SolutionDir)Hosts\Plugins\Monitor\SystemModule\Design\  /Y
+xcopy $(ProjectDir)Presentation\serializableDictionary.xsd $(SolutionDir)Hosts\Plugins\Image\SystemModule\Design\  /Y
+xcopy $(ProjectDir)Presentation\serializableDictionary.xsd $(SolutionDir)Hosts\Plugins\DVDPlayer\SystemModule\Design\  /Y
+xcopy $(ProjectDir)Presentation\serializableDictionary.xsd $(SolutionDir)Hosts\Plugins\Jupiter\SystemModule\Design\  /Y
+xcopy $(ProjectDir)Presentation\serializableDictionary.xsd $(SolutionDir)Hosts\Plugins\Video\SystemModule\Design\  /Y
+xcopy $(ProjectDir)Presentation\serializableDictionary.xsd $(SolutionDir)Hosts\Plugins\VideoCamera\SystemModule\Design\  /Y
+xcopy $(ProjectDir)Presentation\serializableDictionary.xsd $(SolutionDir)Hosts\Plugins\VNC\SystemModule\Design\  /Y
+xcopy $(ProjectDir)Presentation\serializableDictionary.xsd $(SolutionDir)Hosts\Plugins\GangSwitch\SystemModule\Design\  /Y
+xcopy $(ProjectDir)Presentation\serializableDictionary.xsd $(SolutionDir)Hosts\Plugins\Computer\SystemModule\Design\  /Y
+xcopy $(ProjectDir)Presentation\serializableDictionary.xsd $(SolutionDir)Hosts\Plugins\VDCTerminal\SystemModule\Design\  /Y
+xcopy $(ProjectDir)Presentation\serializableDictionary.xsd $(SolutionDir)Hosts\Plugins\BusinessGraphics\SystemModule\Design\  /Y
+xcopy $(ProjectDir)Presentation\serializableDictionary.xsd $(SolutionDir)Hosts\Plugins\Light\SystemModule\Design\  /Y
+xcopy $(ProjectDir)Presentation\serializableDictionary.xsd $(SolutionDir)Hosts\Plugins\AudioMixer\SystemModule\Design\  /Y
+xcopy $(ProjectDir)Presentation\serializableDictionary.xsd $(SolutionDir)Hosts\Plugins\VDCServer\SystemModule\Design\  /Y
+xcopy $(ProjectDir)Presentation\serializableDictionary.xsd $(SolutionDir)Hosts\Plugins\StandardSource\SystemModule\Design\  /Y
+xcopy $(ProjectDir)Presentation\serializableDictionary.xsd $(SolutionDir)Hosts\Plugins\PowerPointPresentation\SystemModule\Design\  /Y
+
+rem ###############################################################
+
+call $(SolutionDir)bin\Tools\copy_moduleconfiguration.cmd $(ProjectDir)Configuration\CommonConfig.xsd $(SolutionDir) $(ConfigurationName)
+call $(SolutionDir)bin\Tools\copy_moduleconfiguration.cmd $(ProjectDir)Configuration\ModuleConfiguration.xsd $(SolutionDir) $(ConfigurationName)
+call $(SolutionDir)bin\Tools\copy_moduleconfiguration.cmd $(ProjectDir)Configuration\ModuleConfiguration.xml $(SolutionDir) $(ConfigurationName)
+call $(SolutionDir)bin\Tools\copy_moduleconfiguration.cmd $(ProjectDir)Configuration\LabelStorage.xsd $(SolutionDir) $(ConfigurationName)
+call $(SolutionDir)bin\Tools\copy_moduleconfiguration.cmd $(ProjectDir)Configuration\LabelStorage.xml $(SolutionDir) $(ConfigurationName)
+
+call $(SolutionDir)bin\Tools\copy_presentation.cmd $(ProjectDir)Presentation\basePresentation.xsd $(SolutionDir) $(ConfigurationName)
+call $(SolutionDir)bin\Tools\copy_presentation.cmd $(ProjectDir)Presentation\presentation.xsd $(SolutionDir) $(ConfigurationName)
+rem call $(SolutionDir)bin\Tools\copy_presentation.cmd $(ProjectDir)Presentation\presentation.xml $(SolutionDir) $(ConfigurationName)
+call $(SolutionDir)bin\Tools\copy_presentation.cmd $(ProjectDir)Presentation\serializableDictionary.xsd  $(SolutionDir) $(ConfigurationName)
+
+rem ###############################################################
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>

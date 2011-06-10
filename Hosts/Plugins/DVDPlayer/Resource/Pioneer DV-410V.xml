@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Preset>
+    <Name>Pioneer DV-410V</Name>
+    <PropertyList>
+        <NameValuePair Name="InterfaceType" Value ="IR"/>
+    </PropertyList>
+    <CommandList>
+        <EquipmentCommand Name="Power"       Command="DVDPower" />
+        <EquipmentCommand Name="Play"        Command="DVDPlay" />
+        <EquipmentCommand Name="Stop"        Command="DVDStop" />
+        <EquipmentCommand Name="Pause"       Command="DVDPause" />
+        <EquipmentCommand Name="Prev"        Command="DVDPrev" />
+        <EquipmentCommand Name="Next"        Command="DVDNext" />
+        <EquipmentCommand Name="Rew"         Command="DVDRev" />
+        <EquipmentCommand Name="Ff"          Command="DVDFf" />
+        <EquipmentCommand Name="Rec"         Command="DVDRec" />
+        <EquipmentCommand Name="Menu"        Command="DVDMenu" />
+        <EquipmentCommand Name="Exit"        Command="DVDExit" />
+        <EquipmentCommand Name="CursorUp"    Command="DVDCursorUp" />
+        <EquipmentCommand Name="CursorDown"  Command="DVDCursorDown" />
+        <EquipmentCommand Name="CursorLeft"  Command="DVDCursorLeft" />
+        <EquipmentCommand Name="CursorRight" Command="DVDCursorRight" />
+        <EquipmentCommand Name="CursorOk"    Command="DVDCursorOk" />
+        <EquipmentCommand Name="Track"       Command="DVDTrack" />
+        <EquipmentCommand Name="Chapter"     Command="DVDChapter" />
+        <EquipmentCommand Name="Repeat"      Command="DVDRepeat" />
+        <EquipmentCommand Name="Setup"       Command="DVDSetup" />
+        <EquipmentCommand Name="Return"      Command="DVDReturn" />
+    </CommandList>
+</Preset>

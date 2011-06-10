@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    xmlns="urn:configuration-schema"
+    xmlns:config="urn:configuration-schema"
+    targetNamespace="urn:configuration-schema">
+
+  <xsd:include schemaLocation="CommonConfig.xsd" />
+
+  <xsd:element name="VideoCameraSource" substitutionGroup="config:SourceType">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="config:HardwareSourceTypeType" />
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="VideoCameraDevice" substitutionGroup="config:DeviceType">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="config:DeviceTypeType">
+          <xsd:attribute name="PresetAmount" type="xsd:int" use="required" />
+          <xsd:attribute name="IsDomical" type="xsd:boolean" use="required" />
+          <xsd:attribute name="HasPreciseControl" type="xsd:boolean" use="required" />
+          <xsd:attribute name="LowZoomBoundary" type="xsd:decimal" use="optional" />
+          <xsd:attribute name="HighZoomBoundary" type="xsd:decimal" use="optional" />
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>

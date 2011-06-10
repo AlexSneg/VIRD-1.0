@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{196AB20E-B29A-447C-BD11-352D4AF73D28}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UI.PresentationDesign.ConfiguratorUI</RootNamespace>
+    <AssemblyName>ConfiguratorUI</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Security_Release|AnyCPU' ">
+    <OutputPath>bin\Security_Release\</OutputPath>
+    <DefineConstants>TRACE;Security_Release</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Security_Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Security_Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;Security_Release</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Vsa" />
+    <Reference Include="Syncfusion.Compression.Base, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Core, Version=6.303.1.8, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Syncfusion\Syncfusion.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Diagram.Base, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Syncfusion\Syncfusion.Diagram.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Diagram.Windows, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Syncfusion\Syncfusion.Diagram.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.DocIO.Base, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Edit.Windows, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Syncfusion\Syncfusion.Edit.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Base, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Syncfusion\Syncfusion.Grid.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Grouping.Base, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Grid.Grouping.Windows, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Grid.Windows, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Syncfusion\Syncfusion.Grid.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grouping.Base, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Shared.Base, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Syncfusion\Syncfusion.Shared.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Windows, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Syncfusion\Syncfusion.Shared.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Base, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Syncfusion\Syncfusion.Tools.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Windows, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Syncfusion\Syncfusion.Tools.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\CompatibilityDispToSourcePair.cs" />
+    <Compile Include="Controller\CompatibilitySourceToDispPair.cs" />
+    <Compile Include="Controller\IPluginAdapter.cs" />
+    <Compile Include="Controller\PluginAdapter.cs" />
+    <Compile Include="Controller\PluginTagObject.cs" />
+    <Compile Include="Controller\ROPluginAdapter.cs" />
+    <Compile Include="Controller\SoftwareSourceAggregate.cs" />
+    <Compile Include="Controller\TreeViewExtention.cs" />
+    <Compile Include="Controls\LabelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LabelControl.Designer.cs">
+      <DependentUpon>LabelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LabelDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LabelDlg.Designer.cs">
+      <DependentUpon>LabelDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleConfigurationExt.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemAdapter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\LabelControl.resx">
+      <DependentUpon>LabelControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LabelDlg.resx">
+      <DependentUpon>LabelDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\img24.jpg" />
+    <Content Include="Resources\ntwrk_16.ico" />
+    <Content Include="Resources\object_14.png" />
+    <Content Include="Resources\picts_16.ico" />
+    <Content Include="Resources\save-32x32.png" />
+    <Content Include="Resources\Save.png" />
+    <Content Include="Resources\Symbol-Add.png" />
+    <Content Include="Resources\Symbol-Delete.png" />
+    <Content Include="Resources\Undo.png" />
+    <Content Include="Resources\windows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Hosts\Plugins\ArcGISMap\ArcGISMap.csproj">
+      <Project>{FEAEC9FE-C3BF-4071-A0BD-FC9BEC69C705}</Project>
+      <Name>ArcGISMap %28Hosts\Plugins\ArcGISMap\ArcGISMap%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Hosts\Plugins\AudioMixer\AudioMixer.csproj">
+      <Project>{19CC577A-05C9-46D6-AB4F-E0118B00AFF2}</Project>
+      <Name>AudioMixer %28Hosts\Plugins\AudioMixer\AudioMixer%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Hosts\Plugins\BusinessGraphics\BusinessGraphics.csproj">
+      <Project>{F8E3693A-0B2B-49B3-9556-CCB1C82B8A6B}</Project>
+      <Name>BusinessGraphics %28Hosts\Plugins\BusinessGraphics\BusinessGraphics%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Hosts\Plugins\Computer\Computer.csproj">
+      <Project>{17F20D8F-1423-407D-BF91-92AFCCC6D4E3}</Project>
+      <Name>Computer %28Hosts\Plugins\Computer\Computer%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Hosts\Plugins\DVDPlayer\DVDPlayer.csproj">
+      <Project>{76649F20-BA9F-4083-B9A6-4C018C484653}</Project>
+      <Name>DVDPlayer %28Hosts\Plugins\DVDPlayer\DVDPlayer%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Hosts\Plugins\GangSwitch\GangSwitch.csproj">
+      <Project>{885483F8-6BCE-45D6-85ED-A0B7082A425B}</Project>
+      <Name>GangSwitch %28Hosts\Plugins\GangSwitch\GangSwitch%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Hosts\Plugins\IEDocument\IEDocument.csproj">
+      <Project>{84BB76E8-2F7E-4917-8F2F-B0A528959A14}</Project>
+      <Name>IEDocument %28Hosts\Plugins\IEDocument\IEDocument%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Hosts\Plugins\Image\Image.csproj">
+      <Project>{2968BAB8-74C1-4B17-9CD9-57BC3C1973E9}</Project>
+      <Name>Image %28Hosts\Plugins\Image\Image%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Hosts\Plugins\Jupiter\Jupiter.csproj">
+      <Project>{0361A3F9-D132-4A41-96B4-D77B213D6461}</Project>
+      <Name>Jupiter %28Hosts\Plugins\Jupiter\Jupiter%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Hosts\Plugins\Light\Light.csproj">
+      <Project>{E8E82117-7E82-45DD-AECF-72D18C089ABF}</Project>
+      <Name>Light %28Hosts\Plugins\Light\Light%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Hosts\Plugins\Monitor\Monitor.csproj">
+      <Project>{461F4748-AC6C-4EAD-9A0A-383744D8C9BC}</Project>
+      <Name>Monitor %28Hosts\Plugins\Monitor\Monitor%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Hosts\Plugins\PowerPointPresentation\PowerPointPresentation.csproj">
+      <Project>{B8C39207-73BD-4ECD-B82F-B9FF9DA4DBBE}</Project>
+      <Name>PowerPointPresentation %28Hosts\Plugins\PowerPointPresentation\PowerPointPresentation%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Hosts\Plugins\StandardSource\StandardSource.csproj">
+      <Project>{48D7817B-97AC-46D2-A01B-665B8DB6130C}</Project>
+      <Name>StandardSource %28Hosts\Plugins\StandardSource\StandardSource%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Hosts\Plugins\VDCServer\VDCServer.csproj">
+      <Project>{299544AF-1F74-4AD8-939B-1671D52C7007}</Project>
+      <Name>VDCServer %28Hosts\Plugins\VDCServer\VDCServer%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Hosts\Plugins\VDCTerminal\VDCTerminal.csproj">
+      <Project>{EF8C7EE9-A263-442C-9113-C24DA52392AE}</Project>
+      <Name>VDCTerminal %28Hosts\Plugins\VDCTerminal\VDCTerminal%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Hosts\Plugins\VideoCamera\VideoCamera.csproj">
+      <Project>{6F1CAC4E-A404-4B16-961E-4B1304064E14}</Project>
+      <Name>VideoCamera %28Hosts\Plugins\VideoCamera\VideoCamera%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Hosts\Plugins\Video\Video.csproj">
+      <Project>{C94E3B43-8E04-42FC-8115-F600F960C24A}</Project>
+      <Name>Video %28Hosts\Plugins\Video\Video%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Hosts\Plugins\VNC\VNC.csproj">
+      <Project>{0F19A28E-7F20-4B7F-8CBC-5BF9EC868D21}</Project>
+      <Name>VNC %28Hosts\Plugins\VNC\VNC%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Hosts\Plugins\WordDocument\WordDocument.csproj">
+      <Project>{01A253E6-D508-433F-9254-0E55C402FF8A}</Project>
+      <Name>WordDocument %28Hosts\Plugins\WordDocument\WordDocument%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TechnicalServices\Configuration\ConfiguratorConfiguration\ConfiguratorConfiguration.csproj">
+      <Project>{AB049FC4-6A2D-4A31-80EC-2864C4535517}</Project>
+      <Name>ConfiguratorConfiguration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TechnicalServices\Entity\Entity.csproj">
+      <Project>{4E56777C-8690-47AB-9FD7-4D65677862FA}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TechnicalServices\Interfaces\Interfaces.csproj">
+      <Project>{E7BED6ED-753D-4D11-96BD-273C88FE10A6}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TechnicalServices\Persistence\CommonPersistence\CommonPersistence.csproj">
+      <Project>{E8497275-E440-4495-AA40-9EA20EEB8BA2}</Project>
+      <Name>CommonPersistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TechnicalServices\TechnicalServices.Common\TechnicalServices.Common.csproj">
+      <Project>{535A2090-3619-450C-88F2-1F2067673D64}</Project>
+      <Name>TechnicalServices.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>xcopy $(TargetPath) $(SolutionDir)bin\Configurator\ /Y</PostBuildEvent>
+  </PropertyGroup>
+</Project>

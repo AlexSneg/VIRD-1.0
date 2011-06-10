@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D098F373-B3ED-452D-9BEF-4B677757092A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UI.ImportExport.ImportExportUI</RootNamespace>
+    <AssemblyName>ImportExportUI</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Security_Release|AnyCPU' ">
+    <OutputPath>bin\Security_Release\</OutputPath>
+    <DefineConstants>TRACE;Security_Release</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Security_Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Security_Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;Security_Release</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Syncfusion.Core, Version=6.303.1.8, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Grid.Base, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Grid.Windows, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Shared.Base, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\Syncfusion\Syncfusion.Shared.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Windows, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Tools.Base, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Tools.Windows, Version=6.303.1.8, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\ExportConfigurationController.cs" />
+    <Compile Include="Controllers\ExportPresentationController.cs" />
+    <Compile Include="Controllers\ExportSlideController.cs" />
+    <Compile Include="Controllers\ImportExportContinue.cs" />
+    <Compile Include="Controllers\ImportPresentationController.cs" />
+    <Compile Include="Controllers\ImportSlideController.cs" />
+    <Compile Include="Forms\ExportPresentationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExportPresentationForm.Designer.cs">
+      <DependentUpon>ExportPresentationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExportConfigurationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExportConfigurationForm.Designer.cs">
+      <DependentUpon>ExportConfigurationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HowImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HowImportForm.Designer.cs">
+      <DependentUpon>HowImportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PresentationExistsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PresentationExistsDialog.Designer.cs">
+      <DependentUpon>PresentationExistsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WrongSlideName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WrongSlideName.Designer.cs">
+      <DependentUpon>WrongSlideName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DomainServices\ImportExportManagement\ImportExportClientManagement.csproj">
+      <Project>{39A7D09A-3658-4AFA-A45D-A0FCB9DF4072}</Project>
+      <Name>ImportExportClientManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DomainServices\ImportExportManagement\ImportExportCommon\ImportExportCommon.csproj">
+      <Project>{AFEAEEBE-DF0C-4CA7-8DB6-CF5ED03B755D}</Project>
+      <Name>ImportExportCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Domain\PresentationDesign\DesignClient\DesignClient.csproj">
+      <Project>{A9C44F75-6CF1-4FF9-824D-E9F6F3DE88BA}</Project>
+      <Name>DesignClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Domain\PresentationDesign\DesignCommon\DesignCommon.csproj">
+      <Project>{38B1C5EB-22AE-447C-B4AB-11EE196EE4E0}</Project>
+      <Name>DesignCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TechnicalServices\Communication\Communication.csproj">
+      <Project>{4F0FFB74-D607-435D-8C14-372DF3500E1B}</Project>
+      <Name>Communication %28TechnicalServices\Communication\Communication%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TechnicalServices\Configuration\ClientConfiguration\ClientConfiguration.csproj">
+      <Project>{DF9B4D93-21FC-48E3-BDDF-186CE63E58FA}</Project>
+      <Name>ClientConfiguration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TechnicalServices\Entity\Entity.csproj">
+      <Project>{4E56777C-8690-47AB-9FD7-4D65677862FA}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TechnicalServices\Interfaces\Interfaces.csproj">
+      <Project>{E7BED6ED-753D-4D11-96BD-273C88FE10A6}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TechnicalServices\Persistence\CommonPersistence\CommonPersistence.csproj">
+      <Project>{E8497275-E440-4495-AA40-9EA20EEB8BA2}</Project>
+      <Name>CommonPersistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\CommonUI.csproj">
+      <Project>{CE5BE2DA-DFAE-4C28-A040-43FE8B8323C4}</Project>
+      <Name>CommonUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\ExportPresentationForm.resx">
+      <DependentUpon>ExportPresentationForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExportConfigurationForm.resx">
+      <DependentUpon>ExportConfigurationForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HowImportForm.resx">
+      <DependentUpon>HowImportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PresentationExistsDialog.resx">
+      <DependentUpon>PresentationExistsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WrongSlideName.resx">
+      <DependentUpon>WrongSlideName.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>xcopy $(TargetPath) $(SolutionDir)bin\PresentationDesigner\  /Y</PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    xmlns="urn:configuration-schema"
+    xmlns:config="urn:configuration-schema"
+    targetNamespace="urn:configuration-schema">
+
+	<xsd:include schemaLocation="CommonConfig.xsd" />
+
+	<xsd:element name="Monitor" substitutionGroup="config:DisplayType">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="config:PassiveDisplayTypeType">
+          <xsd:attribute name="RefreshRate" type="xsd:int" use="optional" default="60" />
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+	</xsd:element>
+
+</xsd:schema>

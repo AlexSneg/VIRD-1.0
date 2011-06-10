@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    xmlns="urn:presentation-schema"
+    xmlns:config="urn:presentation-schema"
+    targetNamespace="urn:presentation-schema">
+
+    <xsd:include schemaLocation="basePresentation.xsd" />
+
+    <xsd:element name="Video" substitutionGroup="Source">
+        <xsd:complexType>
+            <xsd:complexContent>
+                <xsd:extension base="SoftwareSource">
+                    <xsd:attribute name="State" type="xsd:string" use="required" />
+                    <xsd:attribute name="StartTimeShift" type="xsd:int" use="required" />
+                    <xsd:attribute name="AspectLock" type="xsd:boolean" use="optional" default="true" />
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>

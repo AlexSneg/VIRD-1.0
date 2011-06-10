@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    xmlns="urn:configuration-schema"
+    xmlns:config="urn:configuration-schema"
+    targetNamespace="urn:configuration-schema">
+
+    <xsd:include schemaLocation="CommonConfig.xsd" />
+
+    <xsd:element name="JupiterDisplay" substitutionGroup="config:DisplayType">
+        <xsd:complexType>
+            <xsd:complexContent>
+                <xsd:extension base="config:ComputerTypeType">
+                    <xsd:sequence>
+                        <xsd:element name="InOutConfigList" minOccurs="0" maxOccurs="1">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element name="InOutConfig" minOccurs="0" maxOccurs="unbounded">
+                                        <xsd:complexType>
+                                            <xsd:attribute name="VideoIn" type="xsd:int" use="required" />
+                                            <xsd:attribute name="SwitchOut" type="xsd:int" use="required" />
+                                            <xsd:attribute name="WindowType" type="xsd:string" use="required" />
+                                            <xsd:attribute name="Comment" type="xsd:string" use="optional" default="" />
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                    <xsd:attribute name="SegmentRows" type="xsd:int" use="required" />
+                    <xsd:attribute name="SegmentColumns" type="xsd:int" use="required" />
+                    <xsd:attribute name="SegmentWidth" type="xsd:int" use="required" />
+                    <xsd:attribute name="SegmentHeight" type="xsd:int" use="required" />
+                    <xsd:attribute name="ResourceAvailability" type="xsd:int" use="required" />
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="JupiterDevice" substitutionGroup="config:DeviceType">
+        <xsd:complexType>
+            <xsd:complexContent>
+                <xsd:extension base="config:DeviceTypeType" />
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="JupiterMapping" substitutionGroup="config:Mapping">
+        <xsd:complexType>
+            <xsd:complexContent>
+                <xsd:extension base="config:MappingType">
+                    <xsd:attribute name="VideoIn" type="xsd:int" use="optional" default="0" />
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+
+
+</xsd:schema>

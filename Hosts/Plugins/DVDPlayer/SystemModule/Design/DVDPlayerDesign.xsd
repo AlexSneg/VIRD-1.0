@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    xmlns="urn:presentation-schema"
+    xmlns:present="urn:presentation-schema"
+    targetNamespace="urn:presentation-schema">
+
+  <xsd:include schemaLocation="basePresentation.xsd" />
+
+  <xsd:element name="DVDPlayerSource" substitutionGroup="Source">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="HardwareSource" />
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="DVDPlayerDevice" substitutionGroup="Device">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="DeviceType">
+          <xsd:attribute name="MediumType" type="xsd:string" use="optional" default="DVD" />
+          <xsd:attribute name="DiskLabel" type="xsd:string" use="optional" />
+          <xsd:attribute name="SceneAssociatedCommand" type="xsd:string" use="optional" default="None" />
+          <xsd:attribute name="IsPlayerOn" type="xsd:boolean" use="optional" default="true" />
+          <xsd:attribute name="DVDChapter" type="xsd:int" use="optional" default="1" />
+          <xsd:attribute name="Track" type="xsd:int" use="optional" default="1" />
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>

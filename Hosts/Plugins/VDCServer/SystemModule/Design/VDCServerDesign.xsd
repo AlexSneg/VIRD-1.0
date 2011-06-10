@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    xmlns="urn:presentation-schema"
+    xmlns:config="urn:presentation-schema"
+    targetNamespace="urn:presentation-schema"
+    xmlns:vdcServer="urn:VDCServerDeviceDesign">
+
+  <xsd:include schemaLocation="basePresentation.xsd" />
+
+  <xsd:element name="VDCServer" substitutionGroup="config:Device">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="config:DeviceType">
+          
+          <xsd:sequence>
+            <xsd:element name="Members" minOccurs="0" maxOccurs="1">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="ConferenceMember" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:complexType>
+                    <xsd:attribute name="Name" type="xsd:string" />
+                    <xsd:attribute name="Number1" type="xsd:string" />
+                    <xsd:attribute name="Number2" type="xsd:string" />
+                    <xsd:attribute name="ConnectionType" type="xsd:string" />
+                    <xsd:attribute name="ConnectionQuality" type="xsd:string" />
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+            <xsd:element name="Layout" minOccurs="0" maxOccurs="1">
+              <xsd:complexType>
+                <xsd:attribute name="LayoutNumber" type="xsd:int" />
+                <xsd:attribute name="LayoutName" type="xsd:string" />
+                <xsd:attribute name="LayoutPictureBytes" type="xsd:base64Binary" />
+              </xsd:complexType> 
+            </xsd:element>
+            <xsd:element name="ActiveMember" minOccurs="0" maxOccurs="1">
+              <xsd:complexType>
+                <xsd:attribute name="Name" type="xsd:string" />
+                <xsd:attribute name="Number1" type="xsd:string" />
+                <xsd:attribute name="Number2" type="xsd:string" />
+                <xsd:attribute name="ConnectionType" type="xsd:string" />
+                <xsd:attribute name="ConnectionQuality" type="xsd:string" />
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+
+          <xsd:attribute name="IsConferenceActive" type="xsd:boolean" default="true" />
+          <xsd:attribute name="ConferenceName" type="xsd:string"/>
+          <xsd:attribute name="Comments" type="xsd:string"/>
+          <xsd:attribute name="VoiceSwitched" type="xsd:boolean"/>
+          <xsd:attribute name="Private" type="xsd:boolean"/>
+          <xsd:attribute name="Password" type="xsd:string"/>
+
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>

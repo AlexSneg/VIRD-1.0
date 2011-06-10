@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    xmlns="urn:presentation-schema"
+    xmlns:present="urn:presentation-schema"
+    targetNamespace="urn:presentation-schema">
+
+  <xsd:include schemaLocation="basePresentation.xsd" />
+
+  <xsd:element name="WordDocument" substitutionGroup="Source">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="SoftwareSource">
+          <xsd:attribute name="StartPage" type="xsd:int" use="optional" default="1" />
+          <xsd:attribute name="StartLine" type="xsd:int" use="optional" default="1" />
+          <xsd:attribute name="Zoom" type="xsd:int" use="optional" default="100" />
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>
